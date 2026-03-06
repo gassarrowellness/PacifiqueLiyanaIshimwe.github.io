@@ -38,7 +38,7 @@ const AIAssistantDemo = () => {
       <div className="p-4 border-b border-border flex items-center gap-2">
         <Bot className="h-5 w-5 text-primary" />
         <span className="font-medium text-sm">AI Advisory Assistant</span>
-        <span className="ml-auto w-2 h-2 rounded-full bg-emerald-500" />
+        <span className="ml-auto w-2 h-2 rounded-full bg-primary" />
       </div>
       <div className="h-72 overflow-y-auto p-4 space-y-3">
         {messages.map((msg, i) => (

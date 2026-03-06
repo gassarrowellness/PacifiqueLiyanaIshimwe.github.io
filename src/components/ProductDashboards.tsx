@@ -85,7 +85,7 @@ const ProductDashboards = () => {
               >
                 <div className="flex items-center justify-between mb-3">
                   <kpi.icon className="h-4 w-4 text-primary" />
-                  <span className="text-xs font-medium text-emerald-600">{kpi.change}</span>
+                  <span className="text-xs font-medium text-primary">{kpi.change}</span>
                 </div>
                 <p className="text-2xl font-bold text-display">{kpi.value}</p>
                 <p className="text-xs text-muted-foreground mt-1">{kpi.label}</p>
