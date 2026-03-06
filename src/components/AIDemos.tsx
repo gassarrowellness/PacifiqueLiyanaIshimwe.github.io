@@ -13,8 +13,8 @@ const chatResponses: Record<string, string> = {
 };
 
 const AIAssistantDemo = () => {
-  const [messages, setMessages] = useState([
-    { role: "bot" as const, text: "Hello! I'm your AI assistant. Ask me about weather, crop prices, planting advice, health services, or loans. Try typing 'weather', 'price', or 'plant'." },
+  const [messages, setMessages] = useState<{ role: "bot" | "user"; text: string }[]>([
+    { role: "bot", text: "Hello! I'm your AI assistant. Ask me about weather, crop prices, planting advice, health services, or loans. Try typing 'weather', 'price', or 'plant'." },
   ]);
   const [input, setInput] = useState("");
 
