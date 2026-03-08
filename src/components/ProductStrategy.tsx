@@ -58,7 +58,7 @@ const ProductStrategy = () => {
             Product <span className="gradient-text">Lifecycle Strategy</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            How products move from concept to scale — a structured approach to reducing risk and maximizing impact.
+            How products move from concept to scale through a structured approach to reducing risk and maximizing impact.
           </p>
 
           {/* Lifecycle visualization */}

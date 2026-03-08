@@ -41,7 +41,7 @@ const caseStudies: CaseStudy[] = [
     tags: ["GenAI", "USSD", "Offline", "Innovation"],
     problem: "Remote users without internet access had no way to get real-time, personalized guidance on agriculture, health, and community services through basic phones.",
     userInsights: "Users on feature phones needed text-based AI interactions without requiring data connectivity. Drop-off rates on existing USSD services were high due to poor UX.",
-    hypothesis: "A generative AI agent delivered via USSD could provide interactive, personalized support — demonstrating demand for AI access in low-connectivity settings.",
+    hypothesis: "A generative AI agent delivered via USSD could provide interactive, personalized support, demonstrating demand for AI access in low-connectivity settings.",
     strategy: "Built an AI-powered USSD agent that could process natural language queries and deliver real-time guidance across agriculture, health, and community services.",
     experimentation: "Ran controlled pilot in Zambia with rural communities, implementing the product from inception to commercial launch.",
     execution: "Developed from inception to commercial launch. Integrated with existing USSD infrastructure. Trained AI models on local content and language patterns.",
@@ -116,7 +116,7 @@ const CaseStudies = () => {
             Product <span className="gradient-text">Case Studies</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Real products I've built, scaled, and managed — structured as interactive case studies showing the full product journey.
+            Real products I've built, scaled, and managed, structured as interactive case studies showing the full product journey.
           </p>
 
           <div className="space-y-4">

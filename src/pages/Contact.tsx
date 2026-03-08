@@ -57,7 +57,7 @@ const Contact = () => {
                   <p className="text-muted-foreground">
                     I'm always open to discussing new product challenges, consulting opportunities, 
                     or connecting with fellow product thinkers. Whether it's AI, platforms, 
-                    or emerging market innovation — let's talk.
+                    or emerging market innovation, let's talk.
                   </p>
                 </div>
               </div>

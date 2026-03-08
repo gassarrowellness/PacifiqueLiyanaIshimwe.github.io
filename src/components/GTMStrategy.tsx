@@ -12,7 +12,7 @@ const sections = [
   {
     icon: Users,
     title: "Audience Understanding",
-    description: "Analyze the target audience deeply — who they are, what motivates them, what triggers buying decisions, and how they behave in the product ecosystem.",
+    description: "Analyze the target audience deeply: who they are, what motivates them, what triggers buying decisions, and how they behave in the product ecosystem.",
     items: ["User persona mapping", "Motivation analysis", "Buying trigger identification", "Behavior pattern analysis"],
   },
   {
@@ -65,7 +65,7 @@ const GTMStrategy = () => {
             GTM <span className="gradient-text">Strategy Framework</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            A structured framework for taking products to market — from positioning through conversion.
+            A structured framework for taking products to market, from positioning through conversion.
           </p>
 
           <div className="space-y-3">

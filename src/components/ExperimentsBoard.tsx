@@ -69,7 +69,7 @@ const ExperimentsBoard = () => {
             Experimentation <span className="gradient-text">Board</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Real experiments run across products — each with a clear hypothesis, test, result, and learning.
+            Real experiments run across products, each with a clear hypothesis, test, result, and learning.
           </p>
 
           <div className="grid gap-4">

@@ -7,7 +7,7 @@ const prototypes = [
     icon: Shield,
     title: "Decentralized Identity for Informal Workers",
     subtitle: "Portable digital identity for the unbanked workforce",
-    description: "A self-sovereign identity platform enabling informal sector workers to build verifiable work histories, credit profiles, and skill credentials — portable across employers, platforms, and borders.",
+    description: "A self-sovereign identity platform enabling informal sector workers to build verifiable work histories, credit profiles, and skill credentials, portable across employers, platforms, and borders.",
     userProblem: "Billions of informal workers lack verifiable employment records or credit histories, locking them out of financial services, insurance, and formal employment opportunities.",
     architecture: ["DID Registry", "Credential Issuer", "Verification API", "Mobile Wallet", "Partner Portal"],
   },

@@ -6,7 +6,7 @@ const principles = [
   {
     icon: Lightbulb,
     title: "Hypothesis-Driven Development",
-    description: "Every feature starts with a clear hypothesis. I define what we're testing, what success looks like, and how we'll measure it — before writing a single line of code.",
+    description: "Every feature starts with a clear hypothesis. I define what we're testing, what success looks like, and how we'll measure it before committing resources.",
   },
   {
     icon: FlaskConical,
@@ -16,7 +16,7 @@ const principles = [
   {
     icon: Globe,
     title: "Designing for Emerging Markets",
-    description: "Products for emerging markets require deep empathy — offline-first design, local language support, and solutions that work on the devices and networks people actually have.",
+    description: "Products for emerging markets require deep empathy: offline-first design, local language support, and solutions that work on the devices and networks people actually have.",
   },
   {
     icon: Layers,
