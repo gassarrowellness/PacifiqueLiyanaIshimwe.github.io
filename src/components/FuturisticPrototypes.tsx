@@ -1,23 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Truck, Vote, Scale, Radio } from "lucide-react";
+import { Wallet, ShoppingBag, BarChart3, Scale, CreditCard, Share2 } from "lucide-react";
 
 const prototypes = [
   {
-    icon: Truck,
-    title: "Climate-Adaptive Supply Chain for Cooperatives",
-    subtitle: "Weather-responsive logistics for smallholder farmer groups",
-    description: "A platform that integrates real-time weather data, crop yield forecasts, and transport availability to dynamically optimize harvest collection routes and cold chain logistics for agricultural cooperatives.",
-    userProblem: "Smallholder cooperatives lose up to 40% of perishable produce post-harvest due to unpredictable weather, poor road conditions, and lack of real-time coordination between farmers, aggregators, and buyers.",
-    architecture: ["Weather Integration", "Route Optimizer", "Cooperative Dashboard", "Buyer Marketplace", "Cold Chain Tracker"],
+    icon: Wallet,
+    title: "Embedded Savings & Credit Scoring for Gig Workers",
+    subtitle: "Fintech infrastructure for the informal economy",
+    description: "A fintech platform that embeds micro-savings and automated credit scoring into existing gig and trade platforms, using transaction history, mobile money patterns, and work frequency to generate creditworthiness profiles for workers without formal banking records.",
+    userProblem: "Gig workers and informal traders generate consistent income but lack formal financial records. Banks cannot assess their creditworthiness, locking them out of loans, insurance, and savings products.",
+    architecture: ["Transaction Aggregator", "Credit Scoring Engine", "Savings Wallet", "Lender API", "Worker Dashboard"],
   },
   {
-    icon: Vote,
-    title: "Civic Participation Platform for Urban Youth",
-    subtitle: "Structured civic engagement beyond social media",
-    description: "A platform that enables young urban residents to propose, debate, and vote on local policy priorities, then tracks government responses and implementation progress with transparent accountability metrics.",
-    userProblem: "Urban youth across Africa feel disconnected from local governance. Existing feedback channels are bureaucratic and unresponsive, leading to disengagement and mistrust in public institutions.",
-    architecture: ["Proposal Engine", "Deliberation Forum", "Voting Module", "Government API", "Accountability Tracker"],
+    icon: ShoppingBag,
+    title: "AI-Powered Inventory & Demand Forecasting for African E-Commerce",
+    subtitle: "Predictive commerce for small online sellers",
+    description: "An e-commerce operations tool that uses purchase pattern analysis, seasonal trends, and supplier lead times to help small and medium online sellers in African markets forecast demand, optimize stock levels, and automate reorder workflows.",
+    userProblem: "Small e-commerce sellers in emerging markets either overstock and tie up capital, or understock and lose sales. They lack affordable forecasting tools built for fragmented, cash-heavy supply chains.",
+    architecture: ["Sales Data Ingestion", "Demand Forecaster", "Supplier Connector", "Auto-Reorder Engine", "Seller Dashboard"],
+  },
+  {
+    icon: BarChart3,
+    title: "Social Media Revenue Optimization Engine",
+    subtitle: "Turning engagement metrics into monetization strategy",
+    description: "A platform that analyzes content performance, audience behavior, and conversion funnels across social channels to generate actionable monetization strategies for creators, brands, and SMEs in emerging markets.",
+    userProblem: "African creators and SMEs invest heavily in social content but struggle to convert engagement into revenue. They lack tools that connect social analytics to actual sales performance and pricing decisions.",
+    architecture: ["Multi-Platform Connector", "Engagement Analyzer", "Conversion Tracker", "Strategy Generator", "Revenue Dashboard"],
   },
   {
     icon: Scale,
@@ -28,12 +36,20 @@ const prototypes = [
     architecture: ["Regulation Parser", "Tariff Calculator", "Document Generator", "Border Status API", "Trader Mobile App"],
   },
   {
-    icon: Radio,
-    title: "Disaster Response Coordination Network",
-    subtitle: "Real-time resource matching during humanitarian crises",
-    description: "A coordination platform that connects disaster response organizations, local volunteers, and affected communities to match needs with available resources during floods, droughts, and displacement events.",
-    userProblem: "During humanitarian crises in emerging markets, response coordination is fragmented. Overlapping efforts waste resources while some communities receive no aid due to information gaps.",
-    architecture: ["Needs Assessment Tool", "Resource Registry", "Matching Algorithm", "Field Agent App", "Donor Dashboard"],
+    icon: CreditCard,
+    title: "Subscription Commerce Platform for African Retail",
+    subtitle: "Recurring revenue models for physical goods sellers",
+    description: "A platform enabling African retailers and FMCG distributors to offer subscription-based purchasing for essential goods, with mobile money integration, flexible delivery scheduling, and predictive replenishment based on household consumption patterns.",
+    userProblem: "Consumers in emerging markets buy essentials reactively, often paying premium prices at local shops. Retailers lack infrastructure to offer subscription models that improve affordability and retention.",
+    architecture: ["Subscription Builder", "Mobile Money Gateway", "Delivery Scheduler", "Consumption Predictor", "Retailer Portal"],
+  },
+  {
+    icon: Share2,
+    title: "Influencer-Commerce Bridge for Emerging Markets",
+    subtitle: "Direct product sales through social content creators",
+    description: "A platform connecting African brands with micro-influencers to enable trackable, commission-based product sales directly through social media content, with integrated payment processing and performance analytics.",
+    userProblem: "Brands in emerging markets cannot measure influencer ROI. Influencers lack tools to monetize beyond sponsorships. No infrastructure connects social engagement to tracked commerce transactions.",
+    architecture: ["Brand Marketplace", "Creator Storefront", "Attribution Engine", "Commission Tracker", "Payment Processor"],
   },
 ];
 
@@ -54,7 +70,7 @@ const FuturisticPrototypes = () => {
             Future <span className="gradient-text">Product Concepts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Forward-thinking product ideas exploring new problem spaces in logistics, civic tech, trade, and humanitarian response.
+            Forward-thinking product ideas exploring new problem spaces in fintech, e-commerce, social media optimization, and cross-border trade.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
