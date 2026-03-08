@@ -7,7 +7,7 @@ const About = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-16 md:py-20 bg-background">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,13 +21,13 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">I am a product manager with experience managing products and initiatives across remote teams. I piloted and launched the world's first offline Generative AI assistant, and co-designed large-scale programs with USAID, UNICEF, CIMMYT, and government partners and led a national digital engagement platform serving over 2 million users. 
+              <p className="text-lg text-muted-foreground leading-relaxed">Hi, my name is Pacifique. I am a product manager who has led digital platforms reaching millions of users. I piloted and launched the world’s first offline Generative AI assistant and co-designed programs with partners including USAID, UNICEF, CIMMYT, and government agencies.
 
+My work spans AI, fintech, telecom, and renewable energy, focusing on building platforms, running pilots, and scaling solutions that deliver measurable impact.
 
-
-
+In my free time, I paint, practice yoga, and go to the gym.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">My work spans AI, telecom partnerships, stakeholder management, fintech, and renewable energy. I build digital platforms, run pilots, validate hypotheses, and scale solutions that deliver measurable impact. I bring a proven track record in stakeholder management, budget oversight, and translating strategy into operational execution.
+              <p className="text-lg text-muted-foreground leading-relaxed">My work spans AI, telecom partnerships, goverment stakeholder management, fintech, and renewable energy. I enjoy building digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact. 
 
 
 
