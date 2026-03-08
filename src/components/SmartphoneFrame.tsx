@@ -21,7 +21,7 @@ const SmartphoneFrame = ({
   onDotClick,
 }: SmartphoneFrameProps) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col items-center gap-4">
       <div className="relative w-[280px] md:w-[300px]">
         {/* Outer device shadow */}
         <div className="absolute inset-0 rounded-[3rem] bg-[#c9b896]/20 blur-xl scale-105" />
