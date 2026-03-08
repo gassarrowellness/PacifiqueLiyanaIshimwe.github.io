@@ -1,56 +1,106 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Search, Users, Map, Lightbulb, Layout, Smartphone, CheckCircle, ChevronRight } from "lucide-react";
+import MiniDiagram, { DiagramType } from "./MiniDiagram";
+
+interface DetailItem {
+  label: string;
+  context: string;
+  illustration: DiagramType;
+}
 
 const steps = [
   {
     icon: Search,
     title: "Problem Definition",
     description: "Clearly define the problem and the value of solving it. Identify who is affected, the root causes, and the cost of inaction.",
-    details: ["Stakeholder interviews", "Problem severity mapping", "Value proposition canvas", "User pain point analysis"],
+    details: [
+      { label: "Stakeholder interviews", context: "Structured conversations with key decision-makers and users to understand business constraints, success metrics, and organizational priorities that shape the problem space.", illustration: "interviews" as DiagramType },
+      { label: "Problem severity mapping", context: "Categorizing and ranking problems by their frequency, impact on users, and cost to the business. This helps prioritize which problems deserve immediate attention versus long-term investment.", illustration: "matrix" as DiagramType },
+      { label: "Value proposition canvas", context: "A visual tool that maps customer jobs, pains, and gains against your product's features, pain relievers, and gain creators to ensure product-market fit from the start.", illustration: "mapping" as DiagramType },
+      { label: "User pain point analysis", context: "Systematically identifying friction points in the current user experience through support tickets, session recordings, and direct feedback to build an evidence-based case for change.", illustration: "signals" as DiagramType },
+    ],
   },
   {
     icon: Users,
     title: "User Research",
     description: "Understand user behavior, motivations, and constraints through qualitative and quantitative research methods.",
-    details: ["Field interviews", "Behavioral analysis", "Journey mapping", "Persona development"],
+    details: [
+      { label: "Field interviews", context: "Conducting in-context interviews where users naturally interact with the product or service. Observing real environments reveals constraints and workarounds that lab settings miss.", illustration: "interviews" as DiagramType },
+      { label: "Behavioral analysis", context: "Studying how users actually behave versus what they say they do. Includes analytics review, session recordings, and heatmaps to identify patterns and drop-off points.", illustration: "behavior" as DiagramType },
+      { label: "Journey mapping", context: "Visualizing the end-to-end user experience across touchpoints, emotions, and channels. Reveals gaps between user expectations and reality at each stage of interaction.", illustration: "process" as DiagramType },
+      { label: "Persona development", context: "Creating research-backed archetypes that represent distinct user segments with unique goals, behaviors, and constraints. These guide design decisions and help teams build empathy.", illustration: "persona" as DiagramType },
+    ],
   },
   {
     icon: Map,
     title: "Opportunity Mapping",
     description: "Identify areas where the product can create value by mapping user needs to business goals and market gaps.",
-    details: ["Opportunity scoring", "Market gap analysis", "Value chain mapping", "Prioritization frameworks"],
+    details: [
+      { label: "Opportunity scoring", context: "Rating potential opportunities using frameworks like RICE (Reach, Impact, Confidence, Effort) to objectively compare and prioritize where to invest product resources.", illustration: "metrics" as DiagramType },
+      { label: "Market gap analysis", context: "Comparing existing solutions in the market against unmet user needs to identify white spaces where your product can differentiate and capture value.", illustration: "comparison" as DiagramType },
+      { label: "Value chain mapping", context: "Tracing how value flows from raw inputs to the end user, identifying where inefficiencies exist and where the product can insert itself to capture or create value.", illustration: "mapping" as DiagramType },
+      { label: "Prioritization frameworks", context: "Applying structured methods like impact-effort matrices, MoSCoW, or weighted scoring to make transparent, defensible decisions about what to build first.", illustration: "matrix" as DiagramType },
+    ],
   },
   {
     icon: Lightbulb,
     title: "Solution Ideation",
     description: "Generate potential product solutions through structured ideation, considering feasibility, viability, and desirability.",
-    details: ["Design sprints", "How Might We sessions", "Concept sketching", "Feasibility assessment"],
+    details: [
+      { label: "Design sprints", context: "A time-boxed 5-day process for answering critical business questions through design, prototyping, and testing ideas with real users. Compresses months of work into one week.", illustration: "timeline" as DiagramType },
+      { label: "How Might We sessions", context: "Reframing problems as opportunity statements to unlock creative thinking. HMW questions turn pain points into actionable design challenges that teams can ideate around.", illustration: "framework" as DiagramType },
+      { label: "Concept sketching", context: "Rapidly visualizing multiple solution directions through rough sketches before committing to any single approach. Encourages divergent thinking and surfaces hidden assumptions.", illustration: "mvp" as DiagramType },
+      { label: "Feasibility assessment", context: "Evaluating proposed solutions against technical constraints, resource availability, and timeline realities. Ensures the team pursues ideas that can actually be built and shipped.", illustration: "chart" as DiagramType },
+    ],
   },
   {
     icon: Layout,
     title: "Wireframing",
     description: "Show product UI structures and flows. Create low-fidelity representations of the product experience.",
-    details: ["Information architecture", "User flow diagrams", "Lo-fi wireframes", "Interaction patterns"],
+    details: [
+      { label: "Information architecture", context: "Organizing and structuring content so users can find what they need intuitively. Includes site maps, taxonomy design, and content grouping exercises that form the product's structural backbone.", illustration: "mapping" as DiagramType },
+      { label: "User flow diagrams", context: "Mapping the step-by-step paths users take to accomplish tasks within the product. Identifies decision points, error states, and opportunities to reduce friction in critical workflows.", illustration: "process" as DiagramType },
+      { label: "Lo-fi wireframes", context: "Rough sketches of screen layouts focusing on content hierarchy and user flow rather than visual polish. Used to quickly iterate on structure before committing to high-fidelity designs.", illustration: "framework" as DiagramType },
+      { label: "Interaction patterns", context: "Defining reusable UI behaviors like navigation models, form patterns, and feedback mechanisms. Consistent patterns reduce cognitive load and create a predictable, learnable interface.", illustration: "triggers" as DiagramType },
+    ],
   },
   {
     icon: Smartphone,
     title: "Prototype Simulation",
     description: "Build clickable product interaction flows that simulate the real experience for testing and feedback.",
-    details: ["Interactive prototypes", "Click-through flows", "Micro-interaction design", "Device testing"],
+    details: [
+      { label: "Interactive prototypes", context: "High-fidelity clickable mockups that simulate real product behavior. Allow stakeholders and users to experience the proposed solution before engineering investment begins.", illustration: "testing" as DiagramType },
+      { label: "Click-through flows", context: "Connected screens that demonstrate complete user journeys from entry to completion. Used to validate that the navigation and task flow feel natural and efficient.", illustration: "behavior" as DiagramType },
+      { label: "Micro-interaction design", context: "Designing subtle animations and feedback moments — button states, loading indicators, success confirmations — that make the product feel responsive and polished.", illustration: "hooks" as DiagramType },
+      { label: "Device testing", context: "Validating prototypes across different screen sizes, operating systems, and input methods to ensure the experience works consistently for all target users.", illustration: "comparison" as DiagramType },
+    ],
   },
   {
     icon: CheckCircle,
     title: "Validation & Testing",
     description: "User testing, feedback loops, and iteration. Validate assumptions and refine the product based on real data.",
-    details: ["Usability testing", "A/B experiments", "Feedback synthesis", "Iteration cycles"],
+    details: [
+      { label: "Usability testing", context: "Observing real users attempting tasks with the product to identify confusion, errors, and friction. Think-aloud protocols reveal the reasoning behind user behavior.", illustration: "research" as DiagramType },
+      { label: "A/B experiments", context: "Running controlled experiments where different user groups see different versions of a feature. Statistical analysis reveals which variation better achieves the target metric.", illustration: "chart" as DiagramType },
+      { label: "Feedback synthesis", context: "Aggregating and analyzing qualitative and quantitative feedback into actionable themes. Pattern recognition across multiple data sources drives confident design decisions.", illustration: "signals" as DiagramType },
+      { label: "Iteration cycles", context: "Systematically refining the product through repeated build-measure-learn loops. Each cycle incorporates validated learnings to progressively improve the solution.", illustration: "cycle" as DiagramType },
+    ],
   },
 ];
 
 const ProductDesignWalkthrough = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [activeDetail, setActiveDetail] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    setActiveDetail(null);
+  }, [activeStep]);
+
+  const currentDetails = steps[activeStep].details;
+  const selectedDetail = currentDetails.find((d) => d.label === activeDetail);
 
   return (
     <section className="py-24 md:py-32 bg-background" id="design-walkthrough">
@@ -144,18 +194,47 @@ const ProductDesignWalkthrough = () => {
                 {steps[activeStep].description}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {steps[activeStep].details.map((detail, i) => (
+                {currentDetails.map((detail, i) => (
                   <motion.div
-                    key={detail}
+                    key={detail.label}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
-                    className="bg-secondary/60 rounded-xl px-4 py-3 text-sm text-foreground font-medium text-center"
+                    onClick={() => setActiveDetail(activeDetail === detail.label ? null : detail.label)}
+                    className={`rounded-xl px-4 py-3 text-sm font-medium text-center cursor-pointer transition-all border ${
+                      activeDetail === detail.label
+                        ? "border-primary/30 bg-primary/5 text-foreground"
+                        : "border-transparent bg-secondary/60 text-foreground hover:bg-secondary/80"
+                    }`}
                   >
-                    {detail}
+                    {detail.label}
                   </motion.div>
                 ))}
               </div>
+
+              {/* Expanded detail panel */}
+              <AnimatePresence mode="wait">
+                {selectedDetail && (
+                  <motion.div
+                    key={selectedDetail.label}
+                    initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                    animate={{ opacity: 1, height: "auto", marginTop: 16 }}
+                    exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="rounded-xl bg-secondary/40 border border-border/50 p-6 flex flex-col md:flex-row gap-6 items-start">
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold text-foreground mb-2">{selectedDetail.label}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{selectedDetail.context}</p>
+                      </div>
+                      <div className="shrink-0 flex items-center justify-center p-4 rounded-xl bg-background/60 border border-border/30">
+                        <MiniDiagram type={selectedDetail.illustration} />
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           </AnimatePresence>
         </motion.div>
