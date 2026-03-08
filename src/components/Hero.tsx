@@ -23,22 +23,22 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-400/30 bg-white/20 text-sm text-gray-900 mb-6">
-            <span className="w-2 h-2 rounded-full bg-gray-700 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-stone-400/30 bg-white/20 text-sm text-stone-900 mb-6">
+            <span className="w-2 h-2 rounded-full bg-stone-700 animate-pulse" />
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-stone-900">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto mb-3">
+          <p className="text-lg md:text-xl text-stone-600 font-light max-w-2xl mx-auto mb-3">
             {CONTACT.title}
           </p>
 
-          <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto mb-8">
+          <p className="text-sm md:text-base text-stone-500 max-w-xl mx-auto mb-8">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
