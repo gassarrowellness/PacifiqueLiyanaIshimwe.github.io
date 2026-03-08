@@ -41,7 +41,7 @@ const ExperimentsBoard = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-background" id="experiments">
+    <section className="py-16 md:py-20 bg-background" id="experiments">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ const ExperimentsBoard = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Experimentation <span className="gradient-text">Board</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Real experiments run across products, each with a clear hypothesis, test, result, and learning.
           </p>
 

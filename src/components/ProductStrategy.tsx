@@ -83,7 +83,7 @@ const ProductStrategy = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-background" id="strategy">
+    <section className="py-16 md:py-20 bg-background" id="strategy">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -94,7 +94,7 @@ const ProductStrategy = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product <span className="gradient-text">Lifecycle Strategy</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             How products move from concept to scale through a structured approach to reducing risk and maximizing impact.
           </p>
 

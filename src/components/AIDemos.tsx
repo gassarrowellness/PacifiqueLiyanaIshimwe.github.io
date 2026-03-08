@@ -168,7 +168,7 @@ const AIDemos = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="ai-demos" className="py-24 md:py-32 bg-muted/30">
+    <section id="ai-demos" className="py-16 md:py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -179,7 +179,7 @@ const AIDemos = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             AI Product <span className="gradient-text">Experiences</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Interactive simulations demonstrating how AI-powered products work in practice.
           </p>
 

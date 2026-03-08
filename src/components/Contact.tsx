@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-muted/30">
+    <section id="contact" className="py-16 md:py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +30,7 @@ const Contact = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Contact</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Let's <span className="gradient-text">Connect</span>
           </h2>
 

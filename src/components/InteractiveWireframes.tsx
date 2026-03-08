@@ -204,7 +204,7 @@ const InteractiveWireframes = () => {
   const current = steps[activeScreen];
 
   return (
-    <section className="py-24 md:py-32 bg-muted/30" id="wireframes">
+    <section className="py-16 md:py-20 bg-muted/30" id="wireframes">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

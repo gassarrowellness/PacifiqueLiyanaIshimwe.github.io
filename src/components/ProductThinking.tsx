@@ -35,7 +35,7 @@ const ProductThinking = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-16 md:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +43,7 @@ const ProductThinking = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Philosophy</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Product <span className="gradient-text">Thinking</span>
           </h2>
 

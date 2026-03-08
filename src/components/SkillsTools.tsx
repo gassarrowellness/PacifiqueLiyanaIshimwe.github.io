@@ -35,7 +35,7 @@ const SkillsTools = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-muted/30">
+    <section id="skills" className="py-16 md:py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,12 +43,12 @@ const SkillsTools = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Capabilities</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Skills & <span className="gradient-text">Tools</span>
           </h2>
 
           {/* Product Skills */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {skills.map((skill, i) => (
               <motion.div
                 key={i}

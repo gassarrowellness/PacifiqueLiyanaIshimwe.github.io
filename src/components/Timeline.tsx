@@ -51,7 +51,7 @@ const Timeline = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-muted/30" id="timeline">
+    <section className="py-16 md:py-20 bg-muted/30" id="timeline">
       <div className="max-w-4xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,7 +59,7 @@ const Timeline = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Journey</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Career <span className="gradient-text">Timeline</span>
           </h2>
 

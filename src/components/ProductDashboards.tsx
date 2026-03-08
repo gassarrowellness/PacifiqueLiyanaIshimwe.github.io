@@ -58,7 +58,7 @@ const ProductDashboards = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="dashboards" className="py-24 md:py-32 bg-background">
+    <section id="dashboards" className="py-16 md:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,7 +72,7 @@ const ProductDashboards = () => {
           <p className="text-muted-foreground max-w-2xl mb-2">
             Illustrative product dashboards showcasing the types of metrics I track and optimize as a product manager.
           </p>
-          <p className="text-xs text-muted-foreground/60 mb-16 italic">
+          <p className="text-xs text-muted-foreground/60 mb-10 italic">
             Note: Charts use illustrative data to demonstrate dashboard design and analytical thinking, not actual proprietary data.
           </p>
 

@@ -103,7 +103,7 @@ const ProductDesignWalkthrough = () => {
   const selectedDetail = currentDetails.find((d) => d.label === activeDetail);
 
   return (
-    <section className="py-24 md:py-32 bg-background" id="design-walkthrough">
+    <section className="py-16 md:py-20 bg-background" id="design-walkthrough">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,7 +114,7 @@ const ProductDesignWalkthrough = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product Design <span className="gradient-text">Walkthrough</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             How I take products from idea to validated solution through a structured, repeatable framework.
           </p>
 

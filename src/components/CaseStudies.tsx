@@ -104,7 +104,7 @@ const CaseStudies = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="product-work" className="py-24 md:py-32 bg-muted/30">
+    <section id="product-work" className="py-16 md:py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -115,7 +115,7 @@ const CaseStudies = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product <span className="gradient-text">Case Studies</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Real products I've built, scaled, and/or managed, structured as interactive case studies showing the full product journey.
           </p>
 
