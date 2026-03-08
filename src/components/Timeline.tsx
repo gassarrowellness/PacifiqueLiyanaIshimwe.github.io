@@ -6,7 +6,7 @@ const milestones = [
     period: "July 2025 - Present",
     role: "Founder & Operations Lead",
     company: "Gassarro",
-    description: "Established and oversee end-to-end business operations, designing organizational structure, operational workflows, and performance management systems. Introduced KPIs, reporting dashboards, formal SOPs, and automation to reduce operational friction.",
+    description: "Established and oversee end-to-end business operations, designing organizational structure, operational workflows, and performance management systems. Introduced Businesscase, KPIs, reporting dashboards, formal SOPs, and automation to reduce operational friction.",
     highlights: ["Operations design", "KPI dashboards", "Process automation"],
   },
   {
