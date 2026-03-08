@@ -36,20 +36,20 @@ const Hero = () => {
             platforms to renewable energy solutions, with measurable impact.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+            <Button size="default" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
               <a href="#product-work">
                 <FileText className="h-4 w-4" />
                 View Product Work
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full gap-2 border-white/15 text-white/80 hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm" asChild>
+            <Button variant="outline" size="default" className="rounded-full gap-2" asChild>
               <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full gap-2 border-white/15 text-white/80 hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm" asChild>
+            <Button variant="outline" size="default" className="rounded-full gap-2" asChild>
               <a href="mailto:plishimwe@gmail.com">
                 <Mail className="h-4 w-4" />
                 Contact
