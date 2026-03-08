@@ -17,7 +17,7 @@ const milestones = [
     highlights: ["Mobile money agents", "Field ops digitization", "Multi-market rollout"],
   },
   {
-    period: "March 2023 – February 2025",
+    period: "March 2023 - February 2025",
     role: "Platform Manager",
     company: "Viamo",
     description: "Led a national digital engagement platform serving over 2 million users across health, agriculture, and civic education. Co-designed large-scale IVR programs with USAID, CIMMYT, UNICEF, and government partners. Piloted and launched the world's first offline Generative AI assistant.",
