@@ -71,7 +71,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Cookstove & Smartphone Bundles",
-    tagline: "Brightlife by Finca: Clean cooking meets connectivity for 5,000+ households in Uganda",
+    tagline: "Clean cooking meets connectivity for 5,000+ households in Uganda",
     tags: ["Clean Cooking", "Bundled Product", "Last-Mile", "Uganda"],
     problem: "Low-income households in Uganda cooked on charcoal and open fires, causing health and environmental harm, while lacking affordable access to digital connectivity.",
     userInsights: "Households saw value in getting a smartphone alongside a cookstove — clean cooking alone wasn't a strong enough purchase motivator, but bundling it with connectivity was.",
