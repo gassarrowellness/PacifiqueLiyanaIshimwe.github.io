@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/data/contact";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
