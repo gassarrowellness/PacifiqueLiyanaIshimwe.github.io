@@ -73,10 +73,10 @@ const Hero = () => {
           className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/30 backdrop-blur-xl border border-white/50 shadow-sm"
         >
           {[
+            { value: "2M+", label: "Users Served" },
             { value: "6+ yrs", label: "Experience" },
             { value: "3+", label: "Markets" },
             { value: "10+", label: "Products" },
-            { value: "2M+", label: "Users Served" },
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
