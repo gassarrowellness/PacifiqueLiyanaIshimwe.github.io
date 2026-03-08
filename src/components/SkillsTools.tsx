@@ -35,7 +35,7 @@ const SkillsTools = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-muted/30">
+    <section id="skills" className="py-16 md:py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
