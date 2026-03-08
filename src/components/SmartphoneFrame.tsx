@@ -157,7 +157,7 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     );
   }
 
-  // Card borders: ┌ ┐ └ ┘ — skip decorative lines
+  // Card borders: ┌ ┐ └ ┘ - skip decorative lines
   if (el.startsWith("┌") || el.startsWith("└") || el.match(/^[┌└].*[┐┘]$/)) {
     return null;
   }
