@@ -114,7 +114,7 @@ const ProductDesignWalkthrough = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product Design <span className="gradient-text">Walkthrough</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             How I take products from idea to validated solution through a structured, repeatable framework.
           </p>
 

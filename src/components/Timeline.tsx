@@ -59,7 +59,7 @@ const Timeline = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Journey</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Career <span className="gradient-text">Timeline</span>
           </h2>
 

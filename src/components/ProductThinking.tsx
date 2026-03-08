@@ -43,7 +43,7 @@ const ProductThinking = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-label text-primary mb-4">Philosophy</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-16">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-10">
             Product <span className="gradient-text">Thinking</span>
           </h2>
 

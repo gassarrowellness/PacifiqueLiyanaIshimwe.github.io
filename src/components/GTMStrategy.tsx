@@ -111,7 +111,7 @@ const GTMStrategy = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             GTM <span className="gradient-text">Strategy Framework</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             A structured framework for taking products to market, from positioning through conversion.
           </p>
 

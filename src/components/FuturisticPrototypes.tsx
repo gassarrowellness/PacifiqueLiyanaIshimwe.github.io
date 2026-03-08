@@ -125,7 +125,7 @@ const FuturisticPrototypes = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Future <span className="gradient-text">Product Concepts</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Forward-thinking product ideas exploring new problem spaces in fintech, e-commerce, social media optimization, and cross-border trade.
           </p>
 

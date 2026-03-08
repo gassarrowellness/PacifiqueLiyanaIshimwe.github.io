@@ -115,7 +115,7 @@ const CaseStudies = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product <span className="gradient-text">Case Studies</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Real products I've built, scaled, and/or managed, structured as interactive case studies showing the full product journey.
           </p>
 

@@ -179,7 +179,7 @@ const AIDemos = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             AI Product <span className="gradient-text">Experiences</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Interactive simulations demonstrating how AI-powered products work in practice.
           </p>
 

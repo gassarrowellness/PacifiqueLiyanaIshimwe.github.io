@@ -72,7 +72,7 @@ const ProductDashboards = () => {
           <p className="text-muted-foreground max-w-2xl mb-2">
             Illustrative product dashboards showcasing the types of metrics I track and optimize as a product manager.
           </p>
-          <p className="text-xs text-muted-foreground/60 mb-16 italic">
+          <p className="text-xs text-muted-foreground/60 mb-10 italic">
             Note: Charts use illustrative data to demonstrate dashboard design and analytical thinking, not actual proprietary data.
           </p>
 

@@ -52,7 +52,7 @@ const ExperimentsBoard = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Experimentation <span className="gradient-text">Board</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             Real experiments run across products, each with a clear hypothesis, test, result, and learning.
           </p>
 

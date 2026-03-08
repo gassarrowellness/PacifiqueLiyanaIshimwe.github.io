@@ -94,7 +94,7 @@ const ProductStrategy = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product <span className="gradient-text">Lifecycle Strategy</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
+          <p className="text-muted-foreground max-w-2xl mb-10">
             How products move from concept to scale through a structured approach to reducing risk and maximizing impact.
           </p>
 
