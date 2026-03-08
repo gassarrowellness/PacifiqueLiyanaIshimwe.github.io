@@ -79,8 +79,11 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "menu":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="grid grid-cols-3 gap-1.5 w-fit">
+        <div className="flex flex-col items-center h-full">
+          <div className="w-full bg-secondary/40 rounded-xl p-3 mb-4">
+            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
+          </div>
+          <div className="grid grid-cols-3 gap-1.5 w-fit mt-auto">
             {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
               <div
                 key={key}
@@ -93,9 +96,6 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
                 {key}
               </div>
             ))}
-          </div>
-          <div className="w-full bg-secondary/40 rounded-xl p-3 mt-1">
-            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
           </div>
         </div>
       );
