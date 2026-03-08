@@ -74,7 +74,7 @@ const prototypes = [
     userProblem: "Consumers in emerging markets buy essentials reactively, often paying premium prices at local shops. Retailers lack infrastructure to offer subscription models that improve affordability and retention.",
     architecture: ["Subscription Builder", "Mobile Money Gateway", "Delivery Scheduler", "Consumption Predictor", "Retailer Portal"],
     screens: [
-      { title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "{ title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "│ ZMW 850/week     │", "│ [Subscribe →]    │", "└─────────────────┘"] },", "│ [Subscribe →]    │", "└─────────────────┘"] },
+      { title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "│ ZMW 850/week     │", "│ [Subscribe →]    │", "└─────────────────┘"] },
       { title: "Customize Delivery", annotation: "Flexible scheduling options", elements: ["Delivery Schedule", "Frequency:", "○ Weekly  ● Bi-weekly", "○ Monthly", "Preferred day: [Sat ▼]", "Time: [Morning ▼]"] },
       { title: "Payment Setup", annotation: "Mobile money integration", elements: ["Payment Method", "☑ MTN MoMo Auto-pay", "Phone: +260 9XX XXX", "Amount: ZMW 1,700", "Cycle: Every 2 weeks", "[Activate Plan →]"] },
       { title: "Active Subscription", annotation: "Subscription management view", elements: ["My Subscription ✅", "Next delivery: Sat 15", "Items: 6 products", "Saved vs retail: 18%", "[Modify] [Pause]", "[Add items +]"] },
