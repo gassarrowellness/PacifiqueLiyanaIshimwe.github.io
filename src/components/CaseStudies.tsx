@@ -19,7 +19,7 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     title: "National Digital Engagement Platform",
-    tagline: "Viamo: Serving 2M+ users across health, agriculture & civic education",
+    tagline: "Serving 2M+ users across health, agriculture & civic education",
     tags: ["AI", "IVR", "Scale", "Partnerships"],
     problem: "Low-connectivity communities lacked access to reliable health, agriculture, and civic information. Existing digital channels couldn't reach last-mile users on basic phones.",
     userInsights: "Users needed voice-first, offline-capable solutions. Smartphone penetration was low, but mobile phone ownership was high. Content had to be in local languages.",
@@ -54,7 +54,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Mobile Money Agent Support Platform",
-    tagline: "Opareta: Migrating agent workflows from WhatsApp to a dedicated platform",
+    tagline: "Migrating agent workflows from WhatsApp to a dedicated platform",
     tags: ["Mobile Money", "Agent Tools", "Migration", "Platform"],
     problem: "Mobile money agents relied on WhatsApp for operational communication, creating fragmented workflows, poor visibility, and inconsistent support across the agent network.",
     userInsights: "Agents needed a centralized tool for communication and task management. WhatsApp lacked structure for tracking, escalation, and operational reporting.",
@@ -71,10 +71,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Cookstove & Smartphone Bundles",
-    tagline: "Brightlife by Finca: Clean cooking meets connectivity for 5,000+ households in Uganda",
+    tagline: "Clean cooking meets connectivity for 5,000+ households in Uganda",
     tags: ["Clean Cooking", "Bundled Product", "Last-Mile", "Uganda"],
     problem: "Low-income households in Uganda cooked on charcoal and open fires, causing health and environmental harm, while lacking affordable access to digital connectivity.",
-    userInsights: "Households saw value in getting a smartphone alongside a cookstove — clean cooking alone wasn't a strong enough purchase motivator, but bundling it with connectivity was.",
+    userInsights: "Households saw value in getting a smartphone alongside a cookstove. Clean cooking alone wasn't a strong enough purchase motivator, but bundling it with connectivity was.",
     hypothesis: "Bundling clean cookstoves with smartphones and selling through a youth agent network would make both products more attractive and reach households traditional retail couldn't.",
     strategy: "Designed a bundled product line pairing clean cookstoves with smartphones. Built a youth agent distribution program to reach last-mile communities across Uganda.",
     experimentation: "Tested different bundle configurations and agent incentive models across regions to optimize adoption rates and agent retention.",
@@ -89,11 +89,11 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "PayGo Solar + Satellite TV Bundles",
-    tagline: "ENGIE Energy Access: Affordable solar-powered entertainment for off-grid Zambia",
+    tagline: "Affordable solar-powered entertainment for off-grid Zambia",
     tags: ["Solar", "PayGo", "Bundled Product", "Zambia"],
     problem: "Off-grid households in Zambia wanted entertainment and information access but couldn't afford upfront costs for solar systems or satellite TV separately.",
-    userInsights: "Customers valued entertainment as much as lighting — a solar panel alone wasn't compelling enough, but pairing it with satellite TV created strong demand.",
-    hypothesis: "A PayGo solar + satellite TV bundle with flexible payments would drive adoption by solving two needs — energy and entertainment — in a single affordable package.",
+    userInsights: "Customers valued entertainment as much as lighting. A solar panel alone wasn't compelling enough, but pairing it with satellite TV created strong demand.",
+    hypothesis: "A PayGo solar + satellite TV bundle with flexible payments would drive adoption by solving two needs (energy and entertainment) in a single affordable package.",
     strategy: "Launched a bundled solar home system with integrated satellite TV, sold on a PayGo financing model to make it affordable for off-grid households.",
     experimentation: "Piloted the solar + TV bundle across Zambian markets to validate demand, pricing sensitivity, and payment completion rates.",
     execution: "Led product launch end-to-end including pricing strategy, CRM workflow migration, and UX training library for the Zambian team.",
