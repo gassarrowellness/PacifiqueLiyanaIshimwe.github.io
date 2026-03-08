@@ -79,7 +79,7 @@ const Hero = () => {
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
-              <p className="text-xs text-gray-600 mt-1">{m.label}</p>
+              <p className="text-xs text-stone-600 mt-1">{m.label}</p>
             </div>
           ))}
         </motion.div>
