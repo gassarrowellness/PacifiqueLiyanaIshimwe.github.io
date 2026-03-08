@@ -23,7 +23,7 @@ const caseStudies: CaseStudy[] = [
     tags: ["AI", "IVR", "Scale", "Partnerships"],
     problem: "Low-connectivity communities lacked access to reliable health, agriculture, and civic information. Existing digital channels couldn't reach last-mile users on basic phones.",
     userInsights: "Users needed voice-first, offline-capable solutions. Smartphone penetration was low, but mobile phone ownership was high. Content had to be in local languages.",
-    hypothesis: "An AI-powered voice platform could deliver personalized information at scale, improving access and engagement while creating a sustainable revenue model.",
+    hypothesis: "A USSD logic voice platform could deliver relevant and sometimes lifesaving information at scale, improving access and engagement for people without smartphones while creating a sustainable revenue model.",
     strategy: "Co-designed large-scale IVR programs with USAID, UNICEF, CIMMYT, and government partners. Built a monetization model around B2B partnerships and subscription services.",
     experimentation: "Piloted the world's first offline Generative AI assistant ('Ask Viamo Anything'), generating nearly 90,000 user queries during its initial phase to validate demand for AI-supported information access.",
     execution: "Led cross-functional teams to scale the platform nationally in Zambia. Restructured engagement and revenue systems to improve sustainability and scalability.",
