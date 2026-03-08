@@ -2,11 +2,13 @@ import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Smartphone, Hash, MessageSquare, BarChart3 } from "lucide-react";
 import SmartphoneFrame, { ElementRenderer } from "./SmartphoneFrame";
+import UssdPhoneFrame from "./UssdPhoneFrame";
 
 interface WireframeFlow {
   id: string;
   title: string;
   icon: typeof Smartphone;
+  type: "smartphone" | "ussd";
   screens: { title: string; annotation: string; elements: string[] }[];
 }
 
