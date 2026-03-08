@@ -5,52 +5,52 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    --foreground: 20 20% 16%;
     
     --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
+    --card-foreground: 20 20% 16%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 14%;
+    --popover-foreground: 20 20% 16%;
     
-    --primary: 222 100% 59%;
+    --primary: 250 60% 55%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 216 47% 93%;
-    --secondary-foreground: 220 26% 14%;
+    --secondary: 30 20% 94%;
+    --secondary-foreground: 20 20% 16%;
     
-    --muted: 216 47% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 30 15% 96%;
+    --muted-foreground: 25 10% 45%;
     
-    --accent: 216 47% 93%;
-    --accent-foreground: 222 100% 59%;
+    --accent: 30 20% 94%;
+    --accent-foreground: 250 60% 55%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 216 30% 92%;
-    --input: 216 47% 93%;
-    --ring: 222 100% 59%;
+    --border: 30 15% 90%;
+    --input: 30 20% 94%;
+    --ring: 250 60% 55%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 99%;
-    --sidebar-foreground: 220 26% 14%;
-    --sidebar-primary: 222 100% 59%;
+    --sidebar-foreground: 20 20% 16%;
+    --sidebar-primary: 250 60% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 216 47% 96%;
-    --sidebar-accent-foreground: 220 26% 14%;
-    --sidebar-border: 216 30% 92%;
-    --sidebar-ring: 222 100% 59%;
+    --sidebar-accent: 30 15% 96%;
+    --sidebar-accent-foreground: 20 20% 16%;
+    --sidebar-border: 30 15% 90%;
+    --sidebar-ring: 250 60% 55%;
 
     /* Product Lab Tokens */
-    --glow: 222 100% 59%;
+    --glow: 250 60% 55%;
     --surface: 0 0% 100%;
     --surface-elevated: 0 0% 100%;
-    --gradient-hero: linear-gradient(135deg, hsl(222 100% 59% / 0.04), hsl(216 47% 93% / 0.3));
-    --gradient-accent: linear-gradient(135deg, hsl(222 100% 59%), hsl(230 80% 65%));
-    --shadow-soft: 0 4px 20px -4px hsl(220 26% 14% / 0.06);
-    --shadow-glow: 0 0 16px hsl(222 100% 59% / 0.1);
+    --gradient-hero: linear-gradient(135deg, hsl(250 60% 55% / 0.04), hsl(30 20% 94% / 0.3));
+    --gradient-accent: linear-gradient(135deg, hsl(250 60% 55%), hsl(270 50% 60%));
+    --shadow-soft: 0 4px 20px -4px hsl(20 20% 16% / 0.06);
+    --shadow-glow: 0 0 16px hsl(250 60% 55% / 0.1);
   }
 
   .dark {
