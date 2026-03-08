@@ -38,7 +38,7 @@ const Hero = () => {
             {CONTACT.title}
           </p>
 
-          <p className="text-sm md:text-base text-stone-500 max-w-xl mx-auto mb-8">
+          <p className="text-sm md:text-base text-slate-500 max-w-xl mx-auto mb-8">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
