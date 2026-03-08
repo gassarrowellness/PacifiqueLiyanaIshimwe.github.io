@@ -13,16 +13,18 @@ const Navigation = () => {
   const isHome = location.pathname === "/";
 
   const homeLinks = [
-    { label: "About", href: "#about" },
-    { label: "Process", href: "#design-walkthrough" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "#about", isRoute: false },
+    { label: "Work", href: "/work", isRoute: true },
+    { label: "Process", href: "#design-walkthrough", isRoute: false },
+    { label: "Timeline", href: "#timeline", isRoute: false },
+    { label: "Contact", href: "#contact", isRoute: false },
   ];
 
   const workLinks = [
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Strategy", href: "#strategy" },
-    { label: "Experiments", href: "#experiments" },
+    { label: "Home", href: "/", isRoute: true },
+    { label: "Case Studies", href: "#case-studies", isRoute: false },
+    { label: "Strategy", href: "#strategy", isRoute: false },
+    { label: "Experiments", href: "#experiments", isRoute: false },
   ];
 
   const sectionLinks = isHome ? homeLinks : workLinks;
@@ -41,21 +43,25 @@ const Navigation = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
-          <Link
-            to={isHome ? "/work" : "/"}
-            className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
-          >
-            {isHome ? "Work" : "Home"}
-          </Link>
-          {sectionLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`text-[11px] md:text-sm transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {sectionLinks.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-[11px] md:text-sm transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
@@ -78,23 +84,27 @@ const Navigation = () => {
             <SheetContent side="right" className="w-72">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <div className="flex flex-col gap-6 mt-8">
-                <Link
-                  to={isHome ? "/work" : "/"}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  {isHome ? "Work" : "Home"}
-                </Link>
-                {sectionLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-base text-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {sectionLinks.map((link) =>
+                  link.isRoute ? (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-base text-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
                 <Button size="sm" className="rounded-full w-fit" asChild>
                   <a href={CONTACT.resumePath} target="_blank">Resume</a>
                 </Button>
