@@ -24,7 +24,7 @@ const milestones = [
     highlights: ["2M+ users", "Gen-AI USSD launch", "90K AI queries"],
   },
   {
-    period: "May 2022 – November 2022",
+    period: "May 2022 - November 2022",
     role: "Product & Marketing Manager",
     company: "Brightlife by FINCA",
     description: "Spearheaded expansion of digital and commercial offerings, directing end-to-end launch of bundled clean cookstove and smartphone products for low-income households. Championed a youth agent program to strengthen last-mile distribution.",
