@@ -5,26 +5,11 @@ import heroImg from "@/assets/hero-architecture.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with dark overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(222,30%,6%,0.92)] via-[hsl(222,30%,8%,0.88)] to-[hsl(222,30%,8%,1)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(280,60%,20%,0.15)] to-[hsl(222,80%,30%,0.1)]" />
-      </div>
+    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-28">
+      {/* Light translucent grey background */}
+      <div className="absolute inset-0 bg-muted/60 backdrop-blur-sm" />
 
-      {/* Subtle glow accents */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[hsl(280,60%,50%,0.04)] blur-[100px]" />
-
-      {/* Gold accent line under nav */}
-      <div className="absolute top-[72px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-24">
+      <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
