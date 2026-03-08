@@ -7,7 +7,7 @@ const About = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-16 md:py-20 bg-background">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,9 +21,16 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">Hi, my name is Pacifique. I am a product manager who has led digital platforms reaching millions of users. I piloted and launched the world's first offline Generative AI assistant and co-designed programs with partners including USAID, UNICEF, CIMMYT, and government agencies.
-              <br /><br />
-              I paint, practice yoga, and go to the gym. My work spans AI, telecom partnerships, goverment stakeholder management, fintech, and renewable energy. I enjoy building digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact.
+              <p className="text-lg text-muted-foreground leading-relaxed">Hi, my name is Pacifique. I am a product manager who has led digital platforms reaching millions of users. I piloted and launched the world's first offline Generative AI assistant and co-designed programs with partners and government agencies.
+
+ I enjoy building digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact.
+I paint, practice yoga, and go to the gym.
+
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">My work spans AI, telecom partnerships, goverment stakeholder management, fintech, and renewable energy. I enjoy building digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact. 
+
+
+
               </p>
             </div>
 
