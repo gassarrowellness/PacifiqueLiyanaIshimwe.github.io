@@ -5,16 +5,16 @@ import { CONTACT } from "@/data/contact";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-24 bg-gray-900">
-      {/* Aurora-style grey/white background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" />
+    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-24 bg-slate-400">
+      {/* Aurora-style silver metallic background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-600 via-gray-200 to-slate-400" />
       {/* Aurora orbs */}
-      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-white/15 via-gray-400/10 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-gray-400/20 via-white/10 to-transparent rounded-full blur-[100px]" />
-      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-white/10 via-gray-300/15 to-transparent rounded-full blur-[110px]" />
-      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-gray-200/10 via-white/5 to-transparent rounded-full blur-[80px]" />
+      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-white/40 via-slate-100/30 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-slate-100/50 via-white/20 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-white/40 via-gray-500/30 to-transparent rounded-full blur-[110px]" />
+      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-slate-100/50 via-white/20 to-transparent rounded-full blur-[80px]" />
       {/* Central glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-white/10 via-white/5 to-transparent rounded-full blur-[60px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-white/30 via-white/15 to-transparent rounded-full blur-[60px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div
