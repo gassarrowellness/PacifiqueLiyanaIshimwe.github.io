@@ -162,8 +162,8 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2">
             <p className="text-[11px] text-muted-foreground italic">"The current average price of maize in your region is 120 kwacha per kilogram."</p>
-            <p className="text-[11px] text-foreground font-medium mt-2">Press 1 — Ask another question</p>
-            <p className="text-[11px] text-foreground font-medium">Press 0 — Return to main menu</p>
+            <p className="text-[11px] text-foreground font-medium mt-2">Press 1 - Ask another question</p>
+            <p className="text-[11px] text-foreground font-medium">Press 0 - Return to main menu</p>
           </div>
         </div>
       );
