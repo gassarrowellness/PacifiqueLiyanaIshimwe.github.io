@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ChevronLeft, ChevronRight, Signal, Wifi, Battery } from "lucide-react";
+import { ChevronLeft, ChevronRight, Signal, Wifi, Battery, Phone } from "lucide-react";
 
 interface SmartphoneFrameProps {
   screenTitle: string;
