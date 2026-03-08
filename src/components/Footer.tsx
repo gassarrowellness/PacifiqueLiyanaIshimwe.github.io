@@ -1,5 +1,6 @@
 import { Linkedin, Mail, ArrowUp } from "lucide-react";
 import { CONTACT } from "@/data/contact";
+import { openMailto } from "@/lib/openMailto";
 
 const Footer = () => {
   return (
