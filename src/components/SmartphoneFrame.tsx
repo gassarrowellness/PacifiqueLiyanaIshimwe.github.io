@@ -56,7 +56,7 @@ const SmartphoneFrame = ({
 
             {/* App hero header */}
             {headerStyle === "call" ? (
-              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-green-600 to-green-700 dark:from-green-700 dark:to-green-800 px-4 py-3 text-white">
+              <div className="mx-3 mt-4 rounded-2xl bg-gradient-to-br from-green-600 to-green-700 dark:from-green-700 dark:to-green-800 px-4 py-3 text-white">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
                     <Phone className="h-4 w-4 text-white" />
@@ -70,7 +70,7 @@ const SmartphoneFrame = ({
                 </div>
               </div>
             ) : (
-              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-4 py-4 relative overflow-hidden">
+              <div className="mx-3 mt-4 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-4 py-4 relative overflow-hidden">
                 {/* Decorative pattern */}
                 <div className="absolute inset-0 opacity-[0.07]">
                   <div className="absolute top-1 right-2 w-16 h-16 rounded-full border-2 border-primary-foreground" />
