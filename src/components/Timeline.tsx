@@ -10,7 +10,14 @@ const milestones = [
     highlights: ["Operations design", "KPI dashboards", "Process automation"],
   },
   {
-    period: "March 2023 – February 2025",
+    period: "Apr 2025 – Jul 2025",
+    role: "Senior Product Manager",
+    company: "Opareta",
+    description: "Led product management for a mobile app supporting analog mobile money agent networks with transaction tracking and operational digitization. Designed features for transaction recording, improved data capture accuracy, and built internal tools for field issue logging.",
+    highlights: ["Mobile money agents", "Field ops digitization", "Multi-market rollout"],
+  },
+  {
+    period: "March 2023 – April 2025",
     role: "Platform Manager",
     company: "Viamo",
     description: "Led a national digital engagement platform serving over 2 million users across health, agriculture, and civic education. Co-designed large-scale IVR programs with USAID, CIMMYT, UNICEF, and government partners. Piloted and launched the world's first offline Generative AI assistant.",
