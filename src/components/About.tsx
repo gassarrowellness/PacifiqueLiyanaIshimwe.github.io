@@ -28,8 +28,8 @@ const About = () => {
                 large-scale programs with USAID, UNICEF, CIMMYT, and government partners.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My work spans AI, telecom, fintech, and renewable energy — building digital platforms, 
-                running pilots, validating hypotheses, and scaling solutions that deliver measurable 
+                My work spans AI, telecom, fintech, and renewable energy. I build digital platforms, 
+                run pilots, validate hypotheses, and scale solutions that deliver measurable 
                 impact. I bring a proven track record in stakeholder management, budget oversight, 
                 and translating strategy into operational execution.
               </p>

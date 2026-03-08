@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-display font-semibold">P<span className="gradient-text">.</span>Ishimwe</p>
-            <p className="text-sm text-muted-foreground mt-1">Product Manager — Ship, Scale, Monetize</p>
+            <p className="text-sm text-muted-foreground mt-1">Product Manager | Ship, Scale, Monetize</p>
           </div>
 
           <div className="flex items-center gap-4">

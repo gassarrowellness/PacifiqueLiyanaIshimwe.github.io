@@ -65,7 +65,7 @@ const ProductDesignWalkthrough = () => {
             Product Design <span className="gradient-text">Walkthrough</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            How I take products from idea to validated solution — a structured, repeatable framework.
+            How I take products from idea to validated solution through a structured, repeatable framework.
           </p>
 
           {/* Horizontal stepper */}

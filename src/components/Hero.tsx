@@ -28,11 +28,11 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto mb-4">
-            Senior Product Manager — AI, Platforms, Digital Operations
+            Senior Product Manager | AI, Platforms, Digital Operations
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground/70 max-w-xl mx-auto mb-12">
-            Building and scaling digital products for emerging markets — from AI-powered 
+            Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
 
