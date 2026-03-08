@@ -13,7 +13,7 @@ interface Step {
 const steps: Step[] = [
   {
     title: "Dial-in & Welcome",
-    annotation: "User dials shortcode — no smartphone or internet needed",
+    annotation: "User dials shortcode - no smartphone or internet needed",
     description: "User dials the service number (e.g., *123#) and presses the call button. The system answers with a welcome message presenting the main menu options.",
     visualType: "dialin",
   },
