@@ -20,7 +20,7 @@ const steps: Step[] = [
   {
     title: "Menu Navigation",
     annotation: "User presses 3 on the keypad to select the AI assistant",
-    description: "The system confirms the selection: \"You have chosen the AI assistant. You can ask any question — about health, farming, market prices, or general knowledge.\"",
+    description: "The system confirms the selection: \"You have chosen the AI assistant. You can ask any question - about health, farming, market prices, or general knowledge.\"",
     visualType: "menu",
   },
   {
