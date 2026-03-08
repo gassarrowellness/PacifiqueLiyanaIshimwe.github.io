@@ -85,7 +85,7 @@ const Contact = () => {
                 rows={4}
                 className="flex w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring resize-none"
               />
-              <Button type="submit" className="w-full rounded-xl gap-2">
+              <Button type="submit" className="w-full rounded-xl gap-2 bg-[hsl(var(--cta-action))] text-white hover:bg-[hsl(var(--cta-action)/0.85)]">
                 <Send className="h-4 w-4" />
                 Send Message
               </Button>
