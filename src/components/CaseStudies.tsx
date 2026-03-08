@@ -74,7 +74,7 @@ const caseStudies: CaseStudy[] = [
     tagline: "Clean cooking meets connectivity for 5,000+ households in Uganda",
     tags: ["Clean Cooking", "Bundled Product", "Last-Mile", "Uganda"],
     problem: "Low-income households in Uganda cooked on charcoal and open fires, causing health and environmental harm, while lacking affordable access to digital connectivity.",
-    userInsights: "Households saw value in getting a smartphone alongside a cookstove — clean cooking alone wasn't a strong enough purchase motivator, but bundling it with connectivity was.",
+    userInsights: "Households saw value in getting a smartphone alongside a cookstove. Clean cooking alone wasn't a strong enough purchase motivator, but bundling it with connectivity was.",
     hypothesis: "Bundling clean cookstoves with smartphones and selling through a youth agent network would make both products more attractive and reach households traditional retail couldn't.",
     strategy: "Designed a bundled product line pairing clean cookstoves with smartphones. Built a youth agent distribution program to reach last-mile communities across Uganda.",
     experimentation: "Tested different bundle configurations and agent incentive models across regions to optimize adoption rates and agent retention.",
