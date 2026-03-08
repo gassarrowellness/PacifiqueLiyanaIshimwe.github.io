@@ -67,10 +67,10 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
           <p className="text-sm font-bold text-foreground">Dial *123#</p>
           <div className="w-full space-y-1.5 mt-2 bg-secondary/40 rounded-xl p-3">
             <p className="text-[11px] text-muted-foreground italic">"Welcome to [Service Name]."</p>
-            <p className="text-[11px] text-foreground">Press 1 — Weather info</p>
-            <p className="text-[11px] text-foreground">Press 2 — Agri advice</p>
-            <p className="text-[11px] text-foreground font-semibold text-primary">Press 3 — AI Assistant</p>
-            <p className="text-[11px] text-foreground">Press 9 — Repeat menu</p>
+            <p className="text-[11px] text-foreground">Press 1 - Weather info</p>
+            <p className="text-[11px] text-foreground">Press 2 - Agri advice</p>
+            <p className="text-[11px] text-foreground font-semibold text-primary">Press 3 - AI Assistant</p>
+            <p className="text-[11px] text-foreground">Press 9 - Repeat menu</p>
           </div>
         </div>
       );
