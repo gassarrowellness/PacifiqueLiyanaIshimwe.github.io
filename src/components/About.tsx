@@ -57,7 +57,7 @@ const About = () => {
               <div className="grid grid-cols-3 gap-4">
                 {[
                 { label: "Experience", value: "6+ yrs" },
-                { label: "Markets", value: "3+" },
+                { label: "Markets", value: "2+" },
                 { label: "Products", value: "10+" }].
                 map((s) =>
                 <div key={s.label} className="glass rounded-xl p-4 text-center">
