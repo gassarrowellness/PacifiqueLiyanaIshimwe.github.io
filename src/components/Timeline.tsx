@@ -17,7 +17,7 @@ const milestones = [
     highlights: ["Mobile money agents", "Field ops digitization", "Multi-market rollout"],
   },
   {
-    period: "March 2023 – April 2025",
+    period: "March 2023 – February 2025",
     role: "Platform Manager",
     company: "Viamo",
     description: "Led a national digital engagement platform serving over 2 million users across health, agriculture, and civic education. Co-designed large-scale IVR programs with USAID, CIMMYT, UNICEF, and government partners. Piloted and launched the world's first offline Generative AI assistant.",
@@ -31,18 +31,18 @@ const milestones = [
     highlights: ["5K+ households", "$250K+ revenue", "70+ youth agents"],
   },
   {
-    period: "October 2020 – November 2022",
-    role: "Product & Marketing Manager",
+    period: "Mar 2022 – May 2022",
+    role: "Senior Product Analyst",
+    company: "ENGIE Energy Access",
+    description: "Conducted advanced product analytics and market research to inform strategic decisions for PayGo solar solutions across East African markets.",
+    highlights: ["Product analytics", "Market strategy", "Data-driven decisions"],
+  },
+  {
+    period: "October 2020 – March 2022",
+    role: "Product & Strategy Specialist",
     company: "ENGIE Energy Access",
     description: "Led product innovation and market expansion for PayGo solar solutions. Launched bundled solar + satellite TV packages, piloted inverter-powered business systems, and tested solar irrigation for smallholder farmers.",
     highlights: ["PayGo solar", "CRM development", "SME solar initiatives"],
-  },
-  {
-    period: "2018 – 2019",
-    role: "Business Analyst",
-    company: "Brightlife / FINCA International",
-    description: "Data analysis and product insights for digital financial services targeting underserved communities in East Africa.",
-    highlights: ["Data analytics", "Financial services", "Market research"],
   },
 ];
 
