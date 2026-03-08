@@ -174,8 +174,9 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "loop":
       return (
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-full space-y-2">
+        <div className="flex flex-col items-center h-full">
+          <div className="flex-1" />
+          <div className="w-full space-y-2 mt-auto">
             {[
               { key: "1", label: "Ask another question", icon: Mic },
               { key: "0", label: "Return to main menu", icon: Phone },
