@@ -70,7 +70,7 @@ const SmartphoneFrame = ({
                 </div>
               </div>
             ) : (
-              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-4 py-4 relative overflow-hidden">
+              <div className="mx-3 mt-4 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-4 py-4 relative overflow-hidden">
                 {/* Decorative pattern */}
                 <div className="absolute inset-0 opacity-[0.07]">
                   <div className="absolute top-1 right-2 w-16 h-16 rounded-full border-2 border-primary-foreground" />
