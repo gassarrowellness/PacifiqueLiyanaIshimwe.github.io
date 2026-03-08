@@ -50,13 +50,13 @@ const Hero = () => {
                 View Product Work
               </a>
             </Button>
-            <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
+            <Button size="default" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
               <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
+            <Button size="default" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
               <a href={CONTACT.mailtoLink} target="_blank" rel="noopener noreferrer">
                 <Mail className="h-4 w-4" />
                 Contact

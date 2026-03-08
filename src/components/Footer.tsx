@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-display font-semibold">{CONTACT.shortName.replace(".", "")}<span className="gradient-text">.</span>{CONTACT.shortName.split(".")[1]}</p>
+            <p className="text-display font-semibold">P<span className="gradient-text">.</span>Ishimwe</p>
             <p className="text-sm text-muted-foreground mt-1">{CONTACT.tagline}</p>
           </div>
 
