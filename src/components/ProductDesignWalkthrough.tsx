@@ -72,7 +72,7 @@ const steps = [
     details: [
       { label: "Interactive prototypes", context: "High-fidelity clickable mockups that simulate real product behavior. Allow stakeholders and users to experience the proposed solution before engineering investment begins.", illustration: "testing" as DiagramType },
       { label: "Click-through flows", context: "Connected screens that demonstrate complete user journeys from entry to completion. Used to validate that the navigation and task flow feel natural and efficient.", illustration: "behavior" as DiagramType },
-      { label: "Micro-interaction design", context: "Designing subtle animations and feedback moments — button states, loading indicators, success confirmations — that make the product feel responsive and polished.", illustration: "hooks" as DiagramType },
+      { label: "Micro-interaction design", context: "Designing subtle animations and feedback moments - button states, loading indicators, success confirmations - that make the product feel responsive and polished.", illustration: "hooks" as DiagramType },
       { label: "Device testing", context: "Validating prototypes across different screen sizes, operating systems, and input methods to ensure the experience works consistently for all target users.", illustration: "comparison" as DiagramType },
     ],
   },

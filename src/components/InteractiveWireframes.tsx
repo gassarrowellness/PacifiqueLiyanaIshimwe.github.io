@@ -13,14 +13,14 @@ interface Step {
 const steps: Step[] = [
   {
     title: "Dial-in & Welcome",
-    annotation: "User dials shortcode — no smartphone or internet needed",
+    annotation: "User dials shortcode - no smartphone or internet needed",
     description: "User dials the service number (e.g., *123#) and presses the call button. The system answers with a welcome message presenting the main menu options.",
     visualType: "dialin",
   },
   {
     title: "Menu Navigation",
     annotation: "User presses 3 on the keypad to select the AI assistant",
-    description: "The system confirms the selection: \"You have chosen the AI assistant. You can ask any question — about health, farming, market prices, or general knowledge.\"",
+    description: "The system confirms the selection: \"You have chosen the AI assistant. You can ask any question - about health, farming, market prices, or general knowledge.\"",
     visualType: "menu",
   },
   {
@@ -31,7 +31,7 @@ const steps: Step[] = [
   },
   {
     title: "Processing",
-    annotation: "~3 second wait — clearly communicated to the user",
+    annotation: "~3 second wait - clearly communicated to the user",
     description: "The system says: \"Thank you. Please wait while I process your request.\" The AI model generates a response in approximately 3 seconds.",
     visualType: "processing",
   },
@@ -50,7 +50,7 @@ const steps: Step[] = [
 ];
 
 const considerations = [
-  { icon: Globe, title: "Accessibility", desc: "Works on any phone — no data plan or smartphone required." },
+  { icon: Globe, title: "Accessibility", desc: "Works on any phone - no data plan or smartphone required." },
   { icon: Clock, title: "Latency", desc: "3-second processing wait is clearly communicated to manage expectations." },
   { icon: AlertCircle, title: "Error Handling", desc: "If recording is unclear, the system plays a helpful retry prompt." },
   { icon: Languages, title: "Language Support", desc: "Prompts delivered in multiple local languages based on user selection." },
@@ -67,10 +67,10 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
           <p className="text-sm font-bold text-foreground">Dial *123#</p>
           <div className="w-full space-y-1.5 mt-2 bg-secondary/40 rounded-xl p-3">
             <p className="text-[11px] text-muted-foreground italic">"Welcome to [Service Name]."</p>
-            <p className="text-[11px] text-foreground">Press 1 — Weather info</p>
-            <p className="text-[11px] text-foreground">Press 2 — Agri advice</p>
-            <p className="text-[11px] text-foreground font-semibold text-primary">Press 3 — AI Assistant</p>
-            <p className="text-[11px] text-foreground">Press 9 — Repeat menu</p>
+            <p className="text-[11px] text-foreground">Press 1 - Weather info</p>
+            <p className="text-[11px] text-foreground">Press 2 - Agri advice</p>
+            <p className="text-[11px] text-foreground font-semibold text-primary">Press 3 - AI Assistant</p>
+            <p className="text-[11px] text-foreground">Press 9 - Repeat menu</p>
           </div>
         </div>
       );
@@ -93,7 +93,7 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
             ))}
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 mt-1">
-            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question — health, farming, prices, or general knowledge."</p>
+            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
           </div>
         </div>
       );
@@ -162,8 +162,8 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2">
             <p className="text-[11px] text-muted-foreground italic">"The current average price of maize in your region is 120 kwacha per kilogram."</p>
-            <p className="text-[11px] text-foreground font-medium mt-2">Press 1 — Ask another question</p>
-            <p className="text-[11px] text-foreground font-medium">Press 0 — Return to main menu</p>
+            <p className="text-[11px] text-foreground font-medium mt-2">Press 1 - Ask another question</p>
+            <p className="text-[11px] text-foreground font-medium">Press 0 - Return to main menu</p>
           </div>
         </div>
       );
@@ -185,7 +185,7 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
             ))}
             <div className="flex items-center gap-3 p-3 rounded-xl bg-destructive/5 border border-destructive/20">
               <span className="w-7 h-7 rounded-lg bg-destructive/10 flex items-center justify-center text-xs font-bold text-destructive">✕</span>
-              <span className="text-xs text-foreground font-medium">Hang up — Call ends</span>
+              <span className="text-xs text-foreground font-medium">Hang up - Call ends</span>
             </div>
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 mt-2">
@@ -216,7 +216,7 @@ const InteractiveWireframes = () => {
             USSD <span className="gradient-text">Voice Assistant</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-12">
-            An AI-powered voice assistant accessed by dialing a shortcode from any mobile phone — no smartphone or internet required.
+            An AI-powered voice assistant accessed by dialing a shortcode from any mobile phone - no smartphone or internet required.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">

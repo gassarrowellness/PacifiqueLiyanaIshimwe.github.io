@@ -21,7 +21,7 @@ const principles = [
   {
     icon: Layers,
     title: "Building Scalable Platforms",
-    description: "Great products become platforms. I think in terms of ecosystems — APIs, partnerships, and extensibility that multiply impact beyond a single use case.",
+    description: "Great products become platforms. I think in terms of ecosystems: APIs, partnerships, and extensibility that multiply impact beyond a single use case.",
   },
   {
     icon: Scale,

@@ -26,7 +26,7 @@ const SmartphoneFrame = ({
         {/* Outer device shadow */}
         <div className="absolute inset-0 rounded-[3rem] bg-foreground/5 blur-xl scale-105" />
         
-        {/* Phone bezel — thin, modern */}
+        {/* Phone bezel - thin, modern */}
         <div className="relative bg-foreground/95 dark:bg-foreground/15 rounded-[3rem] p-[5px] shadow-2xl ring-1 ring-foreground/10">
           {/* Side buttons */}
           <div className="absolute -left-[2px] top-[80px] w-[3px] h-6 rounded-l bg-foreground/60 dark:bg-foreground/20" />
@@ -50,7 +50,7 @@ const SmartphoneFrame = ({
               </div>
             </div>
 
-            {/* Screen title — app header style */}
+            {/* Screen title - app header style */}
             <div className="px-6 pt-4 pb-2">
               <h4 className="text-base font-bold text-foreground tracking-tight">{screenTitle}</h4>
             </div>
@@ -157,7 +157,7 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     );
   }
 
-  // Card borders: ┌ ┐ └ ┘ — skip decorative lines
+  // Card borders: ┌ ┐ └ ┘ - skip decorative lines
   if (el.startsWith("┌") || el.startsWith("└") || el.match(/^[┌└].*[┐┘]$/)) {
     return null;
   }
@@ -265,7 +265,7 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     }
   }
 
-  // Emoji-prefixed lines — action items / features
+  // Emoji-prefixed lines - action items / features
   if (el.match(/^[🌍💰📦⚠💡🛒🤝📊🟢📋📤📅🔄☐☑🌱💊]/u)) {
     return (
       <div className="flex items-center gap-2 py-1.5 px-3 rounded-xl bg-secondary/40 border border-border/30">

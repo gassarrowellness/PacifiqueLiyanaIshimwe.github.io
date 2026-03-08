@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const chatResponses: Record<string, string> = {
-  "weather": "🌤️ Today's forecast for your region: Partly cloudy, 28°C. Rain expected Thursday — consider delaying planting by 2 days for optimal soil moisture.",
+  "weather": "🌤️ Today's forecast for your region: Partly cloudy, 28°C. Rain expected Thursday - consider delaying planting by 2 days for optimal soil moisture.",
   "price": "🌽 Current maize prices: Lusaka market K450/50kg bag (+5% from last week). Best time to sell: within 10 days based on seasonal trends.",
   "plant": "🌱 Recommended: Plant maize variety SC513 for your soil type. Optimal planting window opens in 12 days. Apply 200kg/ha compound D fertilizer at planting.",
   "health": "🏥 Nearest health clinic: Chawama Health Centre (2.3km). Services: Maternal health, vaccinations, malaria testing. Hours: Mon-Sat 7AM-5PM.",

@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 # The Future of Sustainable Architecture
 
-The architectural landscape is undergoing a profound transformation as we face the urgent need to address climate change and environmental degradation. Sustainable architecture is no longer a niche consideration—it has become the cornerstone of responsible design practice.
+The architectural landscape is undergoing a profound transformation as we face the urgent need to address climate change and environmental degradation. Sustainable architecture is no longer a niche consideration. It has become the cornerstone of responsible design practice.
 
 ## Defining Sustainable Architecture
 
@@ -63,11 +63,11 @@ The next generation of sustainable buildings aims not just to minimize carbon em
 
 ## Challenges and Opportunities
 
-While the path toward sustainable architecture presents challenges—including higher upfront costs, regulatory barriers, and the need for specialized knowledge—it also offers tremendous opportunities. These include reduced operational costs, improved occupant health and productivity, and the potential to create resilient communities that can adapt to changing environmental conditions.
+While the path toward sustainable architecture presents challenges - including higher upfront costs, regulatory barriers, and the need for specialized knowledge - it also offers tremendous opportunities. These include reduced operational costs, improved occupant health and productivity, and the potential to create resilient communities that can adapt to changing environmental conditions.
 
 ## Conclusion
 
-The future of architecture lies in our ability to create buildings that work in harmony with natural systems. As architects, we have the responsibility and the opportunity to design a built environment that supports both human well-being and planetary health. The transition to sustainable architecture is not just an environmental imperative—it is a creative challenge that will define the next era of architectural innovation.
+The future of architecture lies in our ability to create buildings that work in harmony with natural systems. As architects, we have the responsibility and the opportunity to design a built environment that supports both human well-being and planetary health. The transition to sustainable architecture is not just an environmental imperative. It is a creative challenge that will define the next era of architectural innovation.
     `,
     author: "Sarah Chen",
     date: "2024-03-15",
@@ -86,7 +86,7 @@ In an era of overwhelming digital noise and material excess, minimalist architec
 
 ## The Philosophy Behind Minimalism
 
-Minimalist architecture is not about creating empty or stark spaces—it's about intentional design choices that prioritize function, beauty, and the essential elements of living. The approach emphasizes:
+Minimalist architecture is not about creating empty or stark spaces. It's about intentional design choices that prioritize function, beauty, and the essential elements of living. The approach emphasizes:
 
 - **Simplicity over complexity**
 - **Quality over quantity**
@@ -151,7 +151,7 @@ The minimalist approach aligns naturally with sustainable design principles:
 
 ## Conclusion
 
-Minimalism in modern living spaces represents more than just an aesthetic choice—it's a lifestyle philosophy that prioritizes intention, quality, and well-being. As our lives become increasingly complex, the simplicity and clarity of minimalist design offer a path toward more meaningful and sustainable ways of living.
+Minimalism in modern living spaces represents more than just an aesthetic choice. It's a lifestyle philosophy that prioritizes intention, quality, and well-being. As our lives become increasingly complex, the simplicity and clarity of minimalist design offer a path toward more meaningful and sustainable ways of living.
 
 The challenge for architects and designers is to create minimalist spaces that feel alive and welcoming rather than cold or sterile. When executed thoughtfully, minimalist design can provide the perfect canvas for life's most important moments.
     `,
@@ -172,7 +172,7 @@ The fabric of our cities is woven through the careful orchestration of public an
 
 ## The Evolution of Urban Planning
 
-Urban planning has evolved from purely functional considerations—managing traffic flow, utilities, and zoning—to encompass broader goals of social equity, environmental sustainability, and community well-being. This shift recognizes that cities are not just collections of buildings and infrastructure, but complex social organisms that require careful nurturing.
+Urban planning has evolved from purely functional considerations - managing traffic flow, utilities, and zoning - to encompass broader goals of social equity, environmental sustainability, and community well-being. This shift recognizes that cities are not just collections of buildings and infrastructure, but complex social organisms that require careful nurturing.
 
 ### From Zoning to Place-Making
 
@@ -185,7 +185,7 @@ Traditional zoning practices often created segregated, single-use districts that
 
 ## The Architecture of Community
 
-Community spaces serve as the living rooms of our cities—places where strangers become neighbors, where cultural exchange happens naturally, and where the social fabric of urban life is strengthened.
+Community spaces serve as the living rooms of our cities - places where strangers become neighbors, where cultural exchange happens naturally, and where the social fabric of urban life is strengthened.
 
 ### Public Squares and Plazas
 Well-designed public squares act as outdoor rooms that can accommodate a variety of activities:

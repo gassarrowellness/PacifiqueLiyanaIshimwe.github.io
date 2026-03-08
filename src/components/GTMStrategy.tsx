@@ -15,7 +15,7 @@ const sections = [
     title: "Business Clarity & Positioning",
     description: "Define the core problem, the target market, why the product exists, and why the solution matters. Establish clear positioning before going to market.",
     items: [
-      { label: "Core problem definition", detail: "Articulate the specific, urgent problem your product solves. Frame it in the customer's language and quantify the pain — lost time, money, or opportunity.", visual: "framework" as DiagramType },
+      { label: "Core problem definition", detail: "Articulate the specific, urgent problem your product solves. Frame it in the customer's language and quantify the pain - lost time, money, or opportunity.", visual: "framework" as DiagramType },
       { label: "Target market identification", detail: "Define your ideal customer profile using firmographics, psychographics, and behavioral data. Narrow to a beachhead segment you can dominate before expanding.", visual: "mapping" as DiagramType },
       { label: "Product existence rationale", detail: "Answer 'why now?' and 'why us?' with conviction. Connect market timing, team expertise, and technological shifts into a compelling founding thesis.", visual: "comparison" as DiagramType },
       { label: "Solution value articulation", detail: "Craft a value proposition that connects the problem to your unique solution. Make the benefit tangible, measurable, and differentiated from alternatives.", visual: "framework" as DiagramType },
@@ -39,7 +39,7 @@ const sections = [
     items: [
       { label: "Competitor analysis", detail: "Systematically analyze direct and indirect competitors across product features, pricing, positioning, distribution, and customer satisfaction.", visual: "comparison" as DiagramType },
       { label: "Strength/weakness mapping", detail: "Create competitive matrices that reveal where competitors over-invest and under-deliver. Find the gaps where your product can win decisively.", visual: "matrix" as DiagramType },
-      { label: "Differentiation opportunities", detail: "Identify dimensions of competition where you can be meaningfully different — not just better. True differentiation creates categories, not just features.", visual: "chart" as DiagramType },
+      { label: "Differentiation opportunities", detail: "Identify dimensions of competition where you can be meaningfully different - not just better. True differentiation creates categories, not just features.", visual: "chart" as DiagramType },
       { label: "Market positioning gaps", detail: "Map the competitive landscape to find unoccupied positions. Look for underserved segments, unmet needs, and pricing gaps you can own.", visual: "mapping" as DiagramType },
     ],
   },
@@ -51,7 +51,7 @@ const sections = [
       { label: "Content themes", detail: "Develop 3-5 content pillars that establish thought leadership and naturally lead prospects toward your product. Each theme should address a key pain point.", visual: "content" as DiagramType },
       { label: "Product messaging", detail: "Create a messaging hierarchy: tagline → elevator pitch → full narrative. Test messaging with real prospects to ensure it resonates and differentiates.", visual: "framework" as DiagramType },
       { label: "Differentiation strategy", detail: "Choose your primary axis of differentiation (price, quality, speed, simplicity, specialization) and align every touchpoint to reinforce that position.", visual: "comparison" as DiagramType },
-      { label: "Brand voice alignment", detail: "Define a consistent brand voice that reflects your positioning. Every piece of content — from tweets to documentation — should feel unmistakably yours.", visual: "process" as DiagramType },
+      { label: "Brand voice alignment", detail: "Define a consistent brand voice that reflects your positioning. Every piece of content - from tweets to documentation - should feel unmistakably yours.", visual: "process" as DiagramType },
     ],
   },
   {
