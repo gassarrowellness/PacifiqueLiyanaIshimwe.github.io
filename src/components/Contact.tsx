@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { CONTACT } from "@/data/contact";
+import { openMailto } from "@/lib/openMailto";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -16,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
     const body = encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`, '_top');
+    openMailto(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`);
     toast({ title: "Opening email client!", description: "Your message details have been pre-filled." });
     setForm({ name: "", email: "", message: "" });
   };
@@ -42,10 +43,10 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <a href={CONTACT.mailtoLink} target="_top" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <button onClick={() => openMailto(CONTACT.mailtoLink)} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary" />
                   {CONTACT.email}
-                </a>
+                </button>
                 <a href={CONTACT.phoneLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Phone className="h-5 w-5 text-primary" />
                   {CONTACT.phone}

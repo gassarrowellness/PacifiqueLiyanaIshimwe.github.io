@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { CONTACT } from "@/data/contact";
+import { openMailto } from "@/lib/openMailto";
 
 const Contact = () => {
   return (
@@ -20,9 +21,9 @@ const Contact = () => {
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
-                    <a href={CONTACT.mailtoLink} target="_top" className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <button onClick={() => openMailto(CONTACT.mailtoLink)} className="text-xl hover:text-muted-foreground transition-colors duration-300">
                       {CONTACT.email}
-                    </a>
+                    </button>
                   </div>
                   
                   <div>
@@ -48,9 +49,9 @@ const Contact = () => {
                     <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       LinkedIn
                     </a>
-                    <a href={CONTACT.mailtoLink} target="_top" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <button onClick={() => openMailto(CONTACT.mailtoLink)} className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       Email
-                    </a>
+                    </button>
                   </div>
                 </div>
                 
