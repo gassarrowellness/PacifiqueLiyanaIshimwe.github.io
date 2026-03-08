@@ -14,7 +14,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message sent!", description: "Thanks for reaching out. I'll get back to you soon." });
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.open(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`, "_blank");
+    toast({ title: "Opening email client!", description: "Your message details have been pre-filled." });
     setForm({ name: "", email: "", message: "" });
   };
 
