@@ -57,7 +57,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
-              <a href={CONTACT.mailtoLink}>
+              <a href={CONTACT.mailtoLink} target="_blank" rel="noopener noreferrer">
                 <Mail className="h-4 w-4" />
                 Contact
               </a>
