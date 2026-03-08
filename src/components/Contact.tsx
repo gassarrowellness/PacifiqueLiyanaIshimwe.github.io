@@ -16,7 +16,7 @@ const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
     const body = encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`, "_blank");
+    window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${body}`;
     toast({ title: "Opening email client!", description: "Your message details have been pre-filled." });
     setForm({ name: "", email: "", message: "" });
   };
@@ -42,7 +42,7 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <a href={CONTACT.mailtoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href={CONTACT.mailtoLink} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary" />
                   {CONTACT.email}
                 </a>
