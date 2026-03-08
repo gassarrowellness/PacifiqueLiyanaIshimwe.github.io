@@ -11,6 +11,7 @@ interface SmartphoneFrameProps {
   onDotClick: (i: number) => void;
   headerStyle?: "default" | "call";
   headerSubtitle?: string;
+  headerIcon?: ReactNode;
 }
 
 const SmartphoneFrame = ({
