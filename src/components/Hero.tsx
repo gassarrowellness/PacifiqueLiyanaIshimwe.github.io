@@ -28,7 +28,7 @@ const Hero = () => {
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
