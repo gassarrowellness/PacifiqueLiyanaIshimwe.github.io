@@ -43,21 +43,25 @@ const Navigation = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
-          <Link
-            to={isHome ? "/work" : "/"}
-            className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
-          >
-            {isHome ? "Work" : "Home"}
-          </Link>
-          {sectionLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`text-[11px] md:text-sm transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {sectionLinks.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-[11px] md:text-sm transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
