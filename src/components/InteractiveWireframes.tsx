@@ -39,14 +39,16 @@ const flows: WireframeFlow[] = [
   },
   {
     id: "ai-assistant",
-    title: "AI Assistant",
+    title: "USSD Voice Assistant",
     icon: MessageSquare,
-    type: "smartphone",
+    type: "ussd",
     screens: [
-      { title: "Chat Home", annotation: "Contextual quick actions", elements: ["AI Assistant", "How can I help?", "[🌱 Crop advice]", "[💊 Health info]", "[📊 Market prices]", "Type a message..."] },
-      { title: "Conversation", annotation: "Natural language interaction", elements: ["User: What crops grow", "best in clay soil?", "", "AI: For clay soil, consider", "rice, wheat, or beans...", "[Follow-up suggestions]"] },
-      { title: "Rich Response", annotation: "Structured data in chat", elements: ["AI: Here's a summary:", "┌──────────────┐", "│ Crop: Rice    │", "│ Season: Mar-Jun│", "│ Yield: High   │", "└──────────────┘"] },
-      { title: "Action Card", annotation: "Actionable next steps", elements: ["Based on your query:", "📋 Save this advice", "📤 Share via SMS", "📅 Set reminder", "🔄 Ask follow-up"] },
+      { title: "Dial-in & Welcome", annotation: "User dials shortcode *123# — no smartphone or internet needed", elements: ["📞 Dial *123#", "", "\"Welcome to [Service].", "For weather, press 1.", "For agri advice, press 2.", "For AI assistant, press 3.", "To repeat, press 9.\""] },
+      { title: "Menu Navigation", annotation: "User presses 3 → AI assistant selected", elements: ["You pressed: 3", "", "\"You have chosen the AI", "assistant. Ask any question", "— health, farming, prices,", "or general knowledge.\"", "", "🔔 [Beep] Speak now..."] },
+      { title: "Record Question", annotation: "Voice recorded until keypress or 2s silence", elements: ["🎙 Recording...", "", "User speaks:", "\"What is the price of", "maize today?\"", "", "🔔 [Beep] Recording saved.", "Processing your request..."] },
+      { title: "Processing", annotation: "~3 sec wait — clearly communicated to user", elements: ["\"Thank you. Please wait", "while I process your", "request.\"", "", "⏳ Processing... (3 sec)", "", "♪ [Hold music / silence]"] },
+      { title: "Voice Response", annotation: "TTS plays AI-generated answer", elements: ["🔊 AI Response:", "", "\"The current average price", "of maize in your region", "is 120 kwacha per kg.\"", "", "Press 1: Ask another", "Press 0: Main menu"] },
+      { title: "Loop or Exit", annotation: "User loops back, returns to menu, or hangs up", elements: ["1 → Record new question", "0 → Return to main menu", "Hang up → Call ends", "", "If unclear:", "\"I didn't catch that.", "Please try again.\""] },
     ],
   },
   {
