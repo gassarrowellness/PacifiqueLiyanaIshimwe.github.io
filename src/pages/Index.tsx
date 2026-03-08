@@ -1,17 +1,17 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import ProductDesignWalkthrough from "@/components/ProductDesignWalkthrough";
+import ImpactSnapshot from "@/components/ImpactSnapshot";
+import FeaturedWork from "@/components/FeaturedWork";
 import CaseStudies from "@/components/CaseStudies";
-import InteractiveWireframes from "@/components/InteractiveWireframes";
-import FuturisticPrototypes from "@/components/FuturisticPrototypes";
-import AIDemos from "@/components/AIDemos";
+import ProductPhilosophy from "@/components/ProductPhilosophy";
+import ProductDesignWalkthrough from "@/components/ProductDesignWalkthrough";
 import ProductStrategy from "@/components/ProductStrategy";
 import GTMStrategy from "@/components/GTMStrategy";
 import ExperimentsBoard from "@/components/ExperimentsBoard";
-import ProductDashboards from "@/components/ProductDashboards";
-import Timeline from "@/components/Timeline";
-import SkillsTools from "@/components/SkillsTools";
+import Capabilities from "@/components/Capabilities";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import InnovationLab from "@/components/InnovationLab";
+import LiveDemos from "@/components/LiveDemos";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,18 +20,18 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
-      <ProductDesignWalkthrough />
+      <ImpactSnapshot />
+      <FeaturedWork />
       <CaseStudies />
-      <InteractiveWireframes />
-      <FuturisticPrototypes />
-      <AIDemos />
+      <ProductPhilosophy />
+      <ProductDesignWalkthrough />
       <ProductStrategy />
       <GTMStrategy />
       <ExperimentsBoard />
-      <ProductDashboards />
-      <Timeline />
-      <SkillsTools />
+      <Capabilities />
+      <ExperienceTimeline />
+      <InnovationLab />
+      <LiveDemos />
       <Contact />
       <Footer />
     </div>
