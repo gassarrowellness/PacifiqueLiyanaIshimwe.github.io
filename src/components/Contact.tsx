@@ -42,7 +42,7 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <a href={CONTACT.mailtoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href={CONTACT.mailtoLink} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary" />
                   {CONTACT.email}
                 </a>
