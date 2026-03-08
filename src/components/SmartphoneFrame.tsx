@@ -24,29 +24,27 @@ const SmartphoneFrame = ({
     <div className="flex justify-center">
       <div className="relative w-[280px] md:w-[300px]">
         {/* Outer device shadow */}
-        <div className="absolute inset-0 rounded-[3rem] bg-foreground/5 blur-xl scale-105" />
+        <div className="absolute inset-0 rounded-[3rem] bg-[#c9b896]/20 blur-xl scale-105" />
         
-        {/* Phone bezel - thin, modern */}
-        <div className="relative bg-foreground/95 dark:bg-foreground/15 rounded-[3rem] p-[5px] shadow-2xl ring-1 ring-foreground/10">
+        {/* Phone bezel - champagne/gold metallic */}
+        <div className="relative bg-gradient-to-b from-[#d4c5a9] via-[#c9b896] to-[#bfae8a] dark:from-[#8a7d65] dark:via-[#7a6e58] dark:to-[#6b604d] rounded-[3rem] p-[6px] shadow-2xl ring-1 ring-[#bfae8a]/30">
           {/* Side buttons */}
-          <div className="absolute -left-[2px] top-[80px] w-[3px] h-6 rounded-l bg-foreground/60 dark:bg-foreground/20" />
-          <div className="absolute -left-[2px] top-[115px] w-[3px] h-10 rounded-l bg-foreground/60 dark:bg-foreground/20" />
-          <div className="absolute -left-[2px] top-[135px] w-[3px] h-10 rounded-l bg-foreground/60 dark:bg-foreground/20" />
-          <div className="absolute -right-[2px] top-[110px] w-[3px] h-14 rounded-r bg-foreground/60 dark:bg-foreground/20" />
+          <div className="absolute -left-[2px] top-[80px] w-[3px] h-6 rounded-l bg-[#b5a57e] dark:bg-[#6b604d]" />
+          <div className="absolute -left-[2px] top-[115px] w-[3px] h-10 rounded-l bg-[#b5a57e] dark:bg-[#6b604d]" />
+          <div className="absolute -left-[2px] top-[135px] w-[3px] h-10 rounded-l bg-[#b5a57e] dark:bg-[#6b604d]" />
+          <div className="absolute -right-[2px] top-[110px] w-[3px] h-14 rounded-r bg-[#b5a57e] dark:bg-[#6b604d]" />
 
           {/* Inner screen */}
-          <div className="bg-card rounded-[2.6rem] overflow-hidden">
+          <div className="relative bg-card rounded-[2.6rem] overflow-hidden">
+            {/* Camera punch-hole */}
+            <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-black/80 z-10" />
             {/* Status bar */}
             <div className="flex items-center justify-between px-7 pt-3 pb-0.5">
               <span className="text-[11px] font-bold text-foreground/80 tracking-tight">9:41</span>
-              {/* Dynamic Island */}
-              <div className="w-[90px] h-[26px] bg-foreground/95 dark:bg-foreground/20 rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-foreground/20 dark:bg-foreground/10 mr-6" />
-              </div>
               <div className="flex items-center gap-[3px]">
-                <Signal className="h-3 w-3 text-foreground/80" strokeWidth={2.5} />
-                <Wifi className="h-3 w-3 text-foreground/80" strokeWidth={2.5} />
-                <Battery className="h-3.5 w-3.5 text-foreground/80" strokeWidth={2.5} />
+                <Signal className="h-2.5 w-2.5 text-foreground/70" strokeWidth={2.5} />
+                <Wifi className="h-2.5 w-2.5 text-foreground/70" strokeWidth={2.5} />
+                <Battery className="h-3 w-3 text-foreground/70" strokeWidth={2.5} />
               </div>
             </div>
 
