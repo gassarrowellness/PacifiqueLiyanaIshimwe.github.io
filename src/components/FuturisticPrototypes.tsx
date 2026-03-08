@@ -60,8 +60,8 @@ const prototypes = [
     userProblem: "Cross-border SME traders face inconsistent regulations, complex paperwork, and unpredictable tariffs that increase costs and delays. Most cannot afford trade compliance consultants.",
     architecture: ["Regulation Parser", "Tariff Calculator", "Document Generator", "Border Status API", "Trader Mobile App"],
     screens: [
-      { title: "Select Route", annotation: "Origin & destination selection", elements: ["🌍 TradePass", "Select Trade Route:", "From: [Rwanda 🇷🇼]", "To:   [Kenya 🇰🇪]", "Goods: [Textiles ▼]", "[Check Requirements →]"] },
-      { title: "Tariff Check", annotation: "Real-time tariff calculation", elements: ["Tariff Summary", "Product: Cotton textiles", "HS Code: 5208.21", "Duty: 10% (AfCFTA)", "VAT: 16%", "Est. cost: $1,240"] },
+      { title: "Select Route", annotation: "Origin & destination selection", elements: ["🌍 TradePass", "Select Trade Route:", "From: [Rwanda 🇷🇼]", "To:   [Uganda 🇺🇬]", "Goods: [Textiles ▼]", "[Check Requirements →]"] },
+      { title: "Tariff Check", annotation: "Real-time tariff calculation", elements: ["Tariff Summary", "Product: Cotton textiles", "HS Code: 5208.21", "Duty: 10% (AfCFTA)", "VAT: 18%", "Est. cost: $1,240"] },
       { title: "Document Generator", annotation: "Auto-filled export documents", elements: ["Required Documents", "☑ Certificate of Origin", "☑ Commercial Invoice", "☐ Phyto Certificate", "☐ Packing List", "[Generate All →]"] },
       { title: "Submission Status", annotation: "Track clearance progress", elements: ["Clearance Status", "Step 1: Docs ✅", "Step 2: Customs ✅", "Step 3: Inspection 🔄", "Step 4: Release ⏳", "ETA: 2 hours"] },
     ] as Screen[],
