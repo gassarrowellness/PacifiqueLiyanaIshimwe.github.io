@@ -54,7 +54,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Mobile Money Agent Support Platform",
-    tagline: "Opareta: Migrating agent workflows from WhatsApp to a dedicated platform",
+    tagline: "Migrating agent workflows from WhatsApp to a dedicated platform",
     tags: ["Mobile Money", "Agent Tools", "Migration", "Platform"],
     problem: "Mobile money agents relied on WhatsApp for operational communication, creating fragmented workflows, poor visibility, and inconsistent support across the agent network.",
     userInsights: "Agents needed a centralized tool for communication and task management. WhatsApp lacked structure for tracking, escalation, and operational reporting.",
