@@ -24,10 +24,10 @@ const UssdPhoneFrame = ({
     <div className="flex flex-col items-center gap-4">
       <div className="relative w-[260px] md:w-[280px]">
         {/* Phone bezel - classic phone shape */}
-        <div className="bg-[hsl(var(--foreground)/0.85)] dark:bg-[hsl(var(--foreground)/0.15)] rounded-[2rem] p-[10px] shadow-xl">
+        <div className="bg-gradient-to-b from-[#d4c5a9] via-[#c9b896] to-[#bfae8a] dark:from-[#8a7d65] dark:via-[#7a6e58] dark:to-[#6b604d] rounded-[2rem] p-[10px] shadow-xl ring-1 ring-[#bfae8a]/30">
           {/* Earpiece */}
           <div className="flex justify-center pt-2 pb-3">
-            <div className="w-12 h-1.5 rounded-full bg-[hsl(var(--foreground)/0.3)] dark:bg-[hsl(var(--foreground)/0.1)]" />
+            <div className="w-12 h-1.5 rounded-full bg-[#b5a57e]/50 dark:bg-[#6b604d]/50" />
           </div>
 
           {/* Screen area - plain white */}
@@ -56,7 +56,7 @@ const UssdPhoneFrame = ({
               {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
                 <div
                   key={key}
-                  className="h-8 rounded-lg bg-[hsl(var(--foreground)/0.2)] dark:bg-[hsl(var(--foreground)/0.08)] flex items-center justify-center text-xs font-bold text-[hsl(var(--background))] dark:text-[hsl(var(--foreground)/0.5)] select-none"
+                  className="h-8 rounded-lg bg-[#b5a57e]/30 dark:bg-[#6b604d]/30 flex items-center justify-center text-xs font-bold text-[#5a5040] dark:text-[#a89870] select-none"
                 >
                   {key}
                 </div>
@@ -66,12 +66,12 @@ const UssdPhoneFrame = ({
 
           {/* Navigation buttons row */}
           <div className="flex justify-center gap-6 pt-2 pb-1">
-            <div className="w-8 h-8 rounded-full bg-[hsl(var(--foreground)/0.25)] dark:bg-[hsl(var(--foreground)/0.08)] flex items-center justify-center">
-              <span className="text-[8px] font-bold text-[hsl(var(--background))] dark:text-[hsl(var(--foreground)/0.4)]">SEND</span>
+            <div className="w-8 h-8 rounded-full bg-[#b5a57e]/40 dark:bg-[#6b604d]/30 flex items-center justify-center">
+              <span className="text-[8px] font-bold text-[#5a5040] dark:text-[#a89870]">SEND</span>
             </div>
-            <div className="w-10 h-10 rounded-full bg-[hsl(var(--foreground)/0.3)] dark:bg-[hsl(var(--foreground)/0.1)] border-2 border-[hsl(var(--foreground)/0.4)] dark:border-[hsl(var(--foreground)/0.15)]" />
-            <div className="w-8 h-8 rounded-full bg-[hsl(var(--foreground)/0.25)] dark:bg-[hsl(var(--foreground)/0.08)] flex items-center justify-center">
-              <span className="text-[8px] font-bold text-[hsl(var(--background))] dark:text-[hsl(var(--foreground)/0.4)]">END</span>
+            <div className="w-10 h-10 rounded-full bg-[#b5a57e]/50 dark:bg-[#6b604d]/30 border-2 border-[#a89870]/40" />
+            <div className="w-8 h-8 rounded-full bg-[#b5a57e]/40 dark:bg-[#6b604d]/30 flex items-center justify-center">
+              <span className="text-[8px] font-bold text-[#5a5040] dark:text-[#a89870]">END</span>
             </div>
           </div>
         </div>
