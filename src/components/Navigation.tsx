@@ -4,16 +4,28 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { CONTACT } from "@/data/contact";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { Link, useLocation } from "react-router-dom";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Process", href: "#design-walkthrough" },
-  { label: "Portfolio", href: "#product-work" },
-  { label: "Strategy", href: "#strategy" },
-  { label: "Experiments", href: "#experiments" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Contact", href: "#contact" },
-];
+const Navigation = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const homeLinks = [
+    { label: "About", href: "#about" },
+    { label: "Process", href: "#design-walkthrough" },
+    { label: "Timeline", href: "#timeline" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  const workLinks = [
+    { label: "Case Studies", href: "#case-studies" },
+    { label: "Strategy", href: "#strategy" },
+    { label: "Experiments", href: "#experiments" },
+  ];
+
+  const sectionLinks = isHome ? homeLinks : workLinks;
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
