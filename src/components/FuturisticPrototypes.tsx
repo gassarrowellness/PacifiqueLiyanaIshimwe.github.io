@@ -19,9 +19,9 @@ const prototypes = [
     architecture: ["Transaction Aggregator", "Credit Scoring Engine", "Savings Wallet", "Lender API", "Worker Dashboard"],
     screens: [
       { title: "Welcome", annotation: "Onboarding with platform linking", elements: ["💰 GigCredit", "Welcome, worker!", "Link your gig accounts", "to unlock credit.", "[Get Started →]"] },
-      { title: "Link Accounts", annotation: "Connect mobile money & gig platforms", elements: ["Connect Your Accounts", "☑ M-Pesa linked", "☐ Bolt driver account", "☐ Jumia seller", "[Link account]", "Skip for now"] },
+      { title: "Link Accounts", annotation: "Connect mobile money & gig platforms", elements: ["Connect Your Accounts", "☑ MTN MoMo linked", "☐ Bolt driver account", "☐ Jumia seller", "[Link account]", "Skip for now"] },
       { title: "Credit Score", annotation: "AI-generated creditworthiness", elements: ["Your Credit Score", "┌──────────────┐", "│   ★ 720      │", "│  Good Standing │", "└──────────────┘", "Based on 6mo activity"] },
-      { title: "Loan Offers", annotation: "Matched lending products", elements: ["Available Offers", "┌ Micro Loan ────┐", "│ KES 15,000     │", "│ 2.5% / 30 days │", "│ [Apply Now]     │", "└────────────────┘"] },
+      { title: "Loan Offers", annotation: "Matched lending products", elements: ["Available Offers", "┌ Micro Loan ────┐", "│ ZMW 15,000     │", "│ 2.5% / 30 days │", "│ [Apply Now]     │", "└────────────────┘"] },
     ] as Screen[],
   },
   {
@@ -60,8 +60,8 @@ const prototypes = [
     userProblem: "Cross-border SME traders face inconsistent regulations, complex paperwork, and unpredictable tariffs that increase costs and delays. Most cannot afford trade compliance consultants.",
     architecture: ["Regulation Parser", "Tariff Calculator", "Document Generator", "Border Status API", "Trader Mobile App"],
     screens: [
-      { title: "Select Route", annotation: "Origin & destination selection", elements: ["🌍 TradePass", "Select Trade Route:", "From: [Rwanda 🇷🇼]", "To:   [Kenya 🇰🇪]", "Goods: [Textiles ▼]", "[Check Requirements →]"] },
-      { title: "Tariff Check", annotation: "Real-time tariff calculation", elements: ["Tariff Summary", "Product: Cotton textiles", "HS Code: 5208.21", "Duty: 10% (AfCFTA)", "VAT: 16%", "Est. cost: $1,240"] },
+      { title: "Select Route", annotation: "Origin & destination selection", elements: ["🌍 TradePass", "Select Trade Route:", "From: [Rwanda 🇷🇼]", "To:   [Uganda 🇺🇬]", "Goods: [Textiles ▼]", "[Check Requirements →]"] },
+      { title: "Tariff Check", annotation: "Real-time tariff calculation", elements: ["Tariff Summary", "Product: Cotton textiles", "HS Code: 5208.21", "Duty: 10% (AfCFTA)", "VAT: 18%", "Est. cost: $1,240"] },
       { title: "Document Generator", annotation: "Auto-filled export documents", elements: ["Required Documents", "☑ Certificate of Origin", "☑ Commercial Invoice", "☐ Phyto Certificate", "☐ Packing List", "[Generate All →]"] },
       { title: "Submission Status", annotation: "Track clearance progress", elements: ["Clearance Status", "Step 1: Docs ✅", "Step 2: Customs ✅", "Step 3: Inspection 🔄", "Step 4: Release ⏳", "ETA: 2 hours"] },
     ] as Screen[],
@@ -74,9 +74,9 @@ const prototypes = [
     userProblem: "Consumers in emerging markets buy essentials reactively, often paying premium prices at local shops. Retailers lack infrastructure to offer subscription models that improve affordability and retention.",
     architecture: ["Subscription Builder", "Mobile Money Gateway", "Delivery Scheduler", "Consumption Predictor", "Retailer Portal"],
     screens: [
-      { title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "│ KES 850/week     │", "│ [Subscribe →]    │", "└─────────────────┘"] },
+      { title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "│ ZMW 850/week     │", "│ [Subscribe →]    │", "└─────────────────┘"] },
       { title: "Customize Delivery", annotation: "Flexible scheduling options", elements: ["Delivery Schedule", "Frequency:", "○ Weekly  ● Bi-weekly", "○ Monthly", "Preferred day: [Sat ▼]", "Time: [Morning ▼]"] },
-      { title: "Payment Setup", annotation: "Mobile money integration", elements: ["Payment Method", "☑ M-Pesa Auto-pay", "Phone: +254 7XX XXX", "Amount: KES 1,700", "Cycle: Every 2 weeks", "[Activate Plan →]"] },
+      { title: "Payment Setup", annotation: "Mobile money integration", elements: ["Payment Method", "☑ MTN MoMo Auto-pay", "Phone: +260 9XX XXX", "Amount: ZMW 1,700", "Cycle: Every 2 weeks", "[Activate Plan →]"] },
       { title: "Active Subscription", annotation: "Subscription management view", elements: ["My Subscription ✅", "Next delivery: Sat 15", "Items: 6 products", "Saved vs retail: 18%", "[Modify] [Pause]", "[Add items +]"] },
     ] as Screen[],
   },
