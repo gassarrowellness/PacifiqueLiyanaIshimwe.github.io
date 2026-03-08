@@ -9,6 +9,8 @@ interface SmartphoneFrameProps {
   onPrev: () => void;
   onNext: () => void;
   onDotClick: (i: number) => void;
+  headerStyle?: "default" | "call";
+  headerSubtitle?: string;
 }
 
 const SmartphoneFrame = ({
