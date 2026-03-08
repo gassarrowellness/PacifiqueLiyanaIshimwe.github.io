@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { CONTACT } from "@/data/contact";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -15,6 +17,7 @@ const navLinks = [
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -29,7 +32,7 @@ const Navigation = () => {
           P<span className="gradient-text">.</span>Ishimwe
         </a>
 
-        <div className="flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
+        <div className="hidden md:flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -46,6 +49,37 @@ const Navigation = () => {
           <Button size="sm" className="rounded-full hidden sm:inline-flex" asChild>
             <a href={CONTACT.resumePath} target="_blank">Resume</a>
           </Button>
+
+          <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`}
+                aria-label="Open menu"
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72">
+              <SheetTitle className="sr-only">Navigation</SheetTitle>
+              <div className="flex flex-col gap-6 mt-8">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-base text-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <Button size="sm" className="rounded-full w-fit" asChild>
+                  <a href={CONTACT.resumePath} target="_blank">Resume</a>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
