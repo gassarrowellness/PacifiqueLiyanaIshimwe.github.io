@@ -4,6 +4,7 @@ import { Mail, Linkedin, Send, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { CONTACT } from "@/data/contact";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -38,21 +39,21 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <a href="mailto:plishimwe@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href={CONTACT.mailtoLink} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary" />
-                  plishimwe@gmail.com
+                  {CONTACT.email}
                 </a>
-                <a href="tel:+260966298816" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href={CONTACT.phoneLink} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Phone className="h-5 w-5 text-primary" />
-                  +260 966 298 816
+                  {CONTACT.phone}
                 </a>
-                <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                   LinkedIn Profile
                 </a>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
-                  Lusaka, Zambia
+                  {CONTACT.location}
                 </div>
               </div>
             </div>

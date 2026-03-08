@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CONTACT } from "@/data/contact";
 
 const Hero = () => {
   return (
@@ -34,7 +35,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-3">
-            Senior Product Manager | AI, Platforms, Digital Operations
+            {CONTACT.title}
           </p>
 
           <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto mb-8">
@@ -50,13 +51,13 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
-              <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer">
+              <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
             <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
-              <a href="mailto:plishimwe@gmail.com">
+              <a href={CONTACT.mailtoLink}>
                 <Mail className="h-4 w-4" />
                 Contact
               </a>

@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import { CONTACT } from "@/data/contact";
 
 const Contact = () => {
   return (
@@ -19,22 +20,22 @@ const Contact = () => {
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
-                    <a href="mailto:plishimwe@gmail.com" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      plishimwe@gmail.com
+                    <a href={CONTACT.mailtoLink} className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                      {CONTACT.email}
                     </a>
                   </div>
                   
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">PHONE</h3>
-                    <a href="tel:+260966298816" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      +260 966 298 816
+                    <a href={CONTACT.phoneLink} className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                      {CONTACT.phone}
                     </a>
                   </div>
                   
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">LOCATION</h3>
                     <address className="text-xl not-italic">
-                      Lusaka, Zambia
+                      {CONTACT.location}
                     </address>
                   </div>
                 </div>
@@ -44,10 +45,10 @@ const Contact = () => {
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-6">CONNECT</h3>
                   <div className="space-y-4">
-                    <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       LinkedIn
                     </a>
-                    <a href="mailto:plishimwe@gmail.com" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <a href={CONTACT.mailtoLink} className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       Email
                     </a>
                   </div>
