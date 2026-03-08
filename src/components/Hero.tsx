@@ -46,10 +46,10 @@ const Hero = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
             <Button size="default" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
-              <a href="#product-work">
+              <Link to="/work">
                 <FileText className="h-4 w-4" />
                 View Product Work
-              </a>
+              </Link>
             </Button>
             <Button size="default" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
               <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer">
