@@ -60,12 +60,14 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
   switch (type) {
     case "dialin":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-            <Phone className="h-7 w-7 text-primary" />
+        <div className="flex flex-col items-center h-full">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+              <Phone className="h-7 w-7 text-primary" />
+            </div>
+            <p className="text-sm font-bold text-foreground">Dial *123#</p>
           </div>
-          <p className="text-sm font-bold text-foreground">Dial *123#</p>
-          <div className="w-full space-y-1.5 mt-2 bg-secondary/40 rounded-xl p-3">
+          <div className="w-full space-y-1.5 mt-auto bg-secondary/40 rounded-xl p-3">
             <p className="text-[11px] text-muted-foreground italic">"Welcome to [Service Name]."</p>
             <p className="text-[11px] text-foreground">Press 1 - Weather info</p>
             <p className="text-[11px] text-foreground">Press 2 - Agri advice</p>
