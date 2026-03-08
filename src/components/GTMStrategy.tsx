@@ -39,7 +39,7 @@ const sections = [
     items: [
       { label: "Competitor analysis", detail: "Systematically analyze direct and indirect competitors across product features, pricing, positioning, distribution, and customer satisfaction.", visual: "comparison" as DiagramType },
       { label: "Strength/weakness mapping", detail: "Create competitive matrices that reveal where competitors over-invest and under-deliver. Find the gaps where your product can win decisively.", visual: "matrix" as DiagramType },
-      { label: "Differentiation opportunities", detail: "Identify dimensions of competition where you can be meaningfully different — not just better. True differentiation creates categories, not just features.", visual: "chart" as DiagramType },
+      { label: "Differentiation opportunities", detail: "Identify dimensions of competition where you can be meaningfully different - not just better. True differentiation creates categories, not just features.", visual: "chart" as DiagramType },
       { label: "Market positioning gaps", detail: "Map the competitive landscape to find unoccupied positions. Look for underserved segments, unmet needs, and pricing gaps you can own.", visual: "mapping" as DiagramType },
     ],
   },
