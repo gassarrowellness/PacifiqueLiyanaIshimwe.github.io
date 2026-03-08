@@ -50,7 +50,7 @@ const SmartphoneFrame = ({
               </div>
             </div>
 
-            {/* Screen title — app header style */}
+            {/* Screen title - app header style */}
             <div className="px-6 pt-4 pb-2">
               <h4 className="text-base font-bold text-foreground tracking-tight">{screenTitle}</h4>
             </div>
