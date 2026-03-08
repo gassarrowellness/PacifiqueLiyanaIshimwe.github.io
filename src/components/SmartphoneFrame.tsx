@@ -54,7 +54,7 @@ const SmartphoneFrame = ({
             </div>
 
             {/* Screen content */}
-            <div className="px-5 pb-5 min-h-[440px] flex flex-col justify-start">
+            <div className="px-5 pb-5 min-h-[440px] flex flex-col justify-center">
               {children}
             </div>
 
