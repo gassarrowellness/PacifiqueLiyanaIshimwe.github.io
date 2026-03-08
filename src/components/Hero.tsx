@@ -21,15 +21,15 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center"
-        >
+          className="text-center">
+          
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-400/30 bg-white/20 text-sm text-slate-900 mb-6">
             <span className="w-2 h-2 rounded-full bg-slate-700 animate-pulse" />
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900">
-            Pacifique
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900">Pacifique Liyana
+Ishimwe
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
@@ -70,18 +70,18 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/30 backdrop-blur-xl border border-slate-200/50 shadow-sm"
-        >
+          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/30 backdrop-blur-xl border border-slate-200/50 shadow-sm">
+          
           {[
-            { value: "2M+", label: "Users Served" },
-            { value: "6+ yrs", label: "Experience" },
-            { value: "10+", label: "Products" },
-          ].map((m) => (
-            <div key={m.label} className="text-center">
+          { value: "2M+", label: "Users Served" },
+          { value: "6+ yrs", label: "Experience" },
+          { value: "10+", label: "Products" }].
+          map((m) =>
+          <div key={m.label} className="text-center">
               <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
               <p className="text-xs text-slate-600 mt-1">{m.label}</p>
             </div>
-          ))}
+          )}
         </motion.div>
 
         {/* Scroll indicator */}
@@ -89,15 +89,15 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="flex justify-center mt-8"
-        >
+          className="flex justify-center mt-8">
+          
           <a href="#about" className="text-slate-400 hover:text-slate-600 transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
