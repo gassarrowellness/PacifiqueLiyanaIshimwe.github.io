@@ -10,7 +10,7 @@ const milestones = [
     highlights: ["Operations design", "KPI dashboards", "Process automation"],
   },
   {
-    period: "Apr 2025 – Jul 2025",
+    period: "Apr 2025 - Jul 2025",
     role: "Senior Product Manager",
     company: "Opareta",
     description: "Led product management for a mobile app supporting analog mobile money agent networks with transaction tracking and operational digitization. Designed features for transaction recording, improved data capture accuracy, and built internal tools for field issue logging.",
