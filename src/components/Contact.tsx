@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { CONTACT } from "@/data/contact";
+import { openMailto } from "@/lib/openMailto";
 
 const Contact = () => {
   const ref = useRef(null);
