@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { CONTACT } from "@/data/contact";
+import { openMailto } from "@/lib/openMailto";
 
 const Contact = () => {
   return (
