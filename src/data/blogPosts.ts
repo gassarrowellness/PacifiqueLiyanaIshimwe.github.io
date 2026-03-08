@@ -67,7 +67,7 @@ While the path toward sustainable architecture presents challenges - including h
 
 ## Conclusion
 
-The future of architecture lies in our ability to create buildings that work in harmony with natural systems. As architects, we have the responsibility and the opportunity to design a built environment that supports both human well-being and planetary health. The transition to sustainable architecture is not just an environmental imperative—it is a creative challenge that will define the next era of architectural innovation.
+The future of architecture lies in our ability to create buildings that work in harmony with natural systems. As architects, we have the responsibility and the opportunity to design a built environment that supports both human well-being and planetary health. The transition to sustainable architecture is not just an environmental imperative. It is a creative challenge that will define the next era of architectural innovation.
     `,
     author: "Sarah Chen",
     date: "2024-03-15",
