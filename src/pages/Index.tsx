@@ -24,12 +24,12 @@ const Index = () => {
       <ProductDesignWalkthrough />
       <CaseStudies />
       <InteractiveWireframes />
-      <FuturisticPrototypes />
-      <AIDemos />
       <ProductStrategy />
       <GTMStrategy />
       <ExperimentsBoard />
       <ProductDashboards />
+      <FuturisticPrototypes />
+      <AIDemos />
       <Timeline />
       <SkillsTools />
       <Contact />
