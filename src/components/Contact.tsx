@@ -43,10 +43,10 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <a href={CONTACT.mailtoLink} target="_top" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <button onClick={() => openMailto(CONTACT.mailtoLink)} className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary" />
                   {CONTACT.email}
-                </a>
+                </button>
                 <a href={CONTACT.phoneLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <Phone className="h-5 w-5 text-primary" />
                   {CONTACT.phone}

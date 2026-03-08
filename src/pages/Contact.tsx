@@ -49,9 +49,9 @@ const Contact = () => {
                     <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       LinkedIn
                     </a>
-                    <a href={CONTACT.mailtoLink} target="_top" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <button onClick={() => openMailto(CONTACT.mailtoLink)} className="block text-xl hover:text-muted-foreground transition-colors duration-300">
                       Email
-                    </a>
+                    </button>
                   </div>
                 </div>
                 

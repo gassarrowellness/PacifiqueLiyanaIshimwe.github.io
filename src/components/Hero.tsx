@@ -58,11 +58,9 @@ const Hero = () => {
                 LinkedIn
               </a>
             </Button>
-            <Button size="default" className="rounded-full gap-2 shadow-lg bg-[hsl(var(--cta-action))] text-white hover:bg-[hsl(var(--cta-action)/0.85)] shadow-[hsl(var(--cta-action)/0.3)]" asChild>
-              <a href={CONTACT.mailtoLink} target="_top">
+            <Button size="default" className="rounded-full gap-2 shadow-lg bg-[hsl(var(--cta-action))] text-white hover:bg-[hsl(var(--cta-action)/0.85)] shadow-[hsl(var(--cta-action)/0.3)]" onClick={() => openMailto(CONTACT.mailtoLink)}>
                 <Mail className="h-4 w-4" />
                 Contact
-              </a>
             </Button>
           </div>
         </motion.div>
