@@ -63,7 +63,7 @@ The next generation of sustainable buildings aims not just to minimize carbon em
 
 ## Challenges and Opportunities
 
-While the path toward sustainable architecture presents challenges—including higher upfront costs, regulatory barriers, and the need for specialized knowledge—it also offers tremendous opportunities. These include reduced operational costs, improved occupant health and productivity, and the potential to create resilient communities that can adapt to changing environmental conditions.
+While the path toward sustainable architecture presents challenges - including higher upfront costs, regulatory barriers, and the need for specialized knowledge - it also offers tremendous opportunities. These include reduced operational costs, improved occupant health and productivity, and the potential to create resilient communities that can adapt to changing environmental conditions.
 
 ## Conclusion
 
