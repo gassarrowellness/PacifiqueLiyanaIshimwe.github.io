@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp } from "lucide-react";
+import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp, ChevronDown } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
 
 interface ActionItem {
