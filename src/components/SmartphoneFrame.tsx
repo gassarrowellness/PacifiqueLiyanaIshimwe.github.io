@@ -11,6 +11,7 @@ interface SmartphoneFrameProps {
   onDotClick: (i: number) => void;
   headerStyle?: "default" | "call";
   headerSubtitle?: string;
+  headerIcon?: ReactNode;
 }
 
 const SmartphoneFrame = ({
@@ -23,6 +24,7 @@ const SmartphoneFrame = ({
   onDotClick,
   headerStyle = "default",
   headerSubtitle,
+  headerIcon,
 }: SmartphoneFrameProps) => {
   return (
     <div className="flex justify-center">
@@ -68,11 +70,26 @@ const SmartphoneFrame = ({
                 </div>
               </div>
             ) : (
-              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-primary to-primary/80 px-4 py-3">
-                <h4 className="text-sm font-bold text-primary-foreground leading-tight">{screenTitle}</h4>
-                {headerSubtitle && (
-                  <p className="text-[10px] text-primary-foreground/70 mt-0.5">{headerSubtitle}</p>
-                )}
+              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-4 py-4 relative overflow-hidden">
+                {/* Decorative pattern */}
+                <div className="absolute inset-0 opacity-[0.07]">
+                  <div className="absolute top-1 right-2 w-16 h-16 rounded-full border-2 border-primary-foreground" />
+                  <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full border border-primary-foreground" />
+                  <div className="absolute top-3 right-12 w-3 h-3 rounded-full bg-primary-foreground" />
+                </div>
+                <div className="relative flex items-center gap-3">
+                  {headerIcon && (
+                    <div className="w-9 h-9 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary-foreground/10">
+                      {headerIcon}
+                    </div>
+                  )}
+                  <div>
+                    <h4 className="text-sm font-bold text-primary-foreground leading-tight">{screenTitle}</h4>
+                    {headerSubtitle && (
+                      <p className="text-[10px] text-primary-foreground/70 mt-0.5">{headerSubtitle}</p>
+                    )}
+                  </div>
+                </div>
               </div>
             )}
 

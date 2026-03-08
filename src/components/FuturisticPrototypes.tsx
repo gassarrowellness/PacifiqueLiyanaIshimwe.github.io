@@ -198,6 +198,8 @@ const FuturisticPrototypes = () => {
                           {/* Smartphone */}
                           <SmartphoneFrame
                             screenTitle={proto.screens[currentScreen].title}
+                            headerSubtitle={proto.screens[currentScreen].elements[0]?.replace(/[📦💰📊🌍🛒🤝]/gu, '').trim()}
+                            headerIcon={<proto.icon className="h-4 w-4 text-primary-foreground" />}
                             currentScreen={currentScreen}
                             totalScreens={proto.screens.length}
                             onPrev={() => setScreen(i, Math.max(0, currentScreen - 1))}
