@@ -45,7 +45,13 @@ const Navigation = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
-          {navLinks.map((link) => (
+          <Link
+            to={isHome ? "/work" : "/"}
+            className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
+          >
+            {isHome ? "Work" : "Home"}
+          </Link>
+          {sectionLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
