@@ -41,7 +41,7 @@ const ExperimentsBoard = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-background" id="experiments">
+    <section className="py-16 md:py-20 bg-background" id="experiments">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
