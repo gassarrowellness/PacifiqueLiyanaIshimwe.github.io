@@ -12,8 +12,8 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+          transition={{ duration: 0.7 }}>
+          
           <p className="text-label text-primary mb-4">About</p>
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-12">
             Building Products That <span className="gradient-text">Matter</span>
@@ -21,17 +21,16 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a product manager with experience managing products and initiatives across remote 
-                teams. I've led a national digital engagement platform serving over 2 million users, 
-                piloted and launched the world's first offline Generative AI assistant, and co-designed 
-                large-scale programs with USAID, UNICEF, CIMMYT, and government partners.
+              <p className="text-lg text-muted-foreground leading-relaxed">I am a product manager with experience managing products and initiatives across remote teams. I piloted and launched the world's first offline Generative AI assistant, and co-designed large-scale programs with USAID, UNICEF, CIMMYT, and government partners and led a national digital engagement platform serving over 2 million users. 
+
+
+
+
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                My work spans AI, telecom, fintech, and renewable energy. I build digital platforms, 
-                run pilots, validate hypotheses, and scale solutions that deliver measurable 
-                impact. I bring a proven track record in stakeholder management, budget oversight, 
-                and translating strategy into operational execution.
+              <p className="text-lg text-muted-foreground leading-relaxed">My work spans AI, telecom partnerships, stakeholder management, fintech, and renewable energy. I build digital platforms, run pilots, validate hypotheses, and scale solutions that deliver measurable impact. I bring a proven track record in stakeholder management, budget oversight, and translating strategy into operational execution.
+
+
+
               </p>
             </div>
 
@@ -40,39 +39,39 @@ const About = () => {
                 <h3 className="text-label text-primary mb-4">How I Work</h3>
                 <div className="space-y-4">
                   {[
-                    { step: "01", title: "Strategic Discovery", desc: "Define problems, stakeholder alignment, cross-functional prioritization" },
-                    { step: "02", title: "Iterative Development", desc: "Agile delivery, user feedback loops, MVP validation and experimentation" },
-                    { step: "03", title: "Measurable Impact", desc: "Data-driven decisions, monitoring & evaluation, sustainable growth" },
-                  ].map((item) => (
-                    <div key={item.step} className="flex gap-4">
+                  { step: "01", title: "Strategic Discovery", desc: "Define problems, leverage AI-powered insights for clear prioritization" },
+                  { step: "02", title: "Iterative Development", desc: "Regular milestone reviews, collaborative feedback loops aligned to user needs" },
+                  { step: "03", title: "Measurable Impact", desc: "Transparent communication, data-driven outcomes that drive growth" }].
+                  map((item) =>
+                  <div key={item.step} className="flex gap-4">
                       <span className="text-primary font-mono text-sm font-bold mt-1">{item.step}</span>
                       <div>
                         <h4 className="font-medium text-foreground">{item.title}</h4>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { label: "Experience", value: "7+ yrs" },
-                  { label: "Sectors", value: "4+" },
-                  { label: "Countries", value: "2+" },
-                ].map((s) => (
-                  <div key={s.label} className="glass rounded-xl p-4 text-center">
+                { label: "Experience", value: "5+ yrs" },
+                { label: "Markets", value: "5+" },
+                { label: "Products", value: "10+" }].
+                map((s) =>
+                <div key={s.label} className="glass rounded-xl p-4 text-center">
                     <p className="text-xl font-bold text-display gradient-text">{s.value}</p>
                     <p className="text-[11px] text-muted-foreground mt-1">{s.label}</p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default About;
