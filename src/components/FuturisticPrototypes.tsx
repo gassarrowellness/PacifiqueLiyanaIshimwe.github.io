@@ -21,7 +21,7 @@ const prototypes = [
       { title: "Welcome", annotation: "Onboarding with platform linking", elements: ["💰 GigCredit", "Welcome, worker!", "Link your gig accounts", "to unlock credit.", "[Get Started →]"] },
       { title: "Link Accounts", annotation: "Connect mobile money & gig platforms", elements: ["Connect Your Accounts", "☑ MTN MoMo linked", "☐ Bolt driver account", "☐ Jumia seller", "[Link account]", "Skip for now"] },
       { title: "Credit Score", annotation: "AI-generated creditworthiness", elements: ["Your Credit Score", "┌──────────────┐", "│   ★ 720      │", "│  Good Standing │", "└──────────────┘", "Based on 6mo activity"] },
-      { title: "Loan Offers", annotation: "Matched lending products", elements: ["Available Offers", "┌ Micro Loan ────┐", "{ title: "Loan Offers", annotation: "Matched lending products", elements: ["Available Offers", "┌ Micro Loan ────┐", "│ ZMW 15,000     │", "│ 2.5% / 30 days │", "│ [Apply Now]     │", "└────────────────┘"] },", "│ 2.5% / 30 days │", "│ [Apply Now]     │", "└────────────────┘"] },
+      { title: "Loan Offers", annotation: "Matched lending products", elements: ["Available Offers", "┌ Micro Loan ────┐", "│ ZMW 15,000     │", "│ 2.5% / 30 days │", "│ [Apply Now]     │", "└────────────────┘"] },
     ] as Screen[],
   },
   {
