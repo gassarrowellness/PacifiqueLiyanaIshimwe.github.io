@@ -147,22 +147,24 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "response":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-            <Volume2 className="h-7 w-7 text-primary" />
+        <div className="flex flex-col items-center h-full">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+              <Volume2 className="h-7 w-7 text-primary" />
+            </div>
+            {/* Waveform */}
+            <div className="flex gap-0.5 items-end h-8">
+              {[0.4, 0.7, 1, 0.8, 0.5, 0.9, 0.6, 1, 0.7, 0.3, 0.8, 0.5].map((h, i) => (
+                <motion.div
+                  key={i}
+                  className="w-1 bg-primary rounded-full"
+                  animate={{ height: [h * 12, h * 24, h * 12] }}
+                  transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
+                />
+              ))}
+            </div>
           </div>
-          {/* Waveform */}
-          <div className="flex gap-0.5 items-end h-8">
-            {[0.4, 0.7, 1, 0.8, 0.5, 0.9, 0.6, 1, 0.7, 0.3, 0.8, 0.5].map((h, i) => (
-              <motion.div
-                key={i}
-                className="w-1 bg-primary rounded-full"
-                animate={{ height: [h * 12, h * 24, h * 12] }}
-                transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
-              />
-            ))}
-          </div>
-          <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2">
+          <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2 mt-auto">
             <p className="text-[11px] text-muted-foreground italic">"The current average price of maize in your region is 120 kwacha per kilogram."</p>
             <p className="text-[11px] text-foreground font-medium mt-2">Press 1 - Ask another question</p>
             <p className="text-[11px] text-foreground font-medium">Press 0 - Return to main menu</p>
