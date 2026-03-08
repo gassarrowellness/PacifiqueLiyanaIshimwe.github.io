@@ -1,4 +1,5 @@
 import { Linkedin, Mail, ArrowUp } from "lucide-react";
+import { CONTACT } from "@/data/contact";
 
 const Footer = () => {
   return (
@@ -6,15 +7,15 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-display font-semibold">P<span className="gradient-text">.</span>Ishimwe</p>
-            <p className="text-sm text-muted-foreground mt-1">Product Manager | Ship, Scale, Monetize</p>
+            <p className="text-display font-semibold">{CONTACT.shortName.replace(".", "")}<span className="gradient-text">.</span>{CONTACT.shortName.split(".")[1]}</p>
+            <p className="text-sm text-muted-foreground mt-1">{CONTACT.tagline}</p>
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="mailto:plishimwe@gmail.com" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
+            <a href={CONTACT.mailtoLink} className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
               <Mail className="h-4 w-4 text-muted-foreground" />
             </a>
-            <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
+            <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
               <Linkedin className="h-4 w-4 text-muted-foreground" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
@@ -24,7 +25,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Pacifique Liyana Ishimwe. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} {CONTACT.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

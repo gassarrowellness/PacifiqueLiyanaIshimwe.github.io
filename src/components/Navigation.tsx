@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { CONTACT } from "@/data/contact";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -43,7 +44,7 @@ const Navigation = () => {
         <div className="flex items-center gap-2 shrink-0">
           <ThemeToggle />
           <Button size="sm" className="rounded-full hidden sm:inline-flex" asChild>
-            <a href="/Pacifique_Liyana_Ishimwe_Resume.pdf" target="_blank">Resume</a>
+            <a href={CONTACT.resumePath} target="_blank">Resume</a>
           </Button>
         </div>
       </div>
