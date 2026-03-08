@@ -60,12 +60,14 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
   switch (type) {
     case "dialin":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-            <Phone className="h-7 w-7 text-primary" />
+        <div className="flex flex-col items-center h-full">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+              <Phone className="h-7 w-7 text-primary" />
+            </div>
+            <p className="text-sm font-bold text-foreground">Dial *123#</p>
           </div>
-          <p className="text-sm font-bold text-foreground">Dial *123#</p>
-          <div className="w-full space-y-1.5 mt-2 bg-secondary/40 rounded-xl p-3">
+          <div className="w-full space-y-1.5 mt-auto bg-secondary/40 rounded-xl p-3">
             <p className="text-[11px] text-muted-foreground italic">"Welcome to [Service Name]."</p>
             <p className="text-[11px] text-foreground">Press 1 - Weather info</p>
             <p className="text-[11px] text-foreground">Press 2 - Agri advice</p>
@@ -77,8 +79,11 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "menu":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="grid grid-cols-3 gap-1.5 w-fit">
+        <div className="flex flex-col items-center h-full">
+          <div className="w-full bg-secondary/40 rounded-xl p-3 mb-4">
+            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
+          </div>
+          <div className="grid grid-cols-3 gap-1.5 w-fit mt-auto">
             {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map((key) => (
               <div
                 key={key}
@@ -91,9 +96,6 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
                 {key}
               </div>
             ))}
-          </div>
-          <div className="w-full bg-secondary/40 rounded-xl p-3 mt-1">
-            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
           </div>
         </div>
       );
@@ -145,22 +147,24 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "response":
       return (
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-            <Volume2 className="h-7 w-7 text-primary" />
+        <div className="flex flex-col items-center h-full">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+              <Volume2 className="h-7 w-7 text-primary" />
+            </div>
+            {/* Waveform */}
+            <div className="flex gap-0.5 items-end h-8">
+              {[0.4, 0.7, 1, 0.8, 0.5, 0.9, 0.6, 1, 0.7, 0.3, 0.8, 0.5].map((h, i) => (
+                <motion.div
+                  key={i}
+                  className="w-1 bg-primary rounded-full"
+                  animate={{ height: [h * 12, h * 24, h * 12] }}
+                  transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
+                />
+              ))}
+            </div>
           </div>
-          {/* Waveform */}
-          <div className="flex gap-0.5 items-end h-8">
-            {[0.4, 0.7, 1, 0.8, 0.5, 0.9, 0.6, 1, 0.7, 0.3, 0.8, 0.5].map((h, i) => (
-              <motion.div
-                key={i}
-                className="w-1 bg-primary rounded-full"
-                animate={{ height: [h * 12, h * 24, h * 12] }}
-                transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
-              />
-            ))}
-          </div>
-          <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2">
+          <div className="w-full bg-secondary/40 rounded-xl p-3 space-y-2 mt-auto">
             <p className="text-[11px] text-muted-foreground italic">"The current average price of maize in your region is 120 kwacha per kilogram."</p>
             <p className="text-[11px] text-foreground font-medium mt-2">Press 1 - Ask another question</p>
             <p className="text-[11px] text-foreground font-medium">Press 0 - Return to main menu</p>
@@ -170,8 +174,9 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
 
     case "loop":
       return (
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-full space-y-2">
+        <div className="flex flex-col items-center h-full">
+          <div className="flex-1" />
+          <div className="w-full space-y-2 mt-auto">
             {[
               { key: "1", label: "Ask another question", icon: Mic },
               { key: "0", label: "Return to main menu", icon: Phone },
