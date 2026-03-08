@@ -22,15 +22,16 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a product manager with deep experience managing multi-country digital initiatives 
-                across AI, telecom, fintech, and development sectors. I've led platforms serving over 
-                2 million users, launched the world's first offline Generative AI assistant, and scaled 
-                subscription products to $2.4M ARR.
+                I'm a product manager with experience managing products and initiatives across remote 
+                teams. I've led a national digital engagement platform serving over 2 million users, 
+                piloted and launched the world's first offline Generative AI assistant, and co-designed 
+                large-scale programs with USAID, UNICEF, CIMMYT, and government partners.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My work sits at the intersection of product strategy, experimentation, and emerging 
-                market innovation — building digital platforms, running pilots, validating hypotheses, 
-                and scaling solutions that deliver measurable impact for users who need them most.
+                My work spans AI, telecom, fintech, and renewable energy — building digital platforms, 
+                running pilots, validating hypotheses, and scaling solutions that deliver measurable 
+                impact. I bring a proven track record in stakeholder management, budget oversight, 
+                and translating strategy into operational execution.
               </p>
             </div>
 
@@ -39,9 +40,9 @@ const About = () => {
                 <h3 className="text-label text-primary mb-4">How I Work</h3>
                 <div className="space-y-4">
                   {[
-                    { step: "01", title: "Strategic Discovery", desc: "Define problems, leverage AI-powered insights for clear prioritization" },
-                    { step: "02", title: "Iterative Development", desc: "Regular milestone reviews, collaborative feedback loops aligned to user needs" },
-                    { step: "03", title: "Measurable Impact", desc: "Transparent communication, data-driven outcomes that drive growth" },
+                    { step: "01", title: "Strategic Discovery", desc: "Define problems, stakeholder alignment, cross-functional prioritization" },
+                    { step: "02", title: "Iterative Development", desc: "Agile delivery, user feedback loops, MVP validation and experimentation" },
+                    { step: "03", title: "Measurable Impact", desc: "Data-driven decisions, monitoring & evaluation, sustainable growth" },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
                       <span className="text-primary font-mono text-sm font-bold mt-1">{item.step}</span>
@@ -56,9 +57,9 @@ const About = () => {
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { label: "Experience", value: "5+ yrs" },
-                  { label: "Markets", value: "5+" },
-                  { label: "Products", value: "10+" },
+                  { label: "Experience", value: "7+ yrs" },
+                  { label: "Sectors", value: "4+" },
+                  { label: "Countries", value: "2+" },
                 ].map((s) => (
                   <div key={s.label} className="glass rounded-xl p-4 text-center">
                     <p className="text-xl font-bold text-display gradient-text">{s.value}</p>

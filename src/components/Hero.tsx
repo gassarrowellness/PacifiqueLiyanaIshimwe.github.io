@@ -28,19 +28,19 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto mb-4">
-            Product Manager — AI, Platforms, Digital Services
+            Senior Product Manager — AI, Platforms, Digital Operations
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground/70 max-w-xl mx-auto mb-12">
-            I help teams ship, scale, and monetize digital products for emerging markets.
-            From hypothesis to revenue — with measurable impact.
+            Building and scaling digital products for emerging markets — from AI-powered 
+            platforms to renewable energy solutions, with measurable impact.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             <Button size="lg" className="rounded-full gap-2" asChild>
-              <a href="#portfolio">
+              <a href="#product-work">
                 <FileText className="h-4 w-4" />
-                View Portfolio
+                View Product Work
               </a>
             </Button>
             <Button variant="outline" size="lg" className="rounded-full gap-2" asChild>
@@ -66,10 +66,10 @@ const Hero = () => {
           className="glass rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
         >
           {[
-            { value: "$2.4M", label: "ARR Scaled" },
             { value: "2M+", label: "Users Served" },
-            { value: "40%", label: "Activation Lift" },
-            { value: "5+", label: "Markets Launched" },
+            { value: "90K", label: "AI Queries (Pilot)" },
+            { value: "75%+", label: "User Retention" },
+            { value: "5K+", label: "Households Reached" },
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-2xl md:text-3xl font-bold text-display gradient-text">{m.value}</p>

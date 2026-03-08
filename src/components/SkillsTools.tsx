@@ -2,28 +2,32 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   Compass, FlaskConical, Layers, LineChart, Rocket, Users,
-  LayoutDashboard, Palette, TestTube, Cog, Map, GitBranch
+  LayoutDashboard, TestTube, Cog, Map, GitBranch, Palette,
+  Database, BarChart3
 } from "lucide-react";
 
 const skills = [
-  { icon: Compass, label: "Product Strategy", desc: "Roadmaps, opportunity assessment, prioritization" },
-  { icon: Users, label: "User Discovery", desc: "Interviews, personas, journey mapping" },
+  { icon: Compass, label: "Product Strategy", desc: "Roadmaps, GTM strategy, prioritization" },
+  { icon: Users, label: "User Research", desc: "Interviews, personas, human-centered design" },
   { icon: FlaskConical, label: "Experimentation", desc: "A/B testing, MVPs, hypothesis validation" },
   { icon: Rocket, label: "Go-to-Market", desc: "Launch strategy, pilots, market entry" },
-  { icon: Layers, label: "Platform Ecosystems", desc: "Multi-sided platforms, API strategy" },
-  { icon: LineChart, label: "Growth & Monetization", desc: "CAC, retention, ARPU optimization" },
+  { icon: Layers, label: "Platform & API Management", desc: "Multi-sided platforms, ecosystem strategy" },
+  { icon: LineChart, label: "Data-Driven Decisions", desc: "SQL, analytics, monitoring & evaluation" },
 ];
 
 const tools = [
-  { icon: LayoutDashboard, label: "Figma", category: "Design" },
-  { icon: LineChart, label: "Tableau", category: "Analytics" },
-  { icon: TestTube, label: "Google Analytics", category: "Analytics" },
   { icon: Map, label: "Linear", category: "Roadmapping" },
+  { icon: Cog, label: "Jira", category: "Project Mgmt" },
   { icon: Cog, label: "Asana", category: "Project Mgmt" },
   { icon: GitBranch, label: "Confluence", category: "Documentation" },
-  { icon: Palette, label: "Lovable", category: "Product Dev" },
-  { icon: FlaskConical, label: "n8n", category: "Automation" },
-  { icon: Layers, label: "SQL", category: "Data" },
+  { icon: Palette, label: "Notion", category: "Knowledge Mgmt" },
+  { icon: LayoutDashboard, label: "Figma", category: "Design" },
+  { icon: LineChart, label: "Tableau", category: "Analytics" },
+  { icon: BarChart3, label: "Looker Studio", category: "Analytics" },
+  { icon: TestTube, label: "Google Analytics", category: "Analytics" },
+  { icon: FlaskConical, label: "PostHog", category: "Product Analytics" },
+  { icon: GitBranch, label: "GitLab", category: "Dev Tools" },
+  { icon: Database, label: "SQL", category: "Data" },
 ];
 
 const SkillsTools = () => {
