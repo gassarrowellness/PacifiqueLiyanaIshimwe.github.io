@@ -21,9 +21,9 @@ const Contact = () => {
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
-                    <a href={CONTACT.mailtoLink} target="_top" className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <button onClick={() => openMailto(CONTACT.mailtoLink)} className="text-xl hover:text-muted-foreground transition-colors duration-300">
                       {CONTACT.email}
-                    </a>
+                    </button>
                   </div>
                   
                   <div>
