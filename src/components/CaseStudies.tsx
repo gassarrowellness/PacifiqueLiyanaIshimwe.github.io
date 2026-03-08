@@ -19,7 +19,7 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     title: "National Digital Engagement Platform",
-    tagline: "Viamo: Serving 2M+ users across health, agriculture & civic education",
+    tagline: "Serving 2M+ users across health, agriculture & civic education",
     tags: ["AI", "IVR", "Scale", "Partnerships"],
     problem: "Low-connectivity communities lacked access to reliable health, agriculture, and civic information. Existing digital channels couldn't reach last-mile users on basic phones.",
     userInsights: "Users needed voice-first, offline-capable solutions. Smartphone penetration was low, but mobile phone ownership was high. Content had to be in local languages.",
