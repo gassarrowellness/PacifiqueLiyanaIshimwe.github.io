@@ -15,7 +15,7 @@ const sections = [
     title: "Business Clarity & Positioning",
     description: "Define the core problem, the target market, why the product exists, and why the solution matters. Establish clear positioning before going to market.",
     items: [
-      { label: "Core problem definition", detail: "Articulate the specific, urgent problem your product solves. Frame it in the customer's language and quantify the pain — lost time, money, or opportunity.", visual: "framework" as DiagramType },
+      { label: "Core problem definition", detail: "Articulate the specific, urgent problem your product solves. Frame it in the customer's language and quantify the pain - lost time, money, or opportunity.", visual: "framework" as DiagramType },
       { label: "Target market identification", detail: "Define your ideal customer profile using firmographics, psychographics, and behavioral data. Narrow to a beachhead segment you can dominate before expanding.", visual: "mapping" as DiagramType },
       { label: "Product existence rationale", detail: "Answer 'why now?' and 'why us?' with conviction. Connect market timing, team expertise, and technological shifts into a compelling founding thesis.", visual: "comparison" as DiagramType },
       { label: "Solution value articulation", detail: "Craft a value proposition that connects the problem to your unique solution. Make the benefit tangible, measurable, and differentiated from alternatives.", visual: "framework" as DiagramType },
