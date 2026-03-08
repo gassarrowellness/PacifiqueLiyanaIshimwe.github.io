@@ -241,6 +241,14 @@ const InteractiveWireframes = () => {
                   onPrev={() => setActiveScreen(Math.max(0, activeScreen - 1))}
                   onNext={() => setActiveScreen(Math.min(steps.length - 1, activeScreen + 1))}
                   onDotClick={setActiveScreen}
+                  headerStyle="call"
+                  headerSubtitle={
+                    current.visualType === "dialin" ? "Calling..." :
+                    current.visualType === "record" ? "00:12 · Recording" :
+                    current.visualType === "processing" ? "00:15 · Processing" :
+                    current.visualType === "response" ? "00:18 · Playing" :
+                    "Active call"
+                  }
                 >
                   <StepVisual type={current.visualType} />
                 </SmartphoneFrame>
