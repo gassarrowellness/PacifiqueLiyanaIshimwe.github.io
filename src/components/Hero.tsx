@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             <Button size="lg" className="rounded-full gap-2" asChild>
-              <a href="#product-work">
+              <a href="#work">
                 <FileText className="h-4 w-4" />
                 View Product Work
               </a>
