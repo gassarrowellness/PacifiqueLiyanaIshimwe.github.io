@@ -91,7 +91,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
           className="flex justify-center mt-8"
         >
-          <a href="#about" className="text-gray-400 hover:text-gray-600 transition-colors">
+          <a href="#about" className="text-stone-400 hover:text-stone-600 transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
