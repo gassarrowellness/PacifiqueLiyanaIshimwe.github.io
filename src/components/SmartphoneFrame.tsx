@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ChevronLeft, ChevronRight, Signal, Wifi, Battery } from "lucide-react";
+import { ChevronLeft, ChevronRight, Signal, Wifi, Battery, Phone } from "lucide-react";
 
 interface SmartphoneFrameProps {
   screenTitle: string;
@@ -9,6 +9,8 @@ interface SmartphoneFrameProps {
   onPrev: () => void;
   onNext: () => void;
   onDotClick: (i: number) => void;
+  headerStyle?: "default" | "call";
+  headerSubtitle?: string;
 }
 
 const SmartphoneFrame = ({
@@ -19,6 +21,8 @@ const SmartphoneFrame = ({
   onPrev,
   onNext,
   onDotClick,
+  headerStyle = "default",
+  headerSubtitle,
 }: SmartphoneFrameProps) => {
   return (
     <div className="flex justify-center">
@@ -36,8 +40,8 @@ const SmartphoneFrame = ({
 
           {/* Inner screen */}
           <div className="relative bg-card rounded-[2.6rem] overflow-hidden">
-            {/* Camera punch-hole */}
-            <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-black/80 z-10" />
+            {/* Dynamic Island */}
+            <div className="absolute top-[8px] left-1/2 -translate-x-1/2 w-20 h-[22px] rounded-full bg-black z-10" />
             {/* Status bar */}
             <div className="flex items-center justify-between px-7 pt-3 pb-0.5">
               <span className="text-[11px] font-bold text-foreground/80 tracking-tight">9:41</span>
@@ -48,13 +52,32 @@ const SmartphoneFrame = ({
               </div>
             </div>
 
-            {/* Screen title - app header style */}
-            <div className="px-6 pt-4 pb-2">
-              <h4 className="text-base font-bold text-foreground tracking-tight">{screenTitle}</h4>
-            </div>
+            {/* App hero header */}
+            {headerStyle === "call" ? (
+              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-green-600 to-green-700 dark:from-green-700 dark:to-green-800 px-4 py-3 text-white">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+                    <Phone className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-white leading-tight">{screenTitle}</h4>
+                    {headerSubtitle && (
+                      <p className="text-[10px] text-white/70 mt-0.5">{headerSubtitle}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="mx-3 mt-2 rounded-2xl bg-gradient-to-br from-primary to-primary/80 px-4 py-3">
+                <h4 className="text-sm font-bold text-primary-foreground leading-tight">{screenTitle}</h4>
+                {headerSubtitle && (
+                  <p className="text-[10px] text-primary-foreground/70 mt-0.5">{headerSubtitle}</p>
+                )}
+              </div>
+            )}
 
             {/* Screen content */}
-            <div className="px-5 pb-5 min-h-[440px] flex flex-col justify-center">
+            <div className="px-5 pb-5 min-h-[380px] flex flex-col justify-center">
               {children}
             </div>
 
