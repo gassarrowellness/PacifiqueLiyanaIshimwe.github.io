@@ -89,7 +89,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "PayGo Solar + Satellite TV Bundles",
-    tagline: "ENGIE Energy Access: Affordable solar-powered entertainment for off-grid Zambia",
+    tagline: "Affordable solar-powered entertainment for off-grid Zambia",
     tags: ["Solar", "PayGo", "Bundled Product", "Zambia"],
     problem: "Off-grid households in Zambia wanted entertainment and information access but couldn't afford upfront costs for solar systems or satellite TV separately.",
     userInsights: "Customers valued entertainment as much as lighting — a solar panel alone wasn't compelling enough, but pairing it with satellite TV created strong demand.",
