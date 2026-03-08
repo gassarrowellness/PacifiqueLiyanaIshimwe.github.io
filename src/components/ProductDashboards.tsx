@@ -47,9 +47,9 @@ const featureAdoptionData = [
 ];
 
 const kpis = [
-  { label: "Monthly Active Users", value: "2.1M", change: "+12%", icon: Users, positive: true },
+  { label: "Users", value: "2.1M", change: "+12%", icon: Users, positive: true },
   { label: "Retention Rate", value: "75%+", change: "+15%", icon: Target, positive: true },
-  { label: "AI Queries (Pilot)", value: "90K", change: "New", icon: TrendingUp, positive: true },
+  { label: "AI Queries (pilot)", value: "90K", change: "New", icon: TrendingUp, positive: true },
   { label: "Health Program Reach", value: "50K+", change: "+22%", icon: Activity, positive: true },
 ];
 
