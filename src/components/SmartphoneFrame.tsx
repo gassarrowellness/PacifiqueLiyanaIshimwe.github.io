@@ -65,6 +65,35 @@ const SmartphoneFrame = ({
           </div>
         </div>
       </div>
+
+      {/* Navigation controls outside phone */}
+      <div className="flex items-center justify-center gap-4">
+        <button
+          onClick={onPrev}
+          disabled={currentScreen === 0}
+          className="flex items-center gap-0.5 text-xs text-[#b5a57e] hover:text-[#8a7d65] disabled:opacity-20 transition-colors"
+        >
+          <ChevronLeft className="h-3 w-3" /> Back
+        </button>
+        <div className="flex gap-1.5">
+          {Array.from({ length: totalScreens }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => onDotClick(i)}
+              className={`h-1.5 rounded-full transition-all ${
+                i === currentScreen ? "bg-[#c9b896] w-4" : "bg-[#d4c5a9]/40 w-1.5"
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={onNext}
+          disabled={currentScreen === totalScreens - 1}
+          className="flex items-center gap-0.5 text-xs text-[#b5a57e] hover:text-[#8a7d65] disabled:opacity-20 transition-colors"
+        >
+          Next <ChevronRight className="h-3 w-3" />
+        </button>
+      </div>
     </div>
   );
 };
