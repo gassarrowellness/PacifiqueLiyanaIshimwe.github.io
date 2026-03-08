@@ -27,10 +27,6 @@ const Navigation = () => {
 
   const sectionLinks = isHome ? homeLinks : workLinks;
 
-const Navigation = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
