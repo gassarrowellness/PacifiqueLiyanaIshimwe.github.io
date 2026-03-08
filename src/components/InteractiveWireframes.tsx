@@ -50,7 +50,7 @@ const steps: Step[] = [
 ];
 
 const considerations = [
-  { icon: Globe, title: "Accessibility", desc: "Works on any phone — no data plan or smartphone required." },
+  { icon: Globe, title: "Accessibility", desc: "Works on any phone - no data plan or smartphone required." },
   { icon: Clock, title: "Latency", desc: "3-second processing wait is clearly communicated to manage expectations." },
   { icon: AlertCircle, title: "Error Handling", desc: "If recording is unclear, the system plays a helpful retry prompt." },
   { icon: Languages, title: "Language Support", desc: "Prompts delivered in multiple local languages based on user selection." },
