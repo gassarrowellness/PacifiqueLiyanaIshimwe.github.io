@@ -23,34 +23,45 @@ const SmartphoneFrame = ({
   return (
     <div className="flex justify-center">
       <div className="relative w-[280px] md:w-[300px]">
-        {/* Phone bezel */}
-        <div className="bg-foreground/90 dark:bg-foreground/20 rounded-[2.5rem] p-[10px] shadow-xl">
+        {/* Outer device shadow */}
+        <div className="absolute inset-0 rounded-[3rem] bg-foreground/5 blur-xl scale-105" />
+        
+        {/* Phone bezel — thin, modern */}
+        <div className="relative bg-foreground/95 dark:bg-foreground/15 rounded-[3rem] p-[5px] shadow-2xl ring-1 ring-foreground/10">
+          {/* Side buttons */}
+          <div className="absolute -left-[2px] top-[80px] w-[3px] h-6 rounded-l bg-foreground/60 dark:bg-foreground/20" />
+          <div className="absolute -left-[2px] top-[115px] w-[3px] h-10 rounded-l bg-foreground/60 dark:bg-foreground/20" />
+          <div className="absolute -left-[2px] top-[135px] w-[3px] h-10 rounded-l bg-foreground/60 dark:bg-foreground/20" />
+          <div className="absolute -right-[2px] top-[110px] w-[3px] h-14 rounded-r bg-foreground/60 dark:bg-foreground/20" />
+
           {/* Inner screen */}
-          <div className="bg-card rounded-[2rem] overflow-hidden relative">
+          <div className="bg-card rounded-[2.6rem] overflow-hidden">
             {/* Status bar */}
-            <div className="flex items-center justify-between px-6 pt-3 pb-1">
-              <span className="text-[10px] font-semibold text-foreground/70">9:41</span>
-              {/* Notch / Dynamic Island */}
-              <div className="w-20 h-5 bg-foreground/90 dark:bg-foreground/20 rounded-full" />
-              <div className="flex items-center gap-1">
-                <Signal className="h-3 w-3 text-foreground/70" />
-                <Wifi className="h-3 w-3 text-foreground/70" />
-                <Battery className="h-3 w-3 text-foreground/70" />
+            <div className="flex items-center justify-between px-7 pt-3 pb-0.5">
+              <span className="text-[11px] font-bold text-foreground/80 tracking-tight">9:41</span>
+              {/* Dynamic Island */}
+              <div className="w-[90px] h-[26px] bg-foreground/95 dark:bg-foreground/20 rounded-full flex items-center justify-center">
+                <div className="w-2 h-2 rounded-full bg-foreground/20 dark:bg-foreground/10 mr-6" />
+              </div>
+              <div className="flex items-center gap-[3px]">
+                <Signal className="h-3 w-3 text-foreground/80" strokeWidth={2.5} />
+                <Wifi className="h-3 w-3 text-foreground/80" strokeWidth={2.5} />
+                <Battery className="h-3.5 w-3.5 text-foreground/80" strokeWidth={2.5} />
               </div>
             </div>
 
-            {/* Screen title */}
-            <div className="px-5 pt-3 pb-2">
-              <h4 className="text-sm font-bold text-foreground">{screenTitle}</h4>
+            {/* Screen title — app header style */}
+            <div className="px-6 pt-4 pb-2">
+              <h4 className="text-base font-bold text-foreground tracking-tight">{screenTitle}</h4>
             </div>
 
             {/* Screen content */}
-            <div className="px-5 pb-4 min-h-[240px] flex flex-col justify-center">
+            <div className="px-5 pb-5 min-h-[260px] flex flex-col justify-start">
               {children}
             </div>
 
             {/* Navigation inside phone */}
-            <div className="px-5 pb-2 flex items-center justify-between">
+            <div className="px-5 pb-1.5 flex items-center justify-between">
               <button
                 onClick={onPrev}
                 disabled={currentScreen === 0}
@@ -80,7 +91,7 @@ const SmartphoneFrame = ({
 
             {/* Home indicator */}
             <div className="flex justify-center pb-2 pt-1">
-              <div className="w-28 h-1 rounded-full bg-foreground/20" />
+              <div className="w-32 h-[5px] rounded-full bg-foreground/15" />
             </div>
           </div>
         </div>
@@ -89,31 +100,31 @@ const SmartphoneFrame = ({
   );
 };
 
-/** Renders a wireframe element string as a realistic UI component */
+/** Renders a wireframe element string as a realistic, app-grade UI component */
 export const ElementRenderer = ({ element }: { element: string }) => {
   const el = element.trim();
 
   // Empty line = spacer
-  if (el === "") return <div className="h-2" />;
+  if (el === "") return <div className="h-3" />;
 
   // Button: [text]
   if (el.startsWith("[") && el.endsWith("]")) {
     const label = el.slice(1, -1);
     return (
-      <button className="w-full py-2 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-semibold text-center transition-colors hover:bg-primary/90">
+      <button className="w-full py-2.5 px-5 rounded-2xl bg-primary text-primary-foreground text-xs font-semibold text-center shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-[0.98]">
         {label}
       </button>
     );
   }
 
-  // Inline button inside text: contains [...] but isn't purely a button
+  // Inline button inside text
   if (el.includes("[") && el.includes("]") && !(el.startsWith("[") && el.endsWith("]"))) {
     const parts = el.split(/(\[.*?\])/g);
     return (
       <div className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
         {parts.map((part, i) =>
           part.startsWith("[") && part.endsWith("]") ? (
-            <span key={i} className="inline-block py-1 px-2.5 rounded-lg bg-primary/10 text-primary text-[10px] font-semibold">
+            <span key={i} className="inline-block py-1.5 px-3 rounded-xl bg-primary text-primary-foreground text-[10px] font-semibold shadow-sm">
               {part.slice(1, -1)}
             </span>
           ) : (
@@ -127,11 +138,11 @@ export const ElementRenderer = ({ element }: { element: string }) => {
   // Checkbox checked: ☑
   if (el.startsWith("☑")) {
     return (
-      <div className="flex items-center gap-2">
-        <div className="w-4 h-4 rounded bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground text-[10px]">✓</span>
+      <div className="flex items-center gap-3 py-2 px-3 rounded-xl bg-primary/5 border border-primary/15">
+        <div className="w-5 h-5 rounded-lg bg-primary flex items-center justify-center shadow-sm">
+          <span className="text-primary-foreground text-[10px] font-bold">✓</span>
         </div>
-        <span className="text-xs text-foreground">{el.slice(1).trim()}</span>
+        <span className="text-xs text-foreground font-medium">{el.slice(1).trim()}</span>
       </div>
     );
   }
@@ -139,17 +150,19 @@ export const ElementRenderer = ({ element }: { element: string }) => {
   // Checkbox unchecked: ☐
   if (el.startsWith("☐")) {
     return (
-      <div className="flex items-center gap-2">
-        <div className="w-4 h-4 rounded border border-border" />
+      <div className="flex items-center gap-3 py-2 px-3 rounded-xl bg-secondary/50 border border-border/50">
+        <div className="w-5 h-5 rounded-lg border-2 border-border" />
         <span className="text-xs text-muted-foreground">{el.slice(1).trim()}</span>
       </div>
     );
   }
 
-  // Card borders: ┌ ┐ └ ┘ │
-  if (el.startsWith("┌") || el.startsWith("└")) {
-    return null; // Skip card frame lines, handled by │ content
+  // Card borders: ┌ ┐ └ ┘ — skip decorative lines
+  if (el.startsWith("┌") || el.startsWith("└") || el.match(/^[┌└].*[┐┘]$/)) {
+    return null;
   }
+
+  // Card content lines: │
   if (el.startsWith("│")) {
     const content = el.replace(/[│┐┘]/g, "").trim();
     if (!content) return null;
@@ -157,29 +170,29 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     if (content.includes("[") && content.includes("]")) {
       const parts = content.split(/(\[.*?\])/g);
       return (
-        <div className="px-3 py-0.5 bg-accent/50 border-x border-border/30 flex flex-wrap items-center gap-1">
+        <div className="px-4 py-1 bg-accent/40 flex flex-wrap items-center gap-1.5">
           {parts.map((part, i) =>
             part.startsWith("[") && part.endsWith("]") ? (
-              <span key={i} className="inline-block py-1 px-2 rounded-md bg-primary text-primary-foreground text-[10px] font-semibold">
+              <span key={i} className="inline-block py-1.5 px-3 rounded-xl bg-primary text-primary-foreground text-[10px] font-semibold shadow-sm">
                 {part.slice(1, -1)}
               </span>
             ) : (
-              <span key={i} className="text-xs text-foreground">{part}</span>
+              <span key={i} className="text-xs text-foreground font-medium">{part}</span>
             )
           )}
         </div>
       );
     }
     return (
-      <div className="px-3 py-0.5 bg-accent/50 border-x border-border/30">
-        <span className="text-xs text-foreground">{content}</span>
+      <div className="px-4 py-1 bg-accent/40">
+        <span className="text-xs text-foreground font-medium">{content}</span>
       </div>
     );
   }
 
-  // Card frame: ┌─────┐ ┌─────┐ (side-by-side stat boxes)
+  // Side-by-side stat box frames
   if (el.includes("┌") && el.includes("┐") && el.includes("┌", 2)) {
-    return null; // Skip decorative frame lines
+    return null;
   }
 
   // Progress bars: ████
@@ -188,13 +201,18 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     const barLength = (el.match(/█/g) || []).length;
     const maxBar = 8;
     const pct = Math.min(100, (barLength / maxBar) * 100);
+    const label = parts[0]?.trim();
+    const value = parts[1]?.trim();
     return (
-      <div className="flex items-center gap-2">
-        <span className="text-[10px] text-muted-foreground w-20 shrink-0">{parts[0]?.trim()}</span>
-        <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
-          <div className="h-full bg-primary rounded-full transition-all" style={{ width: `${pct}%` }} />
+      <div className="flex items-center gap-3 py-1">
+        <span className="text-[11px] text-foreground font-medium w-20 shrink-0">{label}</span>
+        <div className="flex-1 h-2.5 bg-secondary rounded-full overflow-hidden">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-primary to-primary/70 transition-all"
+            style={{ width: `${pct}%` }}
+          />
         </div>
-        <span className="text-[10px] text-foreground font-medium w-8 text-right">{parts[1]?.trim()}</span>
+        <span className="text-[11px] text-foreground font-bold w-10 text-right">{value}</span>
       </div>
     );
   }
@@ -208,9 +226,9 @@ export const ElementRenderer = ({ element }: { element: string }) => {
           const selected = item.includes("●");
           const label = item.replace(/[○●]\s?/, "").trim();
           return (
-            <div key={i} className="flex items-center gap-1.5">
-              <div className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center ${selected ? "border-primary" : "border-border"}`}>
-                {selected && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+            <div key={i} className="flex items-center gap-2">
+              <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${selected ? "border-primary bg-primary/5" : "border-border"}`}>
+                {selected && <div className="w-2 h-2 rounded-full bg-primary" />}
               </div>
               <span className="text-xs text-foreground">{label}</span>
             </div>
@@ -220,12 +238,12 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     );
   }
 
-  // Status indicators: ✅ 🔄 ⏳
+  // Status indicators: Step N
   if (el.match(/^Step \d/)) {
     const isDone = el.includes("✅");
     const isActive = el.includes("🔄");
     return (
-      <div className={`flex items-center gap-2 py-1 px-2 rounded-lg text-xs ${isDone ? "bg-green-500/10 text-green-600 dark:text-green-400" : isActive ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
+      <div className={`flex items-center gap-2 py-1.5 px-3 rounded-xl text-xs font-medium ${isDone ? "bg-green-500/10 text-green-600 dark:text-green-400" : isActive ? "bg-primary/10 text-primary" : "text-muted-foreground bg-secondary/50"}`}>
         <span>{el}</span>
       </div>
     );
@@ -238,8 +256,8 @@ export const ElementRenderer = ({ element }: { element: string }) => {
       return (
         <div className="flex gap-3">
           {values.map((v, i) => (
-            <div key={i} className="flex-1 text-center py-2 px-3 rounded-xl bg-accent/50 border border-border/30">
-              <span className="text-lg font-bold text-foreground">{v.trim()}</span>
+            <div key={i} className="flex-1 text-center py-3 px-3 rounded-2xl bg-accent/60 border border-border/40 shadow-sm">
+              <span className="text-xl font-bold text-foreground tracking-tight">{v.trim()}</span>
             </div>
           ))}
         </div>
@@ -247,25 +265,93 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     }
   }
 
-  // Emoji-prefixed lines
-  if (el.match(/^[🌍💰📦⚠💡🛒🤝📊🟢📋📤📅🔄☐☑]/u)) {
+  // Emoji-prefixed lines — action items / features
+  if (el.match(/^[🌍💰📦⚠💡🛒🤝📊🟢📋📤📅🔄☐☑🌱💊]/u)) {
     return (
-      <div className="text-xs text-foreground font-medium">{el}</div>
-    );
-  }
-
-  // Percentage or metric lines with arrows
-  if (el.includes("↑") || el.includes("↗") || el.includes("↓")) {
-    return (
-      <div className="text-xs text-foreground flex justify-between">
-        <span>{el}</span>
+      <div className="flex items-center gap-2 py-1.5 px-3 rounded-xl bg-secondary/40 border border-border/30">
+        <span className="text-xs text-foreground font-medium">{el}</span>
       </div>
     );
   }
 
-  // Default: styled label
+  // Percentage or metric lines with arrows
+  if (el.includes("↑") || el.includes("↗")) {
+    return (
+      <div className="text-xs text-foreground flex justify-between items-center py-1 px-3 rounded-lg bg-green-500/5">
+        <span className="font-medium">{el}</span>
+      </div>
+    );
+  }
+  if (el.includes("↓")) {
+    return (
+      <div className="text-xs text-foreground flex justify-between items-center py-1 px-3 rounded-lg bg-destructive/5">
+        <span className="font-medium">{el}</span>
+      </div>
+    );
+  }
+
+  // Input field pattern: ________
+  if (el.includes("________")) {
+    const label = el.replace("________", "").trim();
+    return (
+      <div>
+        {label && <span className="text-[10px] text-muted-foreground mb-1 block">{label}</span>}
+        <div className="h-9 rounded-xl border border-border bg-secondary/30 px-3 flex items-center">
+          <span className="text-xs text-muted-foreground/50">Type here...</span>
+        </div>
+      </div>
+    );
+  }
+
+  // Dropdown pattern: [Dropdown selector]
+  if (el.toLowerCase().includes("dropdown")) {
+    return (
+      <div className="h-9 rounded-xl border border-border bg-secondary/30 px-3 flex items-center justify-between">
+        <span className="text-xs text-muted-foreground">Select...</span>
+        <ChevronLeft className="h-3 w-3 text-muted-foreground -rotate-90" />
+      </div>
+    );
+  }
+
+  // "Type a message..." or chat input
+  if (el.toLowerCase().includes("type a message") || el.toLowerCase().includes("type your")) {
+    return (
+      <div className="h-9 rounded-2xl border border-border bg-secondary/30 px-4 flex items-center">
+        <span className="text-xs text-muted-foreground/50">{el}</span>
+      </div>
+    );
+  }
+
+  // Table-like rows with │ separators (e.g. "Week │ W1  W2  W3  W4")
+  if (el.includes("│") && el.includes("W")) {
+    return (
+      <div className="text-[10px] text-foreground font-mono py-1 px-2 bg-secondary/30 rounded-lg">
+        {el}
+      </div>
+    );
+  }
+
+  // Metric labels like "MRR: $42,500"
+  if (el.includes(":") && (el.includes("$") || el.includes("%"))) {
+    const [label, value] = el.split(":").map(s => s.trim());
+    return (
+      <div className="flex items-center justify-between py-1.5 px-3 rounded-xl bg-secondary/30 border border-border/20">
+        <span className="text-[11px] text-muted-foreground">{label}</span>
+        <span className="text-sm text-foreground font-bold">{value}</span>
+      </div>
+    );
+  }
+
+  // Lines starting with a label like "Logo", "Welcome message", section headers
+  if (el.match(/^[A-Z]/) && el.length < 40 && !el.includes(":")) {
+    return (
+      <div className="text-sm text-foreground font-semibold tracking-tight">{el}</div>
+    );
+  }
+
+  // Default: body text
   return (
-    <div className="text-xs text-muted-foreground">{el}</div>
+    <div className="text-xs text-muted-foreground leading-relaxed">{el}</div>
   );
 };
 
