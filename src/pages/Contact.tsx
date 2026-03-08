@@ -27,7 +27,7 @@ const Contact = () => {
                   
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">PHONE</h3>
-                    <a href={CONTACT.phoneLink} className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                    <a href={CONTACT.phoneLink} target="_blank" rel="noopener noreferrer" className="text-xl hover:text-muted-foreground transition-colors duration-300">
                       {CONTACT.phone}
                     </a>
                   </div>
