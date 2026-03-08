@@ -72,8 +72,8 @@ const Hero = () => {
             { value: "5K+", label: "Households Reached" },
           ].map((m) => (
             <div key={m.label} className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-display gradient-text">{m.value}</p>
-              <p className="text-xs text-white/40 mt-1">{m.label}</p>
+              <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
+              <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
             </div>
           ))}
         </motion.div>
