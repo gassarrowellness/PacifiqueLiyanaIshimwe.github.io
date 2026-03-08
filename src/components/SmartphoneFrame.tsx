@@ -26,7 +26,7 @@ const SmartphoneFrame = ({
         {/* Outer device shadow */}
         <div className="absolute inset-0 rounded-[3rem] bg-foreground/5 blur-xl scale-105" />
         
-        {/* Phone bezel — thin, modern */}
+        {/* Phone bezel - thin, modern */}
         <div className="relative bg-foreground/95 dark:bg-foreground/15 rounded-[3rem] p-[5px] shadow-2xl ring-1 ring-foreground/10">
           {/* Side buttons */}
           <div className="absolute -left-[2px] top-[80px] w-[3px] h-6 rounded-l bg-foreground/60 dark:bg-foreground/20" />
