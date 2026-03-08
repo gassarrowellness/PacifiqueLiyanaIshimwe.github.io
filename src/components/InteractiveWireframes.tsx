@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Smartphone, Hash, MessageSquare, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
+import { Smartphone, Hash, MessageSquare, BarChart3 } from "lucide-react";
+import SmartphoneFrame, { ElementRenderer } from "./SmartphoneFrame";
 
 interface WireframeFlow {
   id: string;
@@ -98,8 +99,8 @@ const InteractiveWireframes = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Wireframe display */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Smartphone display */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${activeFlow}-${activeScreen}`}
@@ -107,57 +108,21 @@ const InteractiveWireframes = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
-                className="bg-card border border-border rounded-2xl overflow-hidden"
               >
-                {/* Phone frame */}
-                <div className="bg-muted/50 p-3 border-b border-border flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                  </div>
-                  <span className="text-xs text-muted-foreground ml-2">{currentFlow.title}</span>
-                </div>
-                <div className="p-8 min-h-[320px] flex flex-col justify-center">
-                  <h4 className="text-sm font-semibold text-foreground mb-6">
-                    {currentFlow.screens[activeScreen].title}
-                  </h4>
-                  <div className="space-y-2.5 font-mono text-sm text-muted-foreground">
+                <SmartphoneFrame
+                  screenTitle={currentFlow.screens[activeScreen].title}
+                  currentScreen={activeScreen}
+                  totalScreens={currentFlow.screens.length}
+                  onPrev={() => setActiveScreen(Math.max(0, activeScreen - 1))}
+                  onNext={() => setActiveScreen(Math.min(currentFlow.screens.length - 1, activeScreen + 1))}
+                  onDotClick={setActiveScreen}
+                >
+                  <div className="space-y-2">
                     {currentFlow.screens[activeScreen].elements.map((el, i) => (
-                      <div key={i} className={el === "" ? "h-2" : ""}>
-                        {el}
-                      </div>
+                      <ElementRenderer key={i} element={el} />
                     ))}
                   </div>
-                </div>
-                {/* Navigation */}
-                <div className="border-t border-border p-4 flex items-center justify-between">
-                  <button
-                    onClick={() => setActiveScreen(Math.max(0, activeScreen - 1))}
-                    disabled={activeScreen === 0}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
-                  >
-                    <ChevronLeft className="h-4 w-4" /> Back
-                  </button>
-                  <div className="flex gap-1.5">
-                    {currentFlow.screens.map((_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setActiveScreen(i)}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          i === activeScreen ? "bg-primary w-5" : "bg-border"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setActiveScreen(Math.min(currentFlow.screens.length - 1, activeScreen + 1))}
-                    disabled={activeScreen === currentFlow.screens.length - 1}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
-                  >
-                    Next <ChevronRight className="h-4 w-4" />
-                  </button>
-                </div>
+                </SmartphoneFrame>
               </motion.div>
             </AnimatePresence>
 

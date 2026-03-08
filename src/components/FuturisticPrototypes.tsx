@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Wallet, ShoppingBag, BarChart3, Scale, CreditCard, Share2, ChevronLeft, ChevronRight, Play, X } from "lucide-react";
+import { Wallet, ShoppingBag, BarChart3, Scale, CreditCard, Share2, Play, X } from "lucide-react";
+import SmartphoneFrame, { ElementRenderer } from "./SmartphoneFrame";
 
 interface Screen {
   title: string;
@@ -193,55 +194,22 @@ const FuturisticPrototypes = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-border">
-                          {/* Phone frame */}
-                          <div className="bg-card border border-border rounded-2xl overflow-hidden">
-                            <div className="bg-muted/50 p-3 border-b border-border flex items-center gap-2">
-                              <div className="flex gap-1.5">
-                                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                              </div>
-                              <span className="text-xs text-muted-foreground ml-2">{proto.title}</span>
+                        <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-border items-center">
+                          {/* Smartphone */}
+                          <SmartphoneFrame
+                            screenTitle={proto.screens[currentScreen].title}
+                            currentScreen={currentScreen}
+                            totalScreens={proto.screens.length}
+                            onPrev={() => setScreen(i, Math.max(0, currentScreen - 1))}
+                            onNext={() => setScreen(i, Math.min(proto.screens.length - 1, currentScreen + 1))}
+                            onDotClick={(si) => setScreen(i, si)}
+                          >
+                            <div className="space-y-2">
+                              {proto.screens[currentScreen].elements.map((el, ei) => (
+                                <ElementRenderer key={ei} element={el} />
+                              ))}
                             </div>
-                            <div className="p-8 min-h-[280px] flex flex-col justify-center">
-                              <h4 className="text-sm font-semibold text-foreground mb-6">
-                                {proto.screens[currentScreen].title}
-                              </h4>
-                              <div className="space-y-2.5 font-mono text-sm text-muted-foreground">
-                                {proto.screens[currentScreen].elements.map((el, ei) => (
-                                  <div key={ei} className={el === "" ? "h-2" : ""}>
-                                    {el}
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <div className="border-t border-border p-4 flex items-center justify-between">
-                              <button
-                                onClick={() => setScreen(i, Math.max(0, currentScreen - 1))}
-                                disabled={currentScreen === 0}
-                                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
-                              >
-                                <ChevronLeft className="h-4 w-4" /> Back
-                              </button>
-                              <div className="flex gap-1.5">
-                                {proto.screens.map((_, si) => (
-                                  <button
-                                    key={si}
-                                    onClick={() => setScreen(i, si)}
-                                    className={`w-2 h-2 rounded-full transition-all ${si === currentScreen ? "bg-primary w-5" : "bg-border"}`}
-                                  />
-                                ))}
-                              </div>
-                              <button
-                                onClick={() => setScreen(i, Math.min(proto.screens.length - 1, currentScreen + 1))}
-                                disabled={currentScreen === proto.screens.length - 1}
-                                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
-                              >
-                                Next <ChevronRight className="h-4 w-4" />
-                              </button>
-                            </div>
-                          </div>
+                          </SmartphoneFrame>
 
                           {/* Annotation panel */}
                           <div className="flex flex-col justify-center">
