@@ -86,7 +86,7 @@ In an era of overwhelming digital noise and material excess, minimalist architec
 
 ## The Philosophy Behind Minimalism
 
-Minimalist architecture is not about creating empty or stark spaces—it's about intentional design choices that prioritize function, beauty, and the essential elements of living. The approach emphasizes:
+Minimalist architecture is not about creating empty or stark spaces. It's about intentional design choices that prioritize function, beauty, and the essential elements of living. The approach emphasizes:
 
 - **Simplicity over complexity**
 - **Quality over quantity**
