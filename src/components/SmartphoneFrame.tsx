@@ -58,35 +58,6 @@ const SmartphoneFrame = ({
               {children}
             </div>
 
-            {/* Navigation inside phone */}
-            <div className="px-5 pb-1.5 flex items-center justify-between">
-              <button
-                onClick={onPrev}
-                disabled={currentScreen === 0}
-                className="flex items-center gap-0.5 text-xs text-[#b5a57e] hover:text-[#8a7d65] disabled:opacity-20 transition-colors"
-              >
-                <ChevronLeft className="h-3 w-3" /> Back
-              </button>
-              <div className="flex gap-1.5">
-                {Array.from({ length: totalScreens }).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => onDotClick(i)}
-                    className={`h-1.5 rounded-full transition-all ${
-                      i === currentScreen ? "bg-[#c9b896] w-4" : "bg-[#d4c5a9]/40 w-1.5"
-                    }`}
-                  />
-                ))}
-              </div>
-              <button
-                onClick={onNext}
-                disabled={currentScreen === totalScreens - 1}
-                className="flex items-center gap-0.5 text-xs text-[#b5a57e] hover:text-[#8a7d65] disabled:opacity-20 transition-colors"
-              >
-                Next <ChevronRight className="h-3 w-3" />
-              </button>
-            </div>
-
             {/* Home indicator */}
             <div className="flex justify-center pb-2 pt-1">
               <div className="w-32 h-[5px] rounded-full bg-[#c9b896]/30" />
