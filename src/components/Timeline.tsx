@@ -31,7 +31,7 @@ const milestones = [
     highlights: ["5K+ households", "$250K+ revenue", "70+ youth agents"],
   },
   {
-    period: "Mar 2022 – May 2022",
+    period: "Mar 2022 - May 2022",
     role: "Senior Product Analyst",
     company: "ENGIE Energy Access",
     description: "Conducted advanced product analytics and market research to inform strategic decisions for PayGo solar solutions across East African markets.",
