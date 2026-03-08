@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 
 const milestones = [
   {
-    period: "July 2025 – Present",
+    period: "July 2025 - Present",
     role: "Founder & Operations Lead",
     company: "Gassarro",
     description: "Established and oversee end-to-end business operations, designing organizational structure, operational workflows, and performance management systems. Introduced KPIs, reporting dashboards, formal SOPs, and automation to reduce operational friction.",
