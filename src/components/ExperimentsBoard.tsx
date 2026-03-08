@@ -4,19 +4,11 @@ import { FlaskConical, ChevronDown } from "lucide-react";
 
 const experiments = [
   {
-    title: "Offline Gen-AI via USSD",
-    hypothesis: "A generative AI agent delivered via USSD could provide interactive, personalized support with near-zero drop-off rates for users without internet access.",
-    test: "Controlled pilot in Zambia with rural communities, measuring user engagement, query completion rates, and information accuracy on USSD infrastructure.",
-    result: "Near-zero user drop-off rates. Users could access real-time, personalized guidance on agriculture and health through basic phones.",
-    learning: "USSD is a viable delivery channel for AI-powered services in low-connectivity environments. Natural language processing can work within USSD character constraints.",
-    status: "validated" as const,
-  },
-  {
-    title: "AI-Powered IVR Platform",
-    hypothesis: "An AI-powered voice platform could deliver personalized information at scale, improving access and engagement while creating a sustainable revenue model.",
-    test: "Piloted 'Ask Viamo Anything' - the world's first offline Generative AI assistant - generating ~90,000 user queries during initial phase to validate demand.",
-    result: "2M+ users served, 75%+ retention rates, 50,000+ users with improved health access. Revenue model validated for sustainable growth.",
-    learning: "Voice-first AI services can achieve high engagement in markets where literacy and connectivity are barriers. B2B partnerships create viable monetization.",
+    title: "Offline Gen-AI: USSD to Voice Platform",
+    hypothesis: "AI delivered via USSD and voice (IVR) can provide personalized support at scale for users without internet access, creating a sustainable service model.",
+    test: "Phase 1: Controlled USSD pilot in Zambia with rural communities, measuring engagement and query completion. Phase 2: Launched 'Ask Viamo Anything' — the world's first offline Gen-AI assistant via voice — generating ~90,000 user queries.",
+    result: "Near-zero drop-off on USSD. 2M+ users served via IVR, 75%+ retention rates, 50,000+ users with improved health access. Revenue model validated for sustainable growth.",
+    learning: "USSD and voice are viable AI delivery channels in low-connectivity environments. Voice-first services achieve high engagement where literacy and connectivity are barriers. B2B partnerships create viable monetization.",
     status: "validated" as const,
   },
   {
@@ -25,14 +17,6 @@ const experiments = [
     test: "Deployed agent network pilot across multiple districts, measuring digital service adoption rates and agent productivity.",
     result: "Significant increase in digital service adoption in pilot areas. Agents became trusted distribution channels for digital products.",
     learning: "Human-assisted distribution is critical for digital products in emerging markets. Trust and local presence drive adoption more than technology alone.",
-    status: "validated" as const,
-  },
-  {
-    title: "MoMo API Integration Platform",
-    hypothesis: "A self-serve API platform could accelerate third-party integrations and unlock new revenue streams for mobile money services.",
-    test: "Launched developer portal and onboarding flow, tracking API adoption rates, time-to-first-transaction, and developer satisfaction.",
-    result: "Accelerated third-party integrations, unlocked new B2B revenue streams, and created a scalable platform ecosystem.",
-    learning: "Developer experience is a product. Reducing friction in API onboarding directly correlates with ecosystem growth and revenue.",
     status: "validated" as const,
   },
   {
