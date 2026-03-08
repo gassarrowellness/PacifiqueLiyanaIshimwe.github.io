@@ -114,7 +114,7 @@ const FuturisticPrototypes = () => {
   };
 
   return (
-    <section id="prototypes" className="py-24 md:py-32 bg-background">
+    <section id="prototypes" className="py-16 md:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
