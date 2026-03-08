@@ -4,20 +4,28 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { CONTACT } from "@/data/contact";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Process", href: "#design-walkthrough" },
-  { label: "Portfolio", href: "#product-work" },
-  { label: "Strategy", href: "#strategy" },
-  { label: "Experiments", href: "#experiments" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Contact", href: "#contact" },
-];
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const homeLinks = [
+    { label: "About", href: "#about" },
+    { label: "Process", href: "#design-walkthrough" },
+    { label: "Timeline", href: "#timeline" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  const workLinks = [
+    { label: "Case Studies", href: "#case-studies" },
+    { label: "Strategy", href: "#strategy" },
+    { label: "Experiments", href: "#experiments" },
+  ];
+
+  const sectionLinks = isHome ? homeLinks : workLinks;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -33,7 +41,13 @@ const Navigation = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-2 md:gap-5 lg:gap-8 flex-wrap justify-center">
-          {navLinks.map((link) => (
+          <Link
+            to={isHome ? "/work" : "/"}
+            className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
+          >
+            {isHome ? "Work" : "Home"}
+          </Link>
+          {sectionLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -64,7 +78,14 @@ const Navigation = () => {
             <SheetContent side="right" className="w-72">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <div className="flex flex-col gap-6 mt-8">
-                {navLinks.map((link) => (
+                <Link
+                  to={isHome ? "/work" : "/"}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  {isHome ? "Work" : "Home"}
+                </Link>
+                {sectionLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
