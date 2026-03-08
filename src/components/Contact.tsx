@@ -17,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
     const body = encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`, '_top');
+    openMailto(`mailto:${CONTACT.email}?subject=${subject}&body=${body}`);
     toast({ title: "Opening email client!", description: "Your message details have been pre-filled." });
     setForm({ name: "", email: "", message: "" });
   };
