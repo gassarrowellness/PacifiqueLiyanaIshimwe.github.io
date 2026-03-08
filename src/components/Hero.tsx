@@ -2,68 +2,42 @@ import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Process", href: "#product-work" },
-  { label: "Portfolio", href: "#prototypes" },
-  { label: "Strategy", href: "#strategy" },
-  { label: "Experiments", href: "#experiments" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Contact", href: "#contact" },
-];
-
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-28">
-      {/* Aurora-style grey/white translucent background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/80 via-background to-muted/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-muted/30 via-transparent to-muted/30" />
-      {/* Subtle light streaks */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-gradient-to-br from-border/40 via-muted/20 to-transparent rounded-full blur-3xl" />
-      <div className="absolute top-10 right-1/4 w-[500px] h-[350px] bg-gradient-to-bl from-border/30 via-muted/15 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-gradient-to-t from-border/20 to-transparent rounded-full blur-2xl" />
+    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-24 bg-gray-900">
+      {/* Aurora-style grey/white background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" />
+      {/* Aurora orbs */}
+      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-white/15 via-gray-400/10 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-gray-400/20 via-white/10 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-white/10 via-gray-300/15 to-transparent rounded-full blur-[110px]" />
+      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-gray-200/10 via-white/5 to-transparent rounded-full blur-[80px]" />
+      {/* Central glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-white/10 via-white/5 to-transparent rounded-full blur-[60px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
-        {/* Horizontal page navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-6 mb-10"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-sm text-primary mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-sm text-white mb-6">
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground">
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-3">
+          <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-3">
             Senior Product Manager | AI, Platforms, Digital Operations
           </p>
 
-          <p className="text-sm md:text-base text-muted-foreground/70 max-w-xl mx-auto mb-8">
+          <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto mb-8">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
@@ -75,13 +49,13 @@ const Hero = () => {
                 View Product Work
               </a>
             </Button>
-            <Button variant="outline" size="default" className="rounded-full gap-2" asChild>
+            <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
               <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="default" className="rounded-full gap-2" asChild>
+            <Button variant="outline" size="default" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white" asChild>
               <a href="mailto:plishimwe@gmail.com">
                 <Mail className="h-4 w-4" />
                 Contact
@@ -95,7 +69,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-card/80 backdrop-blur-sm border border-border shadow-sm"
+          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 shadow-sm"
         >
           {[
             { value: "2M+", label: "Users Served" },
@@ -105,7 +79,7 @@ const Hero = () => {
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
-              <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
+              <p className="text-xs text-gray-400 mt-1">{m.label}</p>
             </div>
           ))}
         </motion.div>
@@ -117,7 +91,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
           className="flex justify-center mt-8"
         >
-          <a href="#about" className="text-muted-foreground/40 hover:text-muted-foreground transition-colors">
+          <a href="#about" className="text-white/30 hover:text-white/60 transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
