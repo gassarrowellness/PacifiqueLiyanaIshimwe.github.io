@@ -76,7 +76,7 @@ const prototypes = [
     screens: [
       { title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "{ title: "Browse Plans", annotation: "Subscription product catalog", elements: ["🛒 SubShop", "Essential Bundles:", "┌ Weekly Basics ──┐", "│ Rice, Oil, Soap  │", "│ ZMW 850/week     │", "│ [Subscribe →]    │", "└─────────────────┘"] },", "│ [Subscribe →]    │", "└─────────────────┘"] },
       { title: "Customize Delivery", annotation: "Flexible scheduling options", elements: ["Delivery Schedule", "Frequency:", "○ Weekly  ● Bi-weekly", "○ Monthly", "Preferred day: [Sat ▼]", "Time: [Morning ▼]"] },
-      { title: "Payment Setup", annotation: "Mobile money integration", elements: ["Payment Method", "☑ M-Pesa Auto-pay", "Phone: +254 7XX XXX", "Amount: KES 1,700", "Cycle: Every 2 weeks", "[Activate Plan →]"] },
+      { title: "Payment Setup", annotation: "Mobile money integration", elements: ["Payment Method", "☑ MTN MoMo Auto-pay", "Phone: +260 9XX XXX", "Amount: ZMW 1,700", "Cycle: Every 2 weeks", "[Activate Plan →]"] },
       { title: "Active Subscription", annotation: "Subscription management view", elements: ["My Subscription ✅", "Next delivery: Sat 15", "Items: 6 products", "Saved vs retail: 18%", "[Modify] [Pause]", "[Add items +]"] },
     ] as Screen[],
   },
