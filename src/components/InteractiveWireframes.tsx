@@ -17,6 +17,7 @@ const flows: WireframeFlow[] = [
     id: "onboarding",
     title: "Mobile Onboarding",
     icon: Smartphone,
+    type: "smartphone",
     screens: [
       { title: "Welcome", annotation: "Value prop + language selector", elements: ["Logo", "Welcome message", "Language: EN | FR | SW", "[Get Started →]"] },
       { title: "Phone Verification", annotation: "SMS OTP for low-barrier auth", elements: ["Enter phone number", "+250 ________", "[Send Code]", "Skip for now"] },
@@ -28,6 +29,7 @@ const flows: WireframeFlow[] = [
     id: "ussd",
     title: "USSD Navigation",
     icon: Hash,
+    type: "ussd",
     screens: [
       { title: "Main Menu", annotation: "Simple numbered menu", elements: ["Welcome to Viamo", "1. Ask a question", "2. Health info", "3. Agri advisory", "4. My account", "Reply with number"] },
       { title: "AI Query", annotation: "Free-text natural language input", elements: ["Ask anything:", "Type your question", "________", "", "0. Back to menu"] },
@@ -39,6 +41,7 @@ const flows: WireframeFlow[] = [
     id: "ai-assistant",
     title: "AI Assistant",
     icon: MessageSquare,
+    type: "smartphone",
     screens: [
       { title: "Chat Home", annotation: "Contextual quick actions", elements: ["AI Assistant", "How can I help?", "[🌱 Crop advice]", "[💊 Health info]", "[📊 Market prices]", "Type a message..."] },
       { title: "Conversation", annotation: "Natural language interaction", elements: ["User: What crops grow", "best in clay soil?", "", "AI: For clay soil, consider", "rice, wheat, or beans...", "[Follow-up suggestions]"] },
@@ -50,6 +53,7 @@ const flows: WireframeFlow[] = [
     id: "dashboard",
     title: "Analytics Dashboard",
     icon: BarChart3,
+    type: "smartphone",
     screens: [
       { title: "Overview", annotation: "KPI summary at a glance", elements: ["Dashboard", "┌─────┐ ┌─────┐", "│2.1M │ │ 75% │", "│Users│ │Retn.│", "└─────┘ └─────┘", "[Chart: User Growth ↗]"] },
       { title: "Engagement", annotation: "Feature usage breakdown", elements: ["Feature Adoption", "Health    ████████ 68%", "Agri      ██████ 52%", "Finance   ████ 34%", "Education ███ 28%", "[View details →]"] },
