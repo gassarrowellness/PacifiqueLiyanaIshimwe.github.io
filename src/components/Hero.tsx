@@ -5,16 +5,16 @@ import { CONTACT } from "@/data/contact";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-24 bg-stone-400">
-      {/* Aurora-style warm metallic background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-stone-600 via-amber-50 to-stone-400" />
+    <section className="relative flex items-center justify-center overflow-hidden py-20 pt-24 bg-slate-400">
+      {/* Aurora-style copper + slate background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-600 via-slate-200 to-slate-400" />
       {/* Aurora orbs */}
-      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-amber-50/40 via-stone-100/30 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-stone-100/50 via-amber-50/20 to-transparent rounded-full blur-[100px]" />
-      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-amber-50/40 via-stone-500/30 to-transparent rounded-full blur-[110px]" />
-      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-stone-100/50 via-amber-50/20 to-transparent rounded-full blur-[80px]" />
+      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-orange-100/40 via-slate-100/30 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-slate-100/50 via-orange-100/20 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-orange-100/40 via-slate-500/30 to-transparent rounded-full blur-[110px]" />
+      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-slate-100/50 via-orange-100/20 to-transparent rounded-full blur-[80px]" />
       {/* Central glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-amber-50/30 via-white/15 to-transparent rounded-full blur-[60px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-orange-50/30 via-white/15 to-transparent rounded-full blur-[60px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div
@@ -23,22 +23,22 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-stone-400/30 bg-white/20 text-sm text-stone-900 mb-6">
-            <span className="w-2 h-2 rounded-full bg-stone-700 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-400/30 bg-white/20 text-sm text-slate-900 mb-6">
+            <span className="w-2 h-2 rounded-full bg-slate-700 animate-pulse" />
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-stone-900">
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-stone-600 font-light max-w-2xl mx-auto mb-3">
+          <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto mb-3">
             {CONTACT.title}
           </p>
 
-          <p className="text-sm md:text-base text-stone-500 max-w-xl mx-auto mb-8">
+          <p className="text-sm md:text-base text-slate-500 max-w-xl mx-auto mb-8">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
@@ -70,7 +70,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/30 backdrop-blur-xl border border-amber-100/50 shadow-sm"
+          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-white/30 backdrop-blur-xl border border-slate-200/50 shadow-sm"
         >
           {[
             { value: "2M+", label: "Users Served" },
@@ -79,7 +79,7 @@ const Hero = () => {
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-xl md:text-2xl font-bold text-display gradient-text">{m.value}</p>
-              <p className="text-xs text-stone-600 mt-1">{m.label}</p>
+              <p className="text-xs text-slate-600 mt-1">{m.label}</p>
             </div>
           ))}
         </motion.div>
@@ -91,7 +91,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
           className="flex justify-center mt-8"
         >
-          <a href="#about" className="text-stone-400 hover:text-stone-600 transition-colors">
+          <a href="#about" className="text-slate-400 hover:text-slate-600 transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
