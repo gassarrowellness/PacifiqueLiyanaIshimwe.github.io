@@ -31,7 +31,7 @@ const steps: Step[] = [
   },
   {
     title: "Processing",
-    annotation: "~3 second wait — clearly communicated to the user",
+    annotation: "~3 second wait - clearly communicated to the user",
     description: "The system says: \"Thank you. Please wait while I process your request.\" The AI model generates a response in approximately 3 seconds.",
     visualType: "processing",
   },
