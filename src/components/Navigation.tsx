@@ -84,23 +84,27 @@ const Navigation = () => {
             <SheetContent side="right" className="w-72">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <div className="flex flex-col gap-6 mt-8">
-                <Link
-                  to={isHome ? "/work" : "/"}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  {isHome ? "Work" : "Home"}
-                </Link>
-                {sectionLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-base text-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {sectionLinks.map((link) =>
+                  link.isRoute ? (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-base text-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
                 <Button size="sm" className="rounded-full w-fit" asChild>
                   <a href={CONTACT.resumePath} target="_blank">Resume</a>
                 </Button>
