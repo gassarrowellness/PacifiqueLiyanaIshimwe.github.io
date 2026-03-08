@@ -1,39 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Cpu, Globe, Sprout, BarChart3, Wifi, Phone, Zap, Users } from "lucide-react";
+import { Cpu, Shield, Landmark, HeartPulse } from "lucide-react";
 
 const prototypes = [
   {
+    icon: Shield,
+    title: "Decentralized Identity for Informal Workers",
+    subtitle: "Portable digital identity for the unbanked workforce",
+    description: "A self-sovereign identity platform enabling informal sector workers to build verifiable work histories, credit profiles, and skill credentials — portable across employers, platforms, and borders.",
+    userProblem: "Billions of informal workers lack verifiable employment records or credit histories, locking them out of financial services, insurance, and formal employment opportunities.",
+    architecture: ["DID Registry", "Credential Issuer", "Verification API", "Mobile Wallet", "Partner Portal"],
+  },
+  {
+    icon: HeartPulse,
+    title: "Predictive Community Health Network",
+    subtitle: "AI-driven early warning for disease outbreaks",
+    description: "A network of community health workers equipped with AI-powered triage tools that aggregate symptom data to predict disease outbreaks before they escalate, enabling preemptive public health responses.",
+    userProblem: "Rural health systems are reactive — outbreaks are detected too late for effective intervention. Community health workers lack tools to report and analyze patterns in real time.",
+    architecture: ["CHW Mobile App", "Symptom Aggregator", "Prediction Engine", "Alert System", "Health Ministry Dashboard"],
+  },
+  {
+    icon: Landmark,
+    title: "Municipal Revenue Intelligence Platform",
+    subtitle: "Smart revenue collection for local governments",
+    description: "A platform that uses satellite imagery, mobile money transaction data, and property registries to identify revenue leakage, optimize tax collection, and improve service delivery in African municipalities.",
+    userProblem: "Local governments in emerging markets collect less than 30% of potential revenue due to outdated registries, informal economies, and lack of enforcement tools.",
+    architecture: ["Satellite Analysis", "Transaction Mapping", "Revenue Model", "Collection Engine", "Citizen Portal"],
+  },
+  {
     icon: Cpu,
-    title: "AI-Powered USSD Assistant",
-    subtitle: "Last-mile AI for feature phone users",
-    description: "A generative AI assistant that operates entirely offline via USSD, providing personalized health, agriculture, and civic guidance to users without internet access.",
-    userProblem: "2.7B people globally lack internet access but own mobile phones. They're excluded from AI-powered services that could transform their daily decisions.",
-    architecture: ["USSD Gateway", "NLP Engine", "Local LLM", "Content CMS", "Analytics Layer"],
-  },
-  {
-    icon: Phone,
-    title: "Voice-Based AI Service Platform",
-    subtitle: "Conversational AI for low-connectivity environments",
-    description: "An IVR-integrated AI platform that delivers voice-based advisory services in local languages, designed for environments where data connectivity is intermittent or unavailable.",
-    userProblem: "Literacy barriers and low connectivity prevent millions from accessing critical information. Voice is the most natural interface for these communities.",
-    architecture: ["IVR System", "Speech-to-Text", "AI Agent", "Text-to-Speech", "Feedback Loop"],
-  },
-  {
-    icon: Sprout,
-    title: "Digital Agriculture Advisory",
-    subtitle: "Precision farming for smallholder farmers",
-    description: "A mobile-first platform combining weather data, market intelligence, and AI-driven agronomic recommendations to optimize crop yields and market timing.",
-    userProblem: "Smallholder farmers make critical planting and selling decisions without access to weather forecasts, market prices, or expert agronomic advice.",
-    architecture: ["Weather API", "Market Data", "AI Advisory", "SMS/USSD Delivery", "Farmer Dashboard"],
-  },
-  {
-    icon: BarChart3,
-    title: "Telecom Data Intelligence Platform",
-    subtitle: "Turning network data into product insights",
-    description: "A data platform that transforms telecom usage patterns into actionable product and market intelligence for financial inclusion and digital service innovation.",
-    userProblem: "Telecoms sit on massive user behavior data but lack tools to translate it into product opportunities for underserved segments.",
-    architecture: ["Data Lake", "ETL Pipeline", "ML Models", "Insight Engine", "Product API"],
+    title: "AI-Powered Skills Marketplace for Africa",
+    subtitle: "Matching informal skills with formal demand",
+    description: "A two-sided marketplace that uses AI to assess, verify, and match informal sector skills (artisans, technicians, care workers) with formal employers, gig platforms, and training providers.",
+    userProblem: "Africa's youth bulge creates massive supply of skilled workers, but fragmented markets, lack of credentials, and information asymmetry prevent efficient matching with demand.",
+    architecture: ["Skills Assessment AI", "Matching Engine", "Credential Layer", "Employer API", "Training Recommender"],
   },
 ];
 
@@ -54,7 +54,7 @@ const FuturisticPrototypes = () => {
             Future <span className="gradient-text">Product Concepts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Forward-thinking product ideas demonstrating vision for scalable, inclusive technology platforms.
+            Forward-thinking product ideas I haven't built yet — exploring new problem spaces beyond my current work in AI, telecom, and energy.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">

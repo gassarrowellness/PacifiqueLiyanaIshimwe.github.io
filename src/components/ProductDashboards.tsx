@@ -48,9 +48,9 @@ const featureAdoptionData = [
 
 const kpis = [
   { label: "Monthly Active Users", value: "2.1M", change: "+12%", icon: Users, positive: true },
-  { label: "Activation Rate", value: "40%", change: "+8%", icon: TrendingUp, positive: true },
-  { label: "M1 Retention", value: "75%", change: "+15%", icon: Target, positive: true },
-  { label: "Avg. Session Length", value: "4.2 min", change: "+22%", icon: Activity, positive: true },
+  { label: "Retention Rate", value: "75%+", change: "+15%", icon: Target, positive: true },
+  { label: "AI Queries (Pilot)", value: "90K", change: "New", icon: TrendingUp, positive: true },
+  { label: "Health Program Reach", value: "50K+", change: "+22%", icon: Activity, positive: true },
 ];
 
 const ProductDashboards = () => {
@@ -69,8 +69,11 @@ const ProductDashboards = () => {
           <h2 className="text-display text-4xl md:text-5xl font-bold mb-4">
             Product <span className="gradient-text">Dashboards</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-16">
-            Realistic product analytics showcasing the metrics I track and optimize as a product manager.
+          <p className="text-muted-foreground max-w-2xl mb-2">
+            Illustrative product dashboards showcasing the types of metrics I track and optimize as a product manager.
+          </p>
+          <p className="text-xs text-muted-foreground/60 mb-16 italic">
+            Note: Charts use illustrative data to demonstrate dashboard design and analytical thinking — not actual proprietary data.
           </p>
 
           {/* KPI Cards */}
@@ -95,10 +98,9 @@ const ProductDashboards = () => {
 
           {/* Charts */}
           <div className="grid md:grid-cols-2 gap-6">
-            {/* User Growth */}
             <div className="glass rounded-2xl p-6">
               <h3 className="text-sm font-medium mb-1">User Growth</h3>
-              <p className="text-xs text-muted-foreground mb-4">Monthly active users over 12 months</p>
+              <p className="text-xs text-muted-foreground mb-4">Platform growth trajectory (illustrative)</p>
               <ResponsiveContainer width="100%" height={200}>
                 <AreaChart data={userGrowthData}>
                   <defs>
@@ -116,10 +118,9 @@ const ProductDashboards = () => {
               </ResponsiveContainer>
             </div>
 
-            {/* Engagement */}
             <div className="glass rounded-2xl p-6">
               <h3 className="text-sm font-medium mb-1">Engagement Metrics</h3>
-              <p className="text-xs text-muted-foreground mb-4">Weekly sessions vs. AI queries</p>
+              <p className="text-xs text-muted-foreground mb-4">Weekly sessions vs. AI queries (illustrative)</p>
               <ResponsiveContainer width="100%" height={200}>
                 <BarChart data={engagementData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 91%)" />
@@ -132,10 +133,9 @@ const ProductDashboards = () => {
               </ResponsiveContainer>
             </div>
 
-            {/* Retention */}
             <div className="glass rounded-2xl p-6">
               <h3 className="text-sm font-medium mb-1">Retention Curve</h3>
-              <p className="text-xs text-muted-foreground mb-4">Cohort retention over time</p>
+              <p className="text-xs text-muted-foreground mb-4">Cohort retention pattern (illustrative)</p>
               <ResponsiveContainer width="100%" height={200}>
                 <LineChart data={retentionData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 91%)" />
@@ -147,10 +147,9 @@ const ProductDashboards = () => {
               </ResponsiveContainer>
             </div>
 
-            {/* Feature Adoption */}
             <div className="glass rounded-2xl p-6">
               <h3 className="text-sm font-medium mb-1">Feature Adoption</h3>
-              <p className="text-xs text-muted-foreground mb-4">Percentage of users using each feature</p>
+              <p className="text-xs text-muted-foreground mb-4">Usage distribution by feature (illustrative)</p>
               <div className="space-y-4 mt-2">
                 {featureAdoptionData.map((f) => (
                   <div key={f.feature}>

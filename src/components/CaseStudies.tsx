@@ -20,18 +20,18 @@ const caseStudies: CaseStudy[] = [
   {
     title: "National Digital Engagement Platform",
     tagline: "Viamo — Serving 2M+ users across health, agriculture & civic education",
-    tags: ["AI", "IVR", "Scale", "Monetization"],
+    tags: ["AI", "IVR", "Scale", "Partnerships"],
     problem: "Low-connectivity communities lacked access to reliable health, agriculture, and civic information. Existing digital channels couldn't reach last-mile users on basic phones.",
     userInsights: "Users needed voice-first, offline-capable solutions. Smartphone penetration was low, but mobile phone ownership was high. Content had to be in local languages.",
     hypothesis: "An AI-powered voice platform could deliver personalized information at scale, improving access and engagement while creating a sustainable revenue model.",
     strategy: "Co-designed large-scale IVR programs with USAID, UNICEF, CIMMYT, and government partners. Built a monetization model around B2B partnerships and subscription services.",
-    experimentation: "Piloted the world's first offline Generative AI assistant ('Ask Viamo Anything'), generating ~90,000 user queries during initial phase to validate demand.",
-    execution: "Led cross-functional teams to scale the platform nationally. Implemented revenue optimization strategies, improved retention flows, and launched AI-supported information access.",
+    experimentation: "Piloted the world's first offline Generative AI assistant ('Ask Viamo Anything'), generating nearly 90,000 user queries during its initial phase to validate demand for AI-supported information access.",
+    execution: "Led cross-functional teams to scale the platform nationally in Zambia. Restructured engagement and revenue systems to improve sustainability and scalability.",
     results: [
       "2M+ users served on the national platform",
-      "90,000 AI queries in pilot phase",
-      "75%+ user retention rates",
-      "50,000+ users with improved health access",
+      "~90,000 AI queries during initial pilot phase",
+      "75%+ user retention rates on health programming",
+      "50,000+ users with improved access to essential health services",
       "Revenue model revised for sustainable growth",
     ],
   },
@@ -41,31 +41,31 @@ const caseStudies: CaseStudy[] = [
     tags: ["GenAI", "USSD", "Offline", "Innovation"],
     problem: "Remote users without internet access had no way to get real-time, personalized guidance on agriculture, health, and community services through basic phones.",
     userInsights: "Users on feature phones needed text-based AI interactions without requiring data connectivity. Drop-off rates on existing USSD services were high due to poor UX.",
-    hypothesis: "A generative AI agent delivered via USSD could provide interactive, personalized support with near-zero drop-off rates.",
+    hypothesis: "A generative AI agent delivered via USSD could provide interactive, personalized support — demonstrating demand for AI access in low-connectivity settings.",
     strategy: "Built an AI-powered USSD agent that could process natural language queries and deliver real-time guidance across agriculture, health, and community services.",
-    experimentation: "Ran controlled pilot in Zambia with rural communities, measuring user engagement, query completion rates, and information accuracy.",
+    experimentation: "Ran controlled pilot in Zambia with rural communities, implementing the product from inception to commercial launch.",
     execution: "Developed from inception to commercial launch. Integrated with existing USSD infrastructure. Trained AI models on local content and language patterns.",
     results: [
-      "Near-zero user drop-off rates",
-      "Improved access to actionable information",
-      "Published as GSMA case study",
+      "Demonstrated demand for AI-supported information in low-connectivity settings",
+      "Published as GSMA case study in partnership with GSMA",
       "Presented at GDDF Panel as world first",
+      "Successfully transitioned from pilot to commercial launch",
     ],
   },
   {
-    title: "Agent Network Performance Platform",
-    tagline: "Zambia & Uganda — Increasing agent efficiency & transaction accuracy",
-    tags: ["Platform", "Operations", "Analytics"],
-    problem: "Mobile money agent networks suffered from low visibility into agent performance, high transaction error rates, and fragmented issue tracking.",
-    userInsights: "Field agents needed real-time dashboards. Operations teams needed centralized issue resolution. Both needed faster feedback loops.",
-    hypothesis: "Integrated support dashboards with performance tracking would improve agent efficiency and reduce errors.",
-    strategy: "Designed tools to increase agent visibility and transaction accuracy. Built integrated support dashboards centralizing field issue tracking and resolution.",
-    experimentation: "Piloted in Zambia market first, then expanded to Uganda after validating improvements in agent performance metrics.",
-    execution: "Led cross-functional implementation across two markets. Built reporting dashboards, trained field teams, and established feedback mechanisms.",
+    title: "MoMo API Platform & Digital Services",
+    tagline: "MTN — B2B mobile money platform and partner ecosystem",
+    tags: ["Platform", "API", "B2B", "Telecom"],
+    problem: "Third-party developers and businesses struggled to integrate with mobile money services, limiting the growth of the digital services ecosystem.",
+    userInsights: "Partners needed reliable API access, clear documentation, and streamlined onboarding to build services on top of mobile money infrastructure.",
+    hypothesis: "A well-managed API platform with streamlined partner onboarding would drive B2B revenue growth and expand the digital services ecosystem.",
+    strategy: "Managed the MoMo API platform and digital services ecosystem. Drove third-party integrations and B2B revenue growth across mobile money services.",
+    experimentation: "Iterated on partner integration flows and onboarding processes to reduce friction and improve developer experience.",
+    execution: "Led cross-functional teams to deliver API platform improvements, partner ecosystem expansion, and B2B revenue initiatives.",
     results: [
-      "25% improvement in agent efficiency",
-      "15% reduction in transaction errors",
-      "Centralized issue tracking across markets",
+      "Grew the third-party integration ecosystem",
+      "Drove B2B revenue growth across mobile money services",
+      "Improved partner onboarding and integration processes",
     ],
   },
   {
@@ -79,27 +79,12 @@ const caseStudies: CaseStudy[] = [
     experimentation: "Piloted solar-powered TVs, clean cookstoves, solar water pumps, and inverter-powered business systems across multiple markets.",
     execution: "Led end-to-end product launches, CRM development, pricing strategy, and marketing infrastructure across Zambia and Uganda.",
     results: [
-      "5,000+ households reached with 3 new products",
+      "3 new products reached 5,000+ households",
       "$250K+ revenue generated",
       "70+ youth agents mobilized",
       "40% increase in partner engagement",
       "40% boost in digital product engagement",
-    ],
-  },
-  {
-    title: "Digital Agriculture Support Tool",
-    tagline: "Mobile-first advisory platform for smallholder farmers",
-    tags: ["AgriTech", "Mobile", "User Research"],
-    problem: "Smallholder farmers lacked timely access to weather alerts, market prices, and agronomic advice, leading to poor decision-making and lower yields.",
-    userInsights: "Farmers preferred mobile-based alerts and tips. Feature adoption increased when content was iteratively improved based on behavior tracking.",
-    hypothesis: "A mobile advisory tool with personalized, data-driven recommendations would increase farmer engagement and adoption of best practices.",
-    strategy: "Provided weather alerts, market prices, and agronomic tips via mobile. Built feedback loops to iteratively improve features based on user behavior.",
-    experimentation: "A/B tested different content formats, delivery timing, and personalization approaches to optimize engagement metrics.",
-    execution: "Deployed across rural regions with continuous iteration based on user feedback and behavior tracking data.",
-    results: [
-      "40% increase in farmer engagement",
-      "Improved adoption of recommended practices",
-      "50,000+ active users across rural regions",
+      "Reduced indoor air pollution for adopting households",
     ],
   },
 ];
@@ -131,7 +116,7 @@ const CaseStudies = () => {
             Product <span className="gradient-text">Case Studies</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Real products I've shipped, scaled, and monetized — structured as interactive case studies showing the full product journey.
+            Real products I've built, scaled, and managed — structured as interactive case studies showing the full product journey.
           </p>
 
           <div className="space-y-4">
@@ -171,7 +156,6 @@ const CaseStudies = () => {
                       className="overflow-hidden"
                     >
                       <div className="px-6 md:px-8 pb-8 border-t border-border">
-                        {/* Product Journey */}
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                           {[
                             { label: "Problem", content: cs.problem, icon: sectionIcons[0].icon },
@@ -191,7 +175,6 @@ const CaseStudies = () => {
                           ))}
                         </div>
 
-                        {/* Results */}
                         <div className="mt-8 p-6 rounded-xl bg-primary/5 border border-primary/10">
                           <h4 className="text-label text-primary mb-4">Results & Impact</h4>
                           <div className="grid sm:grid-cols-2 gap-3">
