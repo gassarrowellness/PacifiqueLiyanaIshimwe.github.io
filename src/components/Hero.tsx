@@ -34,7 +34,7 @@ const Hero = () => {
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-stone-600 font-light max-w-2xl mx-auto mb-3">
+          <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto mb-3">
             {CONTACT.title}
           </p>
 
