@@ -151,7 +151,7 @@ The minimalist approach aligns naturally with sustainable design principles:
 
 ## Conclusion
 
-Minimalism in modern living spaces represents more than just an aesthetic choice—it's a lifestyle philosophy that prioritizes intention, quality, and well-being. As our lives become increasingly complex, the simplicity and clarity of minimalist design offer a path toward more meaningful and sustainable ways of living.
+Minimalism in modern living spaces represents more than just an aesthetic choice. It's a lifestyle philosophy that prioritizes intention, quality, and well-being. As our lives become increasingly complex, the simplicity and clarity of minimalist design offer a path toward more meaningful and sustainable ways of living.
 
 The challenge for architects and designers is to create minimalist spaces that feel alive and welcoming rather than cold or sterile. When executed thoughtfully, minimalist design can provide the perfect canvas for life's most important moments.
     `,
