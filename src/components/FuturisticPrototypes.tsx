@@ -1,39 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Cpu, Shield, Landmark, HeartPulse } from "lucide-react";
+import { Truck, Vote, Scale, Radio } from "lucide-react";
 
 const prototypes = [
   {
-    icon: Shield,
-    title: "Decentralized Identity for Informal Workers",
-    subtitle: "Portable digital identity for the unbanked workforce",
-    description: "A self-sovereign identity platform enabling informal sector workers to build verifiable work histories, credit profiles, and skill credentials, portable across employers, platforms, and borders.",
-    userProblem: "Billions of informal workers lack verifiable employment records or credit histories, locking them out of financial services, insurance, and formal employment opportunities.",
-    architecture: ["DID Registry", "Credential Issuer", "Verification API", "Mobile Wallet", "Partner Portal"],
+    icon: Truck,
+    title: "Climate-Adaptive Supply Chain for Cooperatives",
+    subtitle: "Weather-responsive logistics for smallholder farmer groups",
+    description: "A platform that integrates real-time weather data, crop yield forecasts, and transport availability to dynamically optimize harvest collection routes and cold chain logistics for agricultural cooperatives.",
+    userProblem: "Smallholder cooperatives lose up to 40% of perishable produce post-harvest due to unpredictable weather, poor road conditions, and lack of real-time coordination between farmers, aggregators, and buyers.",
+    architecture: ["Weather Integration", "Route Optimizer", "Cooperative Dashboard", "Buyer Marketplace", "Cold Chain Tracker"],
   },
   {
-    icon: HeartPulse,
-    title: "Predictive Community Health Network",
-    subtitle: "AI-driven early warning for disease outbreaks",
-    description: "A network of community health workers equipped with AI-powered triage tools that aggregate symptom data to predict disease outbreaks before they escalate, enabling preemptive public health responses.",
-    userProblem: "Rural health systems are reactive — outbreaks are detected too late for effective intervention. Community health workers lack tools to report and analyze patterns in real time.",
-    architecture: ["CHW Mobile App", "Symptom Aggregator", "Prediction Engine", "Alert System", "Health Ministry Dashboard"],
+    icon: Vote,
+    title: "Civic Participation Platform for Urban Youth",
+    subtitle: "Structured civic engagement beyond social media",
+    description: "A platform that enables young urban residents to propose, debate, and vote on local policy priorities, then tracks government responses and implementation progress with transparent accountability metrics.",
+    userProblem: "Urban youth across Africa feel disconnected from local governance. Existing feedback channels are bureaucratic and unresponsive, leading to disengagement and mistrust in public institutions.",
+    architecture: ["Proposal Engine", "Deliberation Forum", "Voting Module", "Government API", "Accountability Tracker"],
   },
   {
-    icon: Landmark,
-    title: "Municipal Revenue Intelligence Platform",
-    subtitle: "Smart revenue collection for local governments",
-    description: "A platform that uses satellite imagery, mobile money transaction data, and property registries to identify revenue leakage, optimize tax collection, and improve service delivery in African municipalities.",
-    userProblem: "Local governments in emerging markets collect less than 30% of potential revenue due to outdated registries, informal economies, and lack of enforcement tools.",
-    architecture: ["Satellite Analysis", "Transaction Mapping", "Revenue Model", "Collection Engine", "Citizen Portal"],
+    icon: Scale,
+    title: "Cross-Border Trade Compliance Engine",
+    subtitle: "Automated regulatory navigation for African SME traders",
+    description: "An intelligent compliance tool that helps small and medium traders navigate AfCFTA regulations, tariff schedules, and documentation requirements across multiple African borders in real time.",
+    userProblem: "Cross-border SME traders face inconsistent regulations, complex paperwork, and unpredictable tariffs that increase costs and delays. Most cannot afford trade compliance consultants.",
+    architecture: ["Regulation Parser", "Tariff Calculator", "Document Generator", "Border Status API", "Trader Mobile App"],
   },
   {
-    icon: Cpu,
-    title: "AI-Powered Skills Marketplace for Africa",
-    subtitle: "Matching informal skills with formal demand",
-    description: "A two-sided marketplace that uses AI to assess, verify, and match informal sector skills (artisans, technicians, care workers) with formal employers, gig platforms, and training providers.",
-    userProblem: "Africa's youth bulge creates massive supply of skilled workers, but fragmented markets, lack of credentials, and information asymmetry prevent efficient matching with demand.",
-    architecture: ["Skills Assessment AI", "Matching Engine", "Credential Layer", "Employer API", "Training Recommender"],
+    icon: Radio,
+    title: "Disaster Response Coordination Network",
+    subtitle: "Real-time resource matching during humanitarian crises",
+    description: "A coordination platform that connects disaster response organizations, local volunteers, and affected communities to match needs with available resources during floods, droughts, and displacement events.",
+    userProblem: "During humanitarian crises in emerging markets, response coordination is fragmented. Overlapping efforts waste resources while some communities receive no aid due to information gaps.",
+    architecture: ["Needs Assessment Tool", "Resource Registry", "Matching Algorithm", "Field Agent App", "Donor Dashboard"],
   },
 ];
 
@@ -54,7 +54,7 @@ const FuturisticPrototypes = () => {
             Future <span className="gradient-text">Product Concepts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Forward-thinking product ideas I haven't built yet — exploring new problem spaces beyond my current work in AI, telecom, and energy.
+            Forward-thinking product ideas exploring new problem spaces in logistics, civic tech, trade, and humanitarian response.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
