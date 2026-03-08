@@ -83,9 +83,9 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="flex justify-center mt-16"
+          className="flex justify-center mt-8"
         >
-          <a href="#about" className="text-white/20 hover:text-white/50 transition-colors">
+          <a href="#about" className="text-muted-foreground/40 hover:text-muted-foreground transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
