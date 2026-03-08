@@ -73,7 +73,7 @@ const ProductDashboards = () => {
             Illustrative product dashboards showcasing the types of metrics I track and optimize as a product manager.
           </p>
           <p className="text-xs text-muted-foreground/60 mb-16 italic">
-            Note: Charts use illustrative data to demonstrate dashboard design and analytical thinking — not actual proprietary data.
+            Note: Charts use illustrative data to demonstrate dashboard design and analytical thinking, not actual proprietary data.
           </p>
 
           {/* KPI Cards */}

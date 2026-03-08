@@ -51,7 +51,7 @@ const sections = [
       { label: "Content themes", detail: "Develop 3-5 content pillars that establish thought leadership and naturally lead prospects toward your product. Each theme should address a key pain point.", visual: "content" as DiagramType },
       { label: "Product messaging", detail: "Create a messaging hierarchy: tagline → elevator pitch → full narrative. Test messaging with real prospects to ensure it resonates and differentiates.", visual: "framework" as DiagramType },
       { label: "Differentiation strategy", detail: "Choose your primary axis of differentiation (price, quality, speed, simplicity, specialization) and align every touchpoint to reinforce that position.", visual: "comparison" as DiagramType },
-      { label: "Brand voice alignment", detail: "Define a consistent brand voice that reflects your positioning. Every piece of content — from tweets to documentation — should feel unmistakably yours.", visual: "process" as DiagramType },
+      { label: "Brand voice alignment", detail: "Define a consistent brand voice that reflects your positioning. Every piece of content - from tweets to documentation - should feel unmistakably yours.", visual: "process" as DiagramType },
     ],
   },
   {

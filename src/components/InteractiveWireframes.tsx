@@ -185,7 +185,7 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
             ))}
             <div className="flex items-center gap-3 p-3 rounded-xl bg-destructive/5 border border-destructive/20">
               <span className="w-7 h-7 rounded-lg bg-destructive/10 flex items-center justify-center text-xs font-bold text-destructive">✕</span>
-              <span className="text-xs text-foreground font-medium">Hang up — Call ends</span>
+              <span className="text-xs text-foreground font-medium">Hang up - Call ends</span>
             </div>
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 mt-2">

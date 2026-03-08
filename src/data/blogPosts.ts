@@ -172,7 +172,7 @@ The fabric of our cities is woven through the careful orchestration of public an
 
 ## The Evolution of Urban Planning
 
-Urban planning has evolved from purely functional considerations—managing traffic flow, utilities, and zoning—to encompass broader goals of social equity, environmental sustainability, and community well-being. This shift recognizes that cities are not just collections of buildings and infrastructure, but complex social organisms that require careful nurturing.
+Urban planning has evolved from purely functional considerations - managing traffic flow, utilities, and zoning - to encompass broader goals of social equity, environmental sustainability, and community well-being. This shift recognizes that cities are not just collections of buildings and infrastructure, but complex social organisms that require careful nurturing.
 
 ### From Zoning to Place-Making
 

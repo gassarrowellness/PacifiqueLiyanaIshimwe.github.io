@@ -265,7 +265,7 @@ export const ElementRenderer = ({ element }: { element: string }) => {
     }
   }
 
-  // Emoji-prefixed lines — action items / features
+  // Emoji-prefixed lines - action items / features
   if (el.match(/^[🌍💰📦⚠💡🛒🤝📊🟢📋📤📅🔄☐☑🌱💊]/u)) {
     return (
       <div className="flex items-center gap-2 py-1.5 px-3 rounded-xl bg-secondary/40 border border-border/30">
