@@ -1,17 +1,17 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import ImpactSnapshot from "@/components/ImpactSnapshot";
-import FeaturedWork from "@/components/FeaturedWork";
-import CaseStudies from "@/components/CaseStudies";
-import ProductPhilosophy from "@/components/ProductPhilosophy";
+import About from "@/components/About";
 import ProductDesignWalkthrough from "@/components/ProductDesignWalkthrough";
+import CaseStudies from "@/components/CaseStudies";
+import InteractiveWireframes from "@/components/InteractiveWireframes";
+import FuturisticPrototypes from "@/components/FuturisticPrototypes";
+import AIDemos from "@/components/AIDemos";
 import ProductStrategy from "@/components/ProductStrategy";
 import GTMStrategy from "@/components/GTMStrategy";
 import ExperimentsBoard from "@/components/ExperimentsBoard";
-import Capabilities from "@/components/Capabilities";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
-import InnovationLab from "@/components/InnovationLab";
-import LiveDemos from "@/components/LiveDemos";
+import ProductDashboards from "@/components/ProductDashboards";
+import Timeline from "@/components/Timeline";
+import SkillsTools from "@/components/SkillsTools";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,18 +20,18 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <ImpactSnapshot />
-      <FeaturedWork />
-      <CaseStudies />
-      <ProductPhilosophy />
+      <About />
       <ProductDesignWalkthrough />
+      <CaseStudies />
+      <InteractiveWireframes />
+      <FuturisticPrototypes />
+      <AIDemos />
       <ProductStrategy />
       <GTMStrategy />
       <ExperimentsBoard />
-      <Capabilities />
-      <ExperienceTimeline />
-      <InnovationLab />
-      <LiveDemos />
+      <ProductDashboards />
+      <Timeline />
+      <SkillsTools />
       <Contact />
       <Footer />
     </div>
