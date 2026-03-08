@@ -9,12 +9,12 @@ const Hero = () => {
       {/* Aurora-style copper + slate background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-600 via-slate-200 to-slate-400" />
       {/* Aurora orbs */}
-      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-orange-100/40 via-slate-100/30 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-slate-100/50 via-orange-100/20 to-transparent rounded-full blur-[100px]" />
-      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-orange-100/40 via-slate-500/30 to-transparent rounded-full blur-[110px]" />
-      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-slate-100/50 via-orange-100/20 to-transparent rounded-full blur-[80px]" />
+      <div className="absolute top-[-10%] left-[10%] w-[700px] h-[500px] bg-gradient-to-br from-emerald-100/40 via-slate-100/30 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-[5%] right-[5%] w-[600px] h-[450px] bg-gradient-to-bl from-slate-100/50 via-green-100/20 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-[-5%] left-[30%] w-[500px] h-[400px] bg-gradient-to-tr from-emerald-100/40 via-slate-500/30 to-transparent rounded-full blur-[110px]" />
+      <div className="absolute top-[20%] right-[30%] w-[400px] h-[300px] bg-gradient-to-b from-slate-100/50 via-green-100/20 to-transparent rounded-full blur-[80px]" />
       {/* Central glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-orange-50/30 via-white/15 to-transparent rounded-full blur-[60px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-radial-[circle] from-green-50/30 via-white/15 to-transparent rounded-full blur-[60px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div
