@@ -2,14 +2,46 @@ import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Process", href: "#product-work" },
+  { label: "Portfolio", href: "#prototypes" },
+  { label: "Strategy", href: "#strategy" },
+  { label: "Experiments", href: "#experiments" },
+  { label: "Timeline", href: "#timeline" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Hero = () => {
   return (
     <section className="relative flex items-center justify-center overflow-hidden py-20 pt-28">
-      {/* Light translucent grey background */}
-      <div className="absolute inset-0 bg-muted/60 backdrop-blur-sm" />
+      {/* Aurora-style grey/white translucent background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/80 via-background to-muted/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-muted/30 via-transparent to-muted/30" />
+      {/* Subtle light streaks */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-gradient-to-br from-border/40 via-muted/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-10 right-1/4 w-[500px] h-[350px] bg-gradient-to-bl from-border/30 via-muted/15 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-gradient-to-t from-border/20 to-transparent rounded-full blur-2xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
+        {/* Horizontal page navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-wrap items-center justify-center gap-6 mb-10"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +95,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-card border border-border shadow-sm"
+          className="rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto bg-card/80 backdrop-blur-sm border border-border shadow-sm"
         >
           {[
             { value: "2M+", label: "Users Served" },
