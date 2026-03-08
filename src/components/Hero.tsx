@@ -23,8 +23,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-sm text-white mb-6">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-400/30 bg-white/20 text-sm text-gray-900 mb-6">
+            <span className="w-2 h-2 rounded-full bg-gray-700 animate-pulse" />
             Available for new opportunities
           </div>
 
