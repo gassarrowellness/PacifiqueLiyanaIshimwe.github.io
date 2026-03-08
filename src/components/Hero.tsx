@@ -1,13 +1,28 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImg from "@/assets/hero-architecture.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
-      {/* Floating accent orbs */}
-      <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-accent/30 blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image with dark overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImg}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(222,30%,6%,0.92)] via-[hsl(222,30%,8%,0.88)] to-[hsl(222,30%,8%,1)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(280,60%,20%,0.15)] to-[hsl(222,80%,30%,0.1)]" />
+      </div>
+
+      {/* Subtle glow accents */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[hsl(280,60%,50%,0.04)] blur-[100px]" />
+
+      {/* Gold accent line under nav */}
+      <div className="absolute top-[72px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-24">
         <motion.div
@@ -16,40 +31,40 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-muted-foreground mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm text-sm text-primary/80 mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
+          <h1 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto mb-4">
+          <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-4">
             Senior Product Manager | AI, Platforms, Digital Operations
           </p>
 
-          <p className="text-base md:text-lg text-muted-foreground/70 max-w-xl mx-auto mb-12">
+          <p className="text-base md:text-lg text-white/40 max-w-xl mx-auto mb-12">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="rounded-full gap-2" asChild>
+            <Button size="lg" className="rounded-full gap-2 shadow-lg shadow-primary/20" asChild>
               <a href="#product-work">
                 <FileText className="h-4 w-4" />
                 View Product Work
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full gap-2" asChild>
+            <Button variant="outline" size="lg" className="rounded-full gap-2 border-white/15 text-white/80 hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm" asChild>
               <a href="https://www.linkedin.com/in/pacifique-ishimwe" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full gap-2" asChild>
+            <Button variant="outline" size="lg" className="rounded-full gap-2 border-white/15 text-white/80 hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm" asChild>
               <a href="mailto:plishimwe@gmail.com">
                 <Mail className="h-4 w-4" />
                 Contact
@@ -63,7 +78,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="glass rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+          className="rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto bg-white/[0.04] backdrop-blur-xl border border-white/10"
         >
           {[
             { value: "2M+", label: "Users Served" },
@@ -73,7 +88,7 @@ const Hero = () => {
           ].map((m) => (
             <div key={m.label} className="text-center">
               <p className="text-2xl md:text-3xl font-bold text-display gradient-text">{m.value}</p>
-              <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
+              <p className="text-xs text-white/40 mt-1">{m.label}</p>
             </div>
           ))}
         </motion.div>
@@ -85,7 +100,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
           className="flex justify-center mt-16"
         >
-          <a href="#about" className="text-muted-foreground/40 hover:text-muted-foreground transition-colors">
+          <a href="#about" className="text-white/20 hover:text-white/50 transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>
