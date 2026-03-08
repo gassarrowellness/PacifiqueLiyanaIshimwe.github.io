@@ -75,7 +75,6 @@ const Hero = () => {
           {[
             { value: "2M+", label: "Users Served" },
             { value: "6+ yrs", label: "Experience" },
-            { value: "3+", label: "Markets" },
             { value: "10+", label: "Products" },
           ].map((m) => (
             <div key={m.label} className="text-center">
