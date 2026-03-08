@@ -38,7 +38,7 @@ const milestones = [
     highlights: ["Product analytics", "Market strategy", "Data-driven decisions"],
   },
   {
-    period: "October 2020 – March 2022",
+    period: "October 2020 - March 2022",
     role: "Product & Strategy Specialist",
     company: "ENGIE Energy Access",
     description: "Led product innovation and market expansion for PayGo solar solutions. Launched bundled solar + satellite TV packages, piloted inverter-powered business systems, and tested solar irrigation for smallholder farmers.",

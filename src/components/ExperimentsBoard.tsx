@@ -6,7 +6,7 @@ const experiments = [
   {
     title: "Offline Gen-AI: USSD to Voice Platform",
     hypothesis: "AI delivered via USSD and voice (IVR) can provide personalized support at scale for users without internet access, creating a sustainable service model.",
-    test: "Phase 1: Controlled USSD pilot in Zambia with rural communities, measuring engagement and query completion. Phase 2: Launched 'Ask Viamo Anything' — the world's first offline Gen-AI assistant via voice — generating ~90,000 user queries.",
+    test: "Phase 1: Controlled USSD pilot in Zambia with rural communities, measuring engagement and query completion. Phase 2: Launched 'Ask Viamo Anything', the world's first offline Gen-AI assistant via voice, generating ~90,000 user queries.",
     result: "Near-zero drop-off on USSD. 2M+ users served via IVR, 75%+ retention rates, 50,000+ users with improved health access. Revenue model validated for sustainable growth.",
     learning: "USSD and voice are viable AI delivery channels in low-connectivity environments. Voice-first services achieve high engagement where literacy and connectivity are barriers. B2B partnerships create viable monetization.",
     status: "validated" as const,
