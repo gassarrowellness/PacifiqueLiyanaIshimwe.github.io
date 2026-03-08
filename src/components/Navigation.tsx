@@ -13,16 +13,18 @@ const Navigation = () => {
   const isHome = location.pathname === "/";
 
   const homeLinks = [
-    { label: "About", href: "#about" },
-    { label: "Process", href: "#design-walkthrough" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "#about", isRoute: false },
+    { label: "Work", href: "/work", isRoute: true },
+    { label: "Process", href: "#design-walkthrough", isRoute: false },
+    { label: "Timeline", href: "#timeline", isRoute: false },
+    { label: "Contact", href: "#contact", isRoute: false },
   ];
 
   const workLinks = [
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Strategy", href: "#strategy" },
-    { label: "Experiments", href: "#experiments" },
+    { label: "Home", href: "/", isRoute: true },
+    { label: "Case Studies", href: "#case-studies", isRoute: false },
+    { label: "Strategy", href: "#strategy", isRoute: false },
+    { label: "Experiments", href: "#experiments", isRoute: false },
   ];
 
   const sectionLinks = isHome ? homeLinks : workLinks;
