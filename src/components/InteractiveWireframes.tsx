@@ -106,7 +106,7 @@ const InteractiveWireframes = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Smartphone display */}
+            {/* Phone display */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${activeFlow}-${activeScreen}`}
@@ -115,20 +115,37 @@ const InteractiveWireframes = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
               >
-                <SmartphoneFrame
-                  screenTitle={currentFlow.screens[activeScreen].title}
-                  currentScreen={activeScreen}
-                  totalScreens={currentFlow.screens.length}
-                  onPrev={() => setActiveScreen(Math.max(0, activeScreen - 1))}
-                  onNext={() => setActiveScreen(Math.min(currentFlow.screens.length - 1, activeScreen + 1))}
-                  onDotClick={setActiveScreen}
-                >
-                  <div className="space-y-2">
-                    {currentFlow.screens[activeScreen].elements.map((el, i) => (
-                      <ElementRenderer key={i} element={el} />
-                    ))}
-                  </div>
-                </SmartphoneFrame>
+                {currentFlow.type === "ussd" ? (
+                  <UssdPhoneFrame
+                    screenTitle={currentFlow.screens[activeScreen].title}
+                    currentScreen={activeScreen}
+                    totalScreens={currentFlow.screens.length}
+                    onPrev={() => setActiveScreen(Math.max(0, activeScreen - 1))}
+                    onNext={() => setActiveScreen(Math.min(currentFlow.screens.length - 1, activeScreen + 1))}
+                    onDotClick={setActiveScreen}
+                  >
+                    <div className="space-y-1">
+                      {currentFlow.screens[activeScreen].elements.map((el, i) => (
+                        <div key={i}>{el || "\u00A0"}</div>
+                      ))}
+                    </div>
+                  </UssdPhoneFrame>
+                ) : (
+                  <SmartphoneFrame
+                    screenTitle={currentFlow.screens[activeScreen].title}
+                    currentScreen={activeScreen}
+                    totalScreens={currentFlow.screens.length}
+                    onPrev={() => setActiveScreen(Math.max(0, activeScreen - 1))}
+                    onNext={() => setActiveScreen(Math.min(currentFlow.screens.length - 1, activeScreen + 1))}
+                    onDotClick={setActiveScreen}
+                  >
+                    <div className="space-y-2">
+                      {currentFlow.screens[activeScreen].elements.map((el, i) => (
+                        <ElementRenderer key={i} element={el} />
+                      ))}
+                    </div>
+                  </SmartphoneFrame>
+                )}
               </motion.div>
             </AnimatePresence>
 
