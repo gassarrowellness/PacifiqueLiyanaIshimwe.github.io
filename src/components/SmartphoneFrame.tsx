@@ -23,7 +23,7 @@ const SmartphoneFrame = ({
   onNext,
   onDotClick,
   headerStyle = "default",
-  headerSubtitle,
+  headerIcon,
 }: SmartphoneFrameProps) => {
   return (
     <div className="flex justify-center">
