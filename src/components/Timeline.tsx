@@ -3,42 +3,42 @@ import { motion, useInView } from "framer-motion";
 
 const milestones = [
   {
-    period: "July 2025 – Present",
+    period: "July 2025 - Present",
     role: "Founder & Operations Lead",
     company: "Gassarro",
     description: "Established and oversee end-to-end business operations, designing organizational structure, operational workflows, and performance management systems. Introduced KPIs, reporting dashboards, formal SOPs, and automation to reduce operational friction.",
     highlights: ["Operations design", "KPI dashboards", "Process automation"],
   },
   {
-    period: "Apr 2025 – Jul 2025",
+    period: "Apr 2025 - Jul 2025",
     role: "Senior Product Manager",
     company: "Opareta",
     description: "Led product management for a mobile app supporting analog mobile money agent networks with transaction tracking and operational digitization. Designed features for transaction recording, improved data capture accuracy, and built internal tools for field issue logging.",
     highlights: ["Mobile money agents", "Field ops digitization", "Multi-market rollout"],
   },
   {
-    period: "March 2023 – February 2025",
+    period: "March 2023 - February 2025",
     role: "Platform Manager",
     company: "Viamo",
     description: "Led a national digital engagement platform serving over 2 million users across health, agriculture, and civic education. Co-designed large-scale IVR programs with USAID, CIMMYT, UNICEF, and government partners. Piloted and launched the world's first offline Generative AI assistant.",
     highlights: ["2M+ users", "Gen-AI USSD launch", "90K AI queries"],
   },
   {
-    period: "May 2022 – November 2022",
+    period: "May 2022 - November 2022",
     role: "Product & Marketing Manager",
     company: "Brightlife by FINCA",
     description: "Spearheaded expansion of digital and commercial offerings, directing end-to-end launch of bundled clean cookstove and smartphone products for low-income households. Championed a youth agent program to strengthen last-mile distribution.",
     highlights: ["5K+ households", "$250K+ revenue", "70+ youth agents"],
   },
   {
-    period: "Mar 2022 – May 2022",
+    period: "Mar 2022 - May 2022",
     role: "Senior Product Analyst",
     company: "ENGIE Energy Access",
     description: "Conducted advanced product analytics and market research to inform strategic decisions for PayGo solar solutions across East African markets.",
     highlights: ["Product analytics", "Market strategy", "Data-driven decisions"],
   },
   {
-    period: "October 2020 – March 2022",
+    period: "October 2020 - March 2022",
     role: "Product & Strategy Specialist",
     company: "ENGIE Energy Access",
     description: "Led product innovation and market expansion for PayGo solar solutions. Launched bundled solar + satellite TV packages, piloted inverter-powered business systems, and tested solar irrigation for smallholder farmers.",
