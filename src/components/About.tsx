@@ -21,7 +21,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">Hi, my name is Pacifique. I am a product manager who has led digital platforms reaching millions of users. I piloted and launched the world's first offline Generative AI assistant and co-designed programs with partners and government agencies.  I enjoy building digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact. I am very passionate about emerging markets in the global south. In my free time, I love to paint, practice yoga, and work out in the gym.
+              <p className="text-lg text-muted-foreground leading-relaxed">Hi, my name is Pacifique. I am a product manager who has led and built digital platforms, some of which served millions of users. I piloted and launched the world's first offline Generative AI assistant and co-designed programs with partners and government agencies.  I enjoy building products, digital platforms, running pilots, validate hypotheses, and scaling solutions that deliver measurable impact. I am very passionate about emerging markets in the global south. In my free time, I love to paint, practice yoga, and work out in the gym.
 
 
 
