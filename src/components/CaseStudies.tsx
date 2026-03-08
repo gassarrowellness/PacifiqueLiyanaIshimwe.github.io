@@ -19,7 +19,7 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     title: "National Digital Engagement Platform",
-    tagline: "Viamo — Serving 2M+ users across health, agriculture & civic education",
+    tagline: "Viamo: Serving 2M+ users across health, agriculture & civic education",
     tags: ["AI", "IVR", "Scale", "Partnerships"],
     problem: "Low-connectivity communities lacked access to reliable health, agriculture, and civic information. Existing digital channels couldn't reach last-mile users on basic phones.",
     userInsights: "Users needed voice-first, offline-capable solutions. Smartphone penetration was low, but mobile phone ownership was high. Content had to be in local languages.",
@@ -53,8 +53,8 @@ const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    title: "MoMo API Platform & Digital Services",
-    tagline: "MTN — B2B mobile money platform and partner ecosystem",
+    title: "Mobile money Agentic Platform app & Digital Services",
+    tagline: "Opareta: MNO  B2B mobile money platform and partner ecosystem",
     tags: ["Platform", "API", "B2B", "Telecom"],
     problem: "Third-party developers and businesses struggled to integrate with mobile money services, limiting the growth of the digital services ecosystem.",
     userInsights: "Partners needed reliable API access, clear documentation, and streamlined onboarding to build services on top of mobile money infrastructure.",
@@ -70,7 +70,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Renewable Energy Product Expansion",
-    tagline: "Brightlife & ENGIE — Solar, cookstoves & digital products across Africa",
+    tagline: "Brightlife & ENGIE: Solar, cookstoves & digital products across Africa",
     tags: ["Hardware", "GTM", "Emerging Markets"],
     problem: "Low-income households in off-grid African communities lacked access to affordable energy solutions and clean cooking technology.",
     userInsights: "Customers wanted bundled solutions (energy + entertainment + connectivity). Distribution through youth agents could increase last-mile reach.",
@@ -116,7 +116,7 @@ const CaseStudies = () => {
             Product <span className="gradient-text">Case Studies</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16">
-            Real products I've built, scaled, and managed, structured as interactive case studies showing the full product journey.
+            Real products I've built, scaled, and/or managed, structured as interactive case studies showing the full product journey.
           </p>
 
           <div className="space-y-4">
