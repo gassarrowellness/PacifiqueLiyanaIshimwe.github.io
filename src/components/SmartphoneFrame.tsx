@@ -22,7 +22,7 @@ const SmartphoneFrame = ({
 }: SmartphoneFrameProps) => {
   return (
     <div className="flex justify-center">
-      <div className="relative w-[280px] md:w-[320px]">
+      <div className="relative w-[280px] md:w-[300px]">
         {/* Outer device shadow */}
         <div className="absolute inset-0 rounded-[3rem] bg-[#c9b896]/20 blur-xl scale-105" />
         
