@@ -93,7 +93,7 @@ const StepVisual = ({ type }: { type: Step["visualType"] }) => {
             ))}
           </div>
           <div className="w-full bg-secondary/40 rounded-xl p-3 mt-1">
-            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question — health, farming, prices, or general knowledge."</p>
+            <p className="text-[11px] text-muted-foreground italic">"You have chosen the AI assistant. Ask any question - health, farming, prices, or general knowledge."</p>
           </div>
         </div>
       );
