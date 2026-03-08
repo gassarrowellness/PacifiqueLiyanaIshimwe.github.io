@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp } from "lucide-react";
+import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp, ChevronDown } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
 
 interface ActionItem {
@@ -107,21 +107,20 @@ const ProductStrategy = () => {
                   setActiveStage(activeStage === i ? null : i);
                   setActiveAction(null);
                 }}
-                className={`flex-1 p-5 rounded-2xl border transition-all text-left ${
+                className={`group flex-1 p-5 rounded-2xl border transition-all text-left cursor-pointer ${
                   activeStage === i
                     ? "border-primary/30 bg-primary/5 shadow-md"
-                    : "border-border bg-card hover:border-primary/20"
+                    : "border-border bg-card hover:border-primary/20 hover:shadow-lg hover:-translate-y-1"
                 }`}
               >
                 <div className={`w-10 h-10 rounded-xl ${stage.color} flex items-center justify-center mb-3`}>
                   <stage.icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-display font-semibold text-foreground">{stage.title}</h3>
-                <div className="flex items-center gap-1 mt-2">
-                  {i < stages.length - 1 && (
-                    <div className="hidden md:block text-xs text-muted-foreground">→</div>
-                  )}
-                </div>
+                <p className="text-xs text-primary/60 group-hover:text-primary mt-2 transition-colors flex items-center gap-1">
+                  {activeStage === i ? "Collapse" : "Explore"}
+                  <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${activeStage === i ? "rotate-180" : ""}`} />
+                </p>
               </button>
             ))}
           </div>
