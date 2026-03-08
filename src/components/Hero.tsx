@@ -21,17 +21,17 @@ const Hero = () => {
             Available for new opportunities
           </div>
 
-          <h1 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground">
             Pacifique
             <br />
             <span className="gradient-text">Ishimwe</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-4">
+          <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-3">
             Senior Product Manager | AI, Platforms, Digital Operations
           </p>
 
-          <p className="text-base md:text-lg text-white/40 max-w-xl mx-auto mb-12">
+          <p className="text-sm md:text-base text-muted-foreground/70 max-w-xl mx-auto mb-8">
             Building and scaling digital products for emerging markets, from AI-powered 
             platforms to renewable energy solutions, with measurable impact.
           </p>
