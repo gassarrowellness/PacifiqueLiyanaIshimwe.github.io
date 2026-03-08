@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 # The Future of Sustainable Architecture
 
-The architectural landscape is undergoing a profound transformation as we face the urgent need to address climate change and environmental degradation. Sustainable architecture is no longer a niche consideration—it has become the cornerstone of responsible design practice.
+The architectural landscape is undergoing a profound transformation as we face the urgent need to address climate change and environmental degradation. Sustainable architecture is no longer a niche consideration. It has become the cornerstone of responsible design practice.
 
 ## Defining Sustainable Architecture
 
