@@ -216,7 +216,7 @@ const InteractiveWireframes = () => {
             USSD <span className="gradient-text">Voice Assistant</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-12">
-            An AI-powered voice assistant accessed by dialing a shortcode from any mobile phone — no smartphone or internet required.
+            An AI-powered voice assistant accessed by dialing a shortcode from any mobile phone - no smartphone or internet required.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">

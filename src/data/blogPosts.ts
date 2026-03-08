@@ -185,7 +185,7 @@ Traditional zoning practices often created segregated, single-use districts that
 
 ## The Architecture of Community
 
-Community spaces serve as the living rooms of our cities—places where strangers become neighbors, where cultural exchange happens naturally, and where the social fabric of urban life is strengthened.
+Community spaces serve as the living rooms of our cities - places where strangers become neighbors, where cultural exchange happens naturally, and where the social fabric of urban life is strengthened.
 
 ### Public Squares and Plazas
 Well-designed public squares act as outdoor rooms that can accommodate a variety of activities:

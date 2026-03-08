@@ -14,7 +14,7 @@ const experiments = [
   {
     title: "AI-Powered IVR Platform",
     hypothesis: "An AI-powered voice platform could deliver personalized information at scale, improving access and engagement while creating a sustainable revenue model.",
-    test: "Piloted 'Ask Viamo Anything' — the world's first offline Generative AI assistant — generating ~90,000 user queries during initial phase to validate demand.",
+    test: "Piloted 'Ask Viamo Anything' - the world's first offline Generative AI assistant - generating ~90,000 user queries during initial phase to validate demand.",
     result: "2M+ users served, 75%+ retention rates, 50,000+ users with improved health access. Revenue model validated for sustainable growth.",
     learning: "Voice-first AI services can achieve high engagement in markets where literacy and connectivity are barriers. B2B partnerships create viable monetization.",
     status: "validated" as const,
