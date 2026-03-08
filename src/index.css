@@ -116,7 +116,7 @@
   }
 
   .text-display {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     @apply tracking-[-0.02em] leading-[1.1];
   }
 
