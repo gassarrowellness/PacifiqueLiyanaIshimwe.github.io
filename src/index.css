@@ -162,3 +162,72 @@
     background-size: 24px 24px;
   }
 }
+
+/* Print styles for PDF export */
+@media print {
+  /* Force light background and clean typography */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide interactive/non-essential elements */
+  nav,
+  footer,
+  #contact,
+  .print-hidden,
+  button:not(.print-visible),
+  .theme-toggle {
+    display: none !important;
+  }
+
+  /* Remove animations and transforms */
+  * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Force case study content visible */
+  .case-study-content {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Clean card styles */
+  .glass {
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Page break control */
+  .case-study-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Remove background patterns */
+  .grid-bg,
+  .dot-grid {
+    background-image: none !important;
+  }
+
+  /* Gradient text fallback for print */
+  .gradient-text {
+    -webkit-text-fill-color: black !important;
+    background: none !important;
+  }
+}

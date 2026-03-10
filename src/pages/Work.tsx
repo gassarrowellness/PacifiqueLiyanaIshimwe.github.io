@@ -10,6 +10,8 @@ import AIDemos from "@/components/AIDemos";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { FileDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Work = () => {
   return (
@@ -28,9 +30,17 @@ const Work = () => {
             <h1 className="text-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Product <span className="gradient-text">Work</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
               Case studies, strategy frameworks, experiments, and prototypes from my product journey.
             </p>
+            <Button
+              onClick={() => window.print()}
+              variant="outline"
+              className="print-hidden gap-2"
+            >
+              <FileDown className="h-4 w-4" />
+              Download PDF
+            </Button>
           </motion.div>
         </div>
       </section>
