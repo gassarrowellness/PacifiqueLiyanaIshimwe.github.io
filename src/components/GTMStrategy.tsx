@@ -211,6 +211,29 @@ const GTMStrategy = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Print-only: all sections and items expanded */}
+          <div className="print-only mt-8 space-y-6">
+            {sections.map((section, si) => (
+              <div key={si} className="border border-border rounded-xl p-6 print-no-break">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <section.icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold">{section.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">{section.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {section.items.map((item) => (
+                    <div key={item.label} className="p-3 rounded-lg bg-muted/50">
+                      <h4 className="text-sm font-semibold mb-1">{item.label}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

@@ -163,6 +163,11 @@
   }
 }
 
+/* Print-only utility: hidden on screen, visible in print */
+.print-only {
+  display: none !important;
+}
+
 /* Print styles for PDF export */
 @media print {
   /* Force light background and clean typography */
@@ -182,6 +187,11 @@
   button:not(.print-visible),
   .theme-toggle {
     display: none !important;
+  }
+
+  /* Show print-only content */
+  .print-only {
+    display: block !important;
   }
 
   /* Remove animations and transforms */
@@ -207,8 +217,15 @@
     backdrop-filter: none !important;
   }
 
-  /* Page break control */
-  .case-study-card {
+  /* Page break control - each print-section starts on a new page */
+  .print-section {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Avoid splitting cards/items across pages */
+  .case-study-card,
+  .print-no-break {
     break-inside: avoid;
     page-break-inside: avoid;
     margin-bottom: 1rem;
@@ -229,5 +246,24 @@
   .gradient-text {
     -webkit-text-fill-color: black !important;
     background: none !important;
+  }
+
+  /* Force all motion divs visible */
+  [style*="height: 0"],
+  [style*="opacity: 0"] {
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure charts and images render */
+  .recharts-wrapper {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Wide sections: adjust layout to fit portrait */
+  .print-portrait-grid {
+    grid-template-columns: 1fr !important;
   }
 }

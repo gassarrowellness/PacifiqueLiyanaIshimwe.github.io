@@ -304,6 +304,25 @@ const InteractiveWireframes = () => {
               </div>
             ))}
           </div>
+
+          {/* Print-only: all steps expanded */}
+          <div className="print-only mt-8">
+            <h3 className="text-lg font-bold mb-4">Voice Assistant Flow — All Steps</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {steps.map((step, i) => (
+                <div key={i} className="p-4 rounded-xl border border-border print-no-break">
+                  <div className="flex items-start gap-3">
+                    <span className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</span>
+                    <div>
+                      <p className="font-medium text-sm">{step.title}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{step.annotation}</p>
+                      <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

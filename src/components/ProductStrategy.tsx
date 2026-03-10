@@ -186,6 +186,29 @@ const ProductStrategy = () => {
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Print-only: all stages and actions expanded */}
+          <div className="print-only mt-8 space-y-6">
+            {stages.map((stage, si) => (
+              <div key={si} className="border border-border rounded-xl p-6 print-no-break">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-8 h-8 rounded-lg ${stage.color} flex items-center justify-center`}>
+                    <stage.icon className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-lg font-bold">{stage.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">{stage.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {stage.actions.map((action) => (
+                    <div key={action.label} className="p-3 rounded-lg bg-muted/50">
+                      <h4 className="text-sm font-semibold mb-1">{action.label}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{action.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

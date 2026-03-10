@@ -115,6 +115,34 @@ const ExperimentsBoard = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Print-only: all experiments expanded */}
+          <div className="print-only mt-8 space-y-6">
+            {experiments.map((exp, i) => (
+              <div key={i} className="border border-border rounded-xl p-6 print-no-break">
+                <div className="flex items-center gap-3 mb-4">
+                  <FlaskConical className="h-5 w-5 text-primary" />
+                  <h3 className="text-lg font-bold">{exp.title}</h3>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${statusColors[exp.status]}`}>
+                    {exp.status === "validated" ? "Validated" : exp.status === "in_progress" ? "In Progress" : "Planned"}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "Hypothesis", value: exp.hypothesis },
+                    { label: "Test", value: exp.test },
+                    { label: "Result", value: exp.result },
+                    { label: "Learning", value: exp.learning },
+                  ].map((item) => (
+                    <div key={item.label} className="p-4 rounded-lg bg-muted/50">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">{item.label}</p>
+                      <p className="text-sm leading-relaxed">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

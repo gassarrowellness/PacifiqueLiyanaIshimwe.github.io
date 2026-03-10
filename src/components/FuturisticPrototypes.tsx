@@ -239,6 +239,27 @@ const FuturisticPrototypes = () => {
                       </motion.div>
                     )}
                   </AnimatePresence>
+
+                  {/* Print-only: show all screens for this prototype */}
+                  <div className="print-only mt-4 pt-4 border-t border-border">
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">User Flow Screens</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      {proto.screens.map((screen, si) => (
+                        <div key={si} className="p-3 rounded-lg bg-muted/50">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="w-5 h-5 rounded bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary">{si + 1}</span>
+                            <span className="text-sm font-semibold">{screen.title}</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground mb-2">{screen.annotation}</p>
+                          <div className="space-y-1">
+                            {screen.elements.map((el, ei) => (
+                              <p key={ei} className="text-[11px] text-foreground font-mono">{el}</p>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}

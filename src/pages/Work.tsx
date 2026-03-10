@@ -45,14 +45,14 @@ const Work = () => {
         </div>
       </section>
 
-      <CaseStudies />
-      <InteractiveWireframes />
-      <ProductStrategy />
-      <GTMStrategy />
-      <ExperimentsBoard />
-      <ProductDashboards />
-      <FuturisticPrototypes />
-      <AIDemos />
+      <div className="print-section"><CaseStudies /></div>
+      <div className="print-section"><InteractiveWireframes /></div>
+      <div className="print-section"><ProductStrategy /></div>
+      <div className="print-section"><GTMStrategy /></div>
+      <div className="print-section"><ExperimentsBoard /></div>
+      <div className="print-section"><ProductDashboards /></div>
+      <div className="print-section"><FuturisticPrototypes /></div>
+      <div className="print-section"><AIDemos /></div>
       <Contact />
       <Footer />
     </div>
