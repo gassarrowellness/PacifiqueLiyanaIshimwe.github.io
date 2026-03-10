@@ -115,6 +115,40 @@ const sectionIcons = [
   { icon: BarChart3, label: "Execution" },
 ];
 
+const CaseStudyContent = ({ cs }: { cs: CaseStudy }) => (
+  <div className="px-6 md:px-8 pb-8 border-t border-border">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      {[
+        { label: "Problem", content: cs.problem, icon: sectionIcons[0].icon },
+        { label: "User Insights", content: cs.userInsights, icon: sectionIcons[1].icon },
+        { label: "Hypothesis", content: cs.hypothesis, icon: sectionIcons[2].icon },
+        { label: "Product Strategy", content: cs.strategy, icon: sectionIcons[3].icon },
+        { label: "Experimentation", content: cs.experimentation, icon: sectionIcons[4].icon },
+        { label: "Execution", content: cs.execution, icon: sectionIcons[5].icon },
+      ].map((section) => (
+        <div key={section.label} className="p-4 rounded-xl bg-muted/50">
+          <div className="flex items-center gap-2 mb-3">
+            <section.icon className="h-4 w-4 text-primary" />
+            <h4 className="text-label text-primary">{section.label}</h4>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed">{section.content}</p>
+        </div>
+      ))}
+    </div>
+    <div className="mt-8 p-6 rounded-xl bg-primary/5 border border-primary/10">
+      <h4 className="text-label text-primary mb-4">Results & Impact</h4>
+      <div className="grid sm:grid-cols-2 gap-3">
+        {cs.results.map((r, ri) => (
+          <div key={ri} className="flex items-start gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+            <p className="text-sm text-foreground">{r}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 const CaseStudies = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef(null);
