@@ -102,6 +102,10 @@ const FuturisticPrototypes = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [activeScreens, setActiveScreens] = useState<Record<number, number>>({});
+  const scrollRef = useScrollExpand(expandedCard, (i) => {
+    setExpandedCard(i);
+    if (i !== null) setActiveScreens((prev) => ({ ...prev, [i]: 0 }));
+  });
 
   const toggleCard = (i: number) => {
     setExpandedCard(expandedCard === i ? null : i);
