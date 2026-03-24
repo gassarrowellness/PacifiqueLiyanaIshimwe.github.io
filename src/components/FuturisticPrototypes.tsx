@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Wallet, ShoppingBag, BarChart3, Scale, CreditCard, Share2, Play, X } from "lucide-react";
 import SmartphoneFrame, { ElementRenderer } from "./SmartphoneFrame";
