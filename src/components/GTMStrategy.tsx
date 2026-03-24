@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Target, Users, Sword, Megaphone, DollarSign, TrendingUp, Calendar } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
