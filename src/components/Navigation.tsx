@@ -48,7 +48,7 @@ const Navigation = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-[11px] md:text-sm font-medium transition-colors ${scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80"}`}
+                className={`text-[11px] md:text-sm font-medium transition-colors ${location.pathname === link.href ? (scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80") : (scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white")}`}
               >
                 {link.label}
               </Link>
