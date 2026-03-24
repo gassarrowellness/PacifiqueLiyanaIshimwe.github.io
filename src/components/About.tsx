@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Badge } from "@/components/ui/badge";
+import { testimonials } from "@/data/testimonials";
+import { Quote } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
