@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp, ChevronDown } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
