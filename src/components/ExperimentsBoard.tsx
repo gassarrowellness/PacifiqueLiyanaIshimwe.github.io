@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FlaskConical, ChevronDown } from "lucide-react";
 
