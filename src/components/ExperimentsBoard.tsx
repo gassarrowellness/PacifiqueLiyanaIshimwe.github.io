@@ -40,6 +40,7 @@ const ExperimentsBoard = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(expanded, setExpanded);
 
   return (
     <section className="py-16 md:py-20 bg-background" id="experiments">
