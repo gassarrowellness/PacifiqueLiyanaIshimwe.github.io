@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { ChevronDown, Target, Users, Lightbulb, Rocket, BarChart3, FlaskConical } from "lucide-react";
 
 interface CaseStudy {
