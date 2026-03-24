@@ -78,6 +78,7 @@ const ProductStrategy = () => {
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(activeStage, setActiveStage);
 
   const handleActionClick = (label: string) => {
     setActiveAction(activeAction === label ? null : label);
