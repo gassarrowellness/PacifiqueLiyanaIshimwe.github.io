@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { ChevronDown, Target, Users, Lightbulb, Rocket, BarChart3, FlaskConical } from "lucide-react";
 
 interface CaseStudy {
@@ -153,10 +154,11 @@ const CaseStudies = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(openIndex, setOpenIndex);
 
   return (
     <section id="product-work" className="py-16 md:py-20 bg-muted/30">
-      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Lightbulb, FlaskConical, Rocket, RefreshCcw, TrendingUp, ChevronDown } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
@@ -77,6 +78,7 @@ const ProductStrategy = () => {
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(activeStage, setActiveStage);
 
   const handleActionClick = (label: string) => {
     setActiveAction(activeAction === label ? null : label);
@@ -84,7 +86,7 @@ const ProductStrategy = () => {
 
   return (
     <section className="py-16 md:py-20 bg-background" id="strategy">
-      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

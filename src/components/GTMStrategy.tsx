@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Target, Users, Sword, Megaphone, DollarSign, TrendingUp, Calendar } from "lucide-react";
 import MiniDiagram, { type DiagramType } from "./MiniDiagram";
@@ -94,6 +95,7 @@ const GTMStrategy = () => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(expanded, setExpanded);
 
   const handleItemClick = (label: string) => {
     setActiveItem(activeItem === label ? null : label);
@@ -101,7 +103,7 @@ const GTMStrategy = () => {
 
   return (
     <section className="py-16 md:py-20 bg-muted/30">
-      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

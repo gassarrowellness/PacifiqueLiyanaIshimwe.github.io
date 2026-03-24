@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useScrollExpand } from "@/hooks/use-scroll-expand";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Wallet, ShoppingBag, BarChart3, Scale, CreditCard, Share2, Play, X } from "lucide-react";
 import SmartphoneFrame, { ElementRenderer } from "./SmartphoneFrame";
@@ -101,6 +102,10 @@ const FuturisticPrototypes = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [activeScreens, setActiveScreens] = useState<Record<number, number>>({});
+  const scrollRef = useScrollExpand(expandedCard, (i) => {
+    setExpandedCard(i);
+    if (i !== null) setActiveScreens((prev) => ({ ...prev, [i]: 0 }));
+  });
 
   const toggleCard = (i: number) => {
     setExpandedCard(expandedCard === i ? null : i);
@@ -115,7 +120,7 @@ const FuturisticPrototypes = () => {
 
   return (
     <section id="prototypes" className="py-16 md:py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

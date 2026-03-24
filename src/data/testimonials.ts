@@ -7,33 +7,33 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Great problem-solver with strong analytical skills. He identifies root causes, develops practical solutions, and adapts to evolving challenges.",
+    quote: "Pacifique is outstanding at turning complex processes into seamless systems. Her product and operational insight helped us scale efficiently.",
     name: "Raymond Delali Y.",
     title: "Managing Director",
-    date: "Mar 2025",
+    date: "Mar 2026",
   },
   {
-    quote: "Pacifique is an outstanding product manager who combines deep technical expertise with genuine empathy for users. His ability to translate complex user needs into actionable product strategies sets him apart.",
+    quote: "Working with Pacifique was seamless. She brings clarity, structure, and innovation to every project she touches. Can highly recommend working with her!",
     name: "Anna-Laura S.",
     title: "Director of Sales Operations",
-    date: "Mar 2025",
+    date: "Mar 2026",
   },
   {
-    quote: "He took full ownership of product development, leading releases and driving meaningful improvements. His ability to balance competing priorities and maintain focus on high-impact work was remarkable.",
+    quote: "Pacifique built systems from the ground up that were both user-focused and operationally efficient. Truly a founder-level thinker",
     name: "Tehila C.",
-    title: "Recruitment and Operations Partner",
-    date: "Mar 2025",
+    title: "Recruitment and Operations partner",
+    date: "Mar 2026",
   },
   {
-    quote: "Working with Pacifique was a game-changer for our product strategy. His data-driven approach and keen understanding of market dynamics helped us identify opportunities we had completely overlooked.",
+    quote: "Pacifique delivers end-to-end solutions with precision. She understands product, operations, and strategy like no one else! She is also well versed with various market (country) specific nuances, which is a plus, especially when working on a solution that we want to scale globally.",
     name: "Bulengela N.",
     title: "Digital Product Manager",
-    date: "Mar 2025",
+    date: "Mar 2026",
   },
   {
-    quote: "Pacifique's strategic mindset and hands-on approach made a real difference. He brings clarity to complex problems and consistently delivers results that exceed expectations.",
+    quote: "Highly professional and results-driven. Pacifique combines strategic thinking, timely delivery with practical execution, a rare talent!",
     name: "Michaela B.",
     title: "Manager Operation",
-    date: "Mar 2025",
+    date: "Mar 2026",
   },
 ];
