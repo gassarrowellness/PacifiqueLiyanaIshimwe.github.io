@@ -154,6 +154,7 @@ const CaseStudies = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const scrollRef = useScrollExpand(openIndex, setOpenIndex);
 
   return (
     <section id="product-work" className="py-16 md:py-20 bg-muted/30">
