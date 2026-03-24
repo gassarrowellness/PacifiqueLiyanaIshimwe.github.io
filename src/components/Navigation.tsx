@@ -90,7 +90,7 @@ const Navigation = () => {
                       key={link.href}
                       to={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                      className={`text-base font-medium transition-colors ${location.pathname === link.href ? "text-primary hover:text-primary/80" : "text-foreground hover:text-primary"}`}
                     >
                       {link.label}
                     </Link>

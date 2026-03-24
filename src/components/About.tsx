@@ -19,9 +19,39 @@ const About = () => {
           transition={{ duration: 0.7 }}>
           
           <p className="text-label text-primary mb-4">About</p>
-          <h2 className="text-display text-4xl md:text-5xl font-bold mb-12">
+          <h2 className="text-display text-4xl md:text-5xl font-bold mb-8">
             Building Products That <span className="gradient-text">Matter</span>
           </h2>
+
+          {/* Testimonials Carousel */}
+          <div className="mb-12">
+            <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-3xl mx-auto">
+              <CarouselContent>
+                {testimonials.map((t, i) => (
+                  <CarouselItem key={i}>
+                    <div className="glass rounded-xl p-6 md:p-8">
+                      <Quote className="h-6 w-6 text-primary/40 mb-3" />
+                      <p className="text-muted-foreground leading-relaxed mb-5 italic">
+                        "{t.quote}"
+                      </p>
+                      <div className="flex items-center justify-between flex-wrap gap-2">
+                        <div>
+                          <p className="font-medium text-foreground text-sm">{t.name}</p>
+                          <p className="text-xs text-muted-foreground">{t.title}</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Badge variant="secondary" className="text-[10px]">Verified</Badge>
+                          <span className="text-xs text-muted-foreground">{t.date}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex -left-4 md:-left-12" />
+              <CarouselNext className="hidden sm:flex -right-4 md:-right-12" />
+            </Carousel>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6">
