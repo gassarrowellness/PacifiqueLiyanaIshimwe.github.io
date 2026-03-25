@@ -95,7 +95,7 @@ const GTMStrategy = () => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const scrollRef = useScrollExpand(expanded, setExpanded);
+  const scrollCallbackRef = useScrollExpand(expanded, setExpanded);
 
   const handleItemClick = (label: string) => {
     setActiveItem(activeItem === label ? null : label);
