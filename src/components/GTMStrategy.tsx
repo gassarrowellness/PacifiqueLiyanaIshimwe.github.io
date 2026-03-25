@@ -103,7 +103,7 @@ const GTMStrategy = () => {
 
   return (
     <section className="py-16 md:py-20 bg-muted/30">
-      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; scrollCallbackRef(el); }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
