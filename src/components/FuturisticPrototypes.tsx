@@ -102,7 +102,7 @@ const FuturisticPrototypes = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [activeScreens, setActiveScreens] = useState<Record<number, number>>({});
-  const scrollRef = useScrollExpand(expandedCard, (i) => {
+  const scrollCallbackRef = useScrollExpand(expandedCard, (i) => {
     setExpandedCard(i);
     if (i !== null) setActiveScreens((prev) => ({ ...prev, [i]: 0 }));
   });
@@ -120,7 +120,7 @@ const FuturisticPrototypes = () => {
 
   return (
     <section id="prototypes" className="py-16 md:py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; scrollCallbackRef(el); }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

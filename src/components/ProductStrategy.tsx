@@ -78,7 +78,7 @@ const ProductStrategy = () => {
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const scrollRef = useScrollExpand(activeStage, setActiveStage);
+  const scrollCallbackRef = useScrollExpand(activeStage, setActiveStage);
 
   const handleActionClick = (label: string) => {
     setActiveAction(activeAction === label ? null : label);
@@ -86,7 +86,7 @@ const ProductStrategy = () => {
 
   return (
     <section className="py-16 md:py-20 bg-background" id="strategy">
-      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; (scrollRef as any).current = el; }}>
+      <div className="max-w-6xl mx-auto px-6" ref={(el) => { (ref as any).current = el; scrollCallbackRef(el); }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
