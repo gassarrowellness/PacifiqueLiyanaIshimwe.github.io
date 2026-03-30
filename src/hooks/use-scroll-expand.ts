@@ -1,3 +1,4 @@
+/* v2 – observer in callback ref */
 import { useRef, useCallback } from "react";
 
 /**
