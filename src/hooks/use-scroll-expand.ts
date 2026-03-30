@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useRef, useCallback } from "react";
 
 /**
  * Hook that auto-expands the first item of a collapsible list
@@ -9,7 +9,7 @@ export function useScrollExpand(
   currentIndex: number | null,
   setIndex: (i: number | null) => void
 ) {
-  const elementRef = useRef<HTMLDivElement | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const hasAutoExpanded = useRef(false);
   const currentIndexRef = useRef(currentIndex);
   const setIndexRef = useRef(setIndex);
@@ -19,18 +19,17 @@ export function useScrollExpand(
   setIndexRef.current = setIndex;
 
   const callbackRef = useCallback((el: HTMLDivElement | null) => {
-    elementRef.current = el;
-  }, []);
-
-  useEffect(() => {
-    const el = elementRef.current;
+    // Cleanup previous observer
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+      observerRef.current = null;
+    }
     if (!el) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0];
         if (
-          entry.isIntersecting &&
+          entries[0].isIntersecting &&
           !hasAutoExpanded.current &&
           currentIndexRef.current === null
         ) {
@@ -42,7 +41,7 @@ export function useScrollExpand(
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    observerRef.current = observer;
   }, []);
 
   return callbackRef;
