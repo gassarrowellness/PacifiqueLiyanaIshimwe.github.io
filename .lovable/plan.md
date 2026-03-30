@@ -1,35 +1,48 @@
 
 
-## Plan: Add Testimonials Carousel + Fix Work Tab Highlight
+## Plan: Rebuild auto-expand on scroll
 
-### 1. Create testimonials data and carousel in About section
+### Root cause
+The current `useScrollExpand` hook has a timing bug: the `useEffect([], [])` runs on mount before the callback ref has set the element, so `elementRef.current` is always `null` and the `IntersectionObserver` never attaches. The feature literally does nothing.
 
-**New file: `src/data/testimonials.ts`**
-- Array of 5 testimonial objects from the screenshot:
-  - Raymond Delali Y. | Managing Director
-  - Anna-Laura S. | Director of Sales Operations
-  - Tehila C. | Recruitment and Operations partner
-  - Bulengela N. | Digital Product Manager
-  - Michaela B. | Manager Operation
-- Each with: quote, name, title, date ("Mar 2026")
+### Solution: Rewrite the hook
+Delete the broken `useEffect` approach. Move observer creation directly into the callback ref — this guarantees the observer attaches the moment the DOM element exists.
 
-**Edit: `src/components/About.tsx`**
-- Import `Carousel`, `CarouselContent`, `CarouselItem`, `CarouselPrevious`, `CarouselNext` from the existing carousel UI component
-- Import testimonials data
-- Add a testimonials carousel section between the heading ("Building Products That Matter") and the grid content
-- Each slide: quote text, name, title, date, "Verified" badge
-- Use Embla's autoplay-like loop option for UX
-- Mobile-friendly: single card per slide, touch-swipeable (Embla handles this natively)
+### File changes
 
-### 2. Fix Work tab permanent highlight in Navigation
+**`src/hooks/use-scroll-expand.ts`** — Full rewrite:
+- Remove `useEffect` entirely
+- In the `useCallback` ref: disconnect any previous observer, then create and attach a new `IntersectionObserver` directly on the element
+- Keep the same `hasAutoExpanded` guard (only fires once per section)
+- Keep `currentIndexRef` / `setIndexRef` pattern to avoid stale closures
 
-**Edit: `src/components/Navigation.tsx`** (line 51)
-- Currently route links always get `text-primary` styling regardless of whether they're active
-- Change to: apply `text-primary` only when `location.pathname === link.href`, otherwise use the same muted style as non-route links
-- Same fix for mobile menu (line 93)
+```ts
+const callbackRef = useCallback((el: HTMLDivElement | null) => {
+  if (observerRef.current) observerRef.current.disconnect();
+  if (!el) return;
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !hasAutoExpanded.current && currentIndexRef.current === null) {
+      hasAutoExpanded.current = true;
+      setIndexRef.current(0);
+    }
+  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+  observer.observe(el);
+  observerRef.current = observer;
+}, []);
+```
 
-### Files changed
-- `src/data/testimonials.ts` (new)
-- `src/components/About.tsx`
-- `src/components/Navigation.tsx`
+**No changes needed** in any of the 5 consumer components — they already wire the hook correctly via `scrollCallbackRef`. The fix is entirely in the hook.
+
+### Components affected (auto-fixed by hook change)
+- CaseStudies
+- ProductStrategy
+- GTMStrategy
+- ExperimentsBoard
+- FuturisticPrototypes
+
+### QA/QC
+- Scroll through entire Work page; each section's first accordion item should expand when the section enters the viewport
+- Manually collapsing and opening other items should still work normally
+- Mobile: same behavior on touch scroll
+- No visual or layout changes
 
