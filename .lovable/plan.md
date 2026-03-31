@@ -1,48 +1,39 @@
 
 
-## Plan: Rebuild auto-expand on scroll
+## Plan: Merge case studies and add language strategy details
 
-### Root cause
-The current `useScrollExpand` hook has a timing bug: the `useEffect([], [])` runs on mount before the callback ref has set the element, so `elementRef.current` is always `null` and the `IntersectionObserver` never attaches. The feature literally does nothing.
+### Change
 
-### Solution: Rewrite the hook
-Delete the broken `useEffect` approach. Move observer creation directly into the callback ref — this guarantees the observer attaches the moment the DOM element exists.
+**`src/components/CaseStudies.tsx`** — Replace the two separate entries (lines 21-55) with one merged entry:
 
-### File changes
+**Title**: "National Digital Engagement Platform & GenAI Assistant"
+**Tagline**: "Voice-first AI serving 2M+ users across health, agriculture & civic education"
+**Tags**: `["GenAI", "IVR", "USSD", "Speech-to-Text", "Scale", "Partnerships"]`
 
-**`src/hooks/use-scroll-expand.ts`** — Full rewrite:
-- Remove `useEffect` entirely
-- In the `useCallback` ref: disconnect any previous observer, then create and attach a new `IntersectionObserver` directly on the element
-- Keep the same `hasAutoExpanded` guard (only fires once per section)
-- Keep `currentIndexRef` / `setIndexRef` pattern to avoid stale closures
+**Content updates incorporating all user direction:**
 
-```ts
-const callbackRef = useCallback((el: HTMLDivElement | null) => {
-  if (observerRef.current) observerRef.current.disconnect();
-  if (!el) return;
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !hasAutoExpanded.current && currentIndexRef.current === null) {
-      hasAutoExpanded.current = true;
-      setIndexRef.current(0);
-    }
-  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-  observer.observe(el);
-  observerRef.current = observer;
-}, []);
-```
+- **Problem**: Combined — low-connectivity communities lacking access to reliable information; no way to get real-time personalized guidance on basic phones
+- **User Insights**: Voice-first needs, local languages, feature phone text-based interactions, high USSD drop-off due to poor UX
+- **Hypothesis**: A voice-first AI platform using IVR logic trees could deliver personalized, lifesaving information at scale; a GenAI assistant layered on top could demonstrate demand for AI access in offline settings
+- **Strategy**: Co-designed IVR programs with USAID, UNICEF, CIMMYT, government partners. Built GenAI assistant as voice-first on IVR using speech-to-text and text-to-speech pipeline. **For MVP and second iteration, simplified AI responses to plain English and built prompting guidance for users, since no local language LLMs existed at the time. Long-term roadmap included partnering with MNOs and local LLM labs to expand language support — the AVA feature in Pakistan, for example, already operates in Urdu.**
+- **Experimentation**: Piloted world's first offline GenAI assistant generating ~90,000 queries. **Latency reduced from 1-minute responses to 3-second response times** through iterative optimization. **Human-in-the-loop data validation** — real people reviewing AI-generated responses to ensure accuracy before scaling
+- **Execution**: Led cross-functional teams nationally in Zambia, from inception to commercial launch. Integrated with USSD infrastructure, trained AI on local content. Restructured engagement and revenue systems
 
-**No changes needed** in any of the 5 consumer components — they already wire the hook correctly via `scrollCallbackRef`. The fix is entirely in the hook.
+**Combined results:**
+- 2M+ users served on the national platform
+- ~90,000 AI queries during initial pilot phase
+- Response latency reduced from 1 minute to 3 seconds
+- 75%+ user retention rates on health programming
+- 50,000+ users with improved access to essential health services
+- Human-in-the-loop validation ensuring data accuracy at scale
+- Revenue model revised for sustainable growth
+- Published as GSMA case study
+- Presented at GDDF Panel as world first
+- Successfully transitioned from pilot to commercial launch
 
-### Components affected (auto-fixed by hook change)
-- CaseStudies
-- ProductStrategy
-- GTMStrategy
-- ExperimentsBoard
-- FuturisticPrototypes
+### Files changed
+- `src/components/CaseStudies.tsx` — merge two entries into one, remove second entry
 
-### QA/QC
-- Scroll through entire Work page; each section's first accordion item should expand when the section enters the viewport
-- Manually collapsing and opening other items should still work normally
-- Mobile: same behavior on touch scroll
-- No visual or layout changes
+### No UI/UX changes
+Same accordion layout, same component structure. Data consolidation only.
 
