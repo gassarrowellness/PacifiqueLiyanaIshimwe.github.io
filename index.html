@@ -22,6 +22,18 @@
   <meta name="twitter:title" content="Pacifique Liyana Ishimwe — Product Manager | AI, Platforms, Digital Services">
   <meta property="og:description" content="Product Manager building scalable digital products for emerging markets. Expertise in AI, digital platforms, mobile services, and emerging technology ecosystems.">
   <meta name="twitter:description" content="Product Manager building scalable digital products for emerging markets. Expertise in AI, digital platforms, mobile services, and emerging technology ecosystems.">
+  <script>
+    // spa-github-pages: restore the original path that 404.html stashed in the query string,
+    // so React Router sees the real route. No-op on normal loads.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+      }
+    })(window.location);
+  </script>
 </head>
 
   <body>

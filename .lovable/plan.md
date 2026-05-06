@@ -1,39 +1,40 @@
+## Plan: Deploy to GitHub Pages at PacifiqueLiyanaIshimwe.github.io
 
+GitHub is already connected and the repo is renamed to `PacifiqueLiyanaIshimwe.github.io` — so this is a user site served at the root URL `https://pacifiqueliyanaishimwe.github.io/`. No Vite `base` change needed.
 
-## Plan: Merge case studies and add language strategy details
+### Manual step (one-time, in GitHub)
+- Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**
 
-### Change
+### Code changes
 
-**`src/components/CaseStudies.tsx`** — Replace the two separate entries (lines 21-55) with one merged entry:
+**1. `.github/workflows/deploy.yml`** (new) — on every push to `main`:
+- Checkout repo
+- Setup Bun (`oven-sh/setup-bun@v2`)
+- `bun install --frozen-lockfile`
+- `bun run build` (outputs to `dist/`)
+- `actions/configure-pages@v5`
+- `actions/upload-pages-artifact@v3` with `path: dist`
+- `actions/deploy-pages@v4`
+- Permissions: `pages: write`, `id-token: write`, `contents: read`
+- Concurrency group: `pages`
 
-**Title**: "National Digital Engagement Platform & GenAI Assistant"
-**Tagline**: "Voice-first AI serving 2M+ users across health, agriculture & civic education"
-**Tags**: `["GenAI", "IVR", "USSD", "Speech-to-Text", "Scale", "Partnerships"]`
+**2. `public/404.html`** (new) — SPA fallback. GitHub Pages does not have Lovable's automatic SPA routing, so refreshing `/work` would 404. Standard `spa-github-pages` trick: rewrites the path into a query string and redirects to `index.html`.
 
-**Content updates incorporating all user direction:**
+**3. `index.html`** — small inline `<script>` in `<head>` that reads the redirect query string from `404.html` and restores the original path via `history.replaceState` before React Router boots. No-op on normal loads.
 
-- **Problem**: Combined — low-connectivity communities lacking access to reliable information; no way to get real-time personalized guidance on basic phones
-- **User Insights**: Voice-first needs, local languages, feature phone text-based interactions, high USSD drop-off due to poor UX
-- **Hypothesis**: A voice-first AI platform using IVR logic trees could deliver personalized, lifesaving information at scale; a GenAI assistant layered on top could demonstrate demand for AI access in offline settings
-- **Strategy**: Co-designed IVR programs with USAID, UNICEF, CIMMYT, government partners. Built GenAI assistant as voice-first on IVR using speech-to-text and text-to-speech pipeline. **For MVP and second iteration, simplified AI responses to plain English and built prompting guidance for users, since no local language LLMs existed at the time. Long-term roadmap included partnering with MNOs and local LLM labs to expand language support — the AVA feature in Pakistan, for example, already operates in Urdu.**
-- **Experimentation**: Piloted world's first offline GenAI assistant generating ~90,000 queries. **Latency reduced from 1-minute responses to 3-second response times** through iterative optimization. **Human-in-the-loop data validation** — real people reviewing AI-generated responses to ensure accuracy before scaling
-- **Execution**: Led cross-functional teams nationally in Zambia, from inception to commercial launch. Integrated with USSD infrastructure, trained AI on local content. Restructured engagement and revenue systems
+**4. `vite.config.ts`** — no change. `base: '/'` (default) is correct for a user site at the domain root.
 
-**Combined results:**
-- 2M+ users served on the national platform
-- ~90,000 AI queries during initial pilot phase
-- Response latency reduced from 1 minute to 3 seconds
-- 75%+ user retention rates on health programming
-- 50,000+ users with improved access to essential health services
-- Human-in-the-loop validation ensuring data accuracy at scale
-- Revenue model revised for sustainable growth
-- Published as GSMA case study
-- Presented at GDDF Panel as world first
-- Successfully transitioned from pilot to commercial launch
+### What stays unchanged
+- No UI/UX, component, or styling changes
+- `BrowserRouter` stays as is
+- Lovable Cloud / analytics code untouched (analytics only tracks the `.lovable.app` copy — expected)
+- The Lovable-published site at `plishimweportfolio.lovable.app` stays live in parallel unless you unpublish it
+
+### After deploy
+- First push triggers the workflow; site goes live at `https://pacifiqueliyanaishimwe.github.io/` in ~1–2 minutes
+- Every future Lovable edit auto-syncs to GitHub → auto-redeploys
 
 ### Files changed
-- `src/components/CaseStudies.tsx` — merge two entries into one, remove second entry
-
-### No UI/UX changes
-Same accordion layout, same component structure. Data consolidation only.
-
+- `.github/workflows/deploy.yml` (new)
+- `public/404.html` (new)
+- `index.html` (add redirect-restore script)
