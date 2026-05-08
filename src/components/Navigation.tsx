@@ -36,9 +36,9 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-sm" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/60 backdrop-blur-xl border-b border-white/30 dark:border-white/10 shadow-sm" : "bg-background/30 backdrop-blur-md border-b border-white/20"}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
-        <a href="#" className={`text-display text-lg font-semibold shrink-0 transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
+        <a href="#" className={`text-display text-lg font-semibold shrink-0 transition-colors ${"text-foreground"}`}>
           P<span className="gradient-text">.</span>Ishimwe
         </a>
 
@@ -48,7 +48,7 @@ const Navigation = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-[11px] md:text-sm font-medium transition-colors ${location.pathname === link.href ? (scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/80") : (scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white")}`}
+                className={`text-[11px] md:text-sm font-medium transition-colors ${location.pathname === link.href ? ("text-primary hover:text-primary/80") : ("text-muted-foreground hover:text-foreground")}`}
               >
                 {link.label}
               </Link>
@@ -56,7 +56,7 @@ const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-[11px] md:text-sm transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
+                className={`text-[11px] md:text-sm transition-colors ${"text-muted-foreground hover:text-foreground"}`}
               >
                 {link.label}
               </a>
@@ -75,7 +75,7 @@ const Navigation = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`}
+                className={`md:hidden ${"text-foreground"}`}
                 aria-label="Open menu"
               >
                 <Menu className="h-5 w-5" />

@@ -36,7 +36,7 @@ const Work = () => {
             <Button
               onClick={() => window.print()}
               variant="outline"
-              className="print-hidden gap-2"
+              className="print-hidden gap-2 rounded-full glass-button"
             >
               <FileDown className="h-4 w-4" />
               Download PDF

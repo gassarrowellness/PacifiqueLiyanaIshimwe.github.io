@@ -144,8 +144,17 @@
 
   /* Glass card */
   .glass {
-    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+    @apply bg-card/60 backdrop-blur-xl border border-white/40 dark:border-white/10;
     box-shadow: var(--shadow-soft);
+  }
+
+  /* Glass button / pill */
+  .glass-button {
+    @apply bg-white/50 dark:bg-white/10 backdrop-blur-md border border-white/60 dark:border-white/15;
+    box-shadow: 0 4px 20px -6px hsl(var(--foreground) / 0.08);
+  }
+  .glass-button:hover {
+    @apply bg-white/70 dark:bg-white/15;
   }
 
   /* Gradient text */

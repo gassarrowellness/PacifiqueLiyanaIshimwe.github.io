@@ -12,11 +12,11 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
-              <Linkedin className="h-4 w-4 text-muted-foreground" />
+            <a href={CONTACT.linkedIn} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-button flex items-center justify-center transition-colors">
+              <Linkedin className="h-4 w-4 text-foreground" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 transition-colors">
-              <ArrowUp className="h-4 w-4 text-muted-foreground" />
+            <a href="#" className="w-10 h-10 rounded-full glass-button flex items-center justify-center transition-colors">
+              <ArrowUp className="h-4 w-4 text-foreground" />
             </a>
           </div>
         </div>
