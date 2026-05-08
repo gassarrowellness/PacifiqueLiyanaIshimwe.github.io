@@ -38,3 +38,8 @@ git clone https://github.com/gassarrowellness/PacifiqueLiyanaIshimwe.github.io.g
 cd PacifiqueLiyanaIshimwe.github.io
 npm install
 npm run dev
+## Asset Usage
+
+All portfolio content, case studies, branding, written materials, visual assets, and exported documents are the intellectual property of Pacifique Liyana Ishimwe unless otherwise stated.
+
+These assets may not be reused, reproduced, redistributed, or commercially exploited without prior written permission.
