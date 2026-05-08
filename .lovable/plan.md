@@ -1,40 +1,37 @@
-## Plan: Deploy to GitHub Pages at PacifiqueLiyanaIshimwe.github.io
+## Plan: Deploy as a project site under `gassarrowellness`
 
-GitHub is already connected and the repo is renamed to `PacifiqueLiyanaIshimwe.github.io` — so this is a user site served at the root URL `https://pacifiqueliyanaishimwe.github.io/`. No Vite `base` change needed.
+Final URL: `https://gassarrowellness.github.io/PacifiqueLiyanaIshimwe.github.io/`
 
-### Manual step (one-time, in GitHub)
-- Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**
+### Manual step (one-time)
+Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**
 
 ### Code changes
 
-**1. `.github/workflows/deploy.yml`** (new) — on every push to `main`:
-- Checkout repo
-- Setup Bun (`oven-sh/setup-bun@v2`)
-- `bun install --frozen-lockfile`
-- `bun run build` (outputs to `dist/`)
-- `actions/configure-pages@v5`
-- `actions/upload-pages-artifact@v3` with `path: dist`
-- `actions/deploy-pages@v4`
-- Permissions: `pages: write`, `id-token: write`, `contents: read`
-- Concurrency group: `pages`
+**1. `vite.config.ts`** — set the base path so built asset URLs resolve under the subpath:
+```ts
+base: '/PacifiqueLiyanaIshimwe.github.io/',
+```
 
-**2. `public/404.html`** (new) — SPA fallback. GitHub Pages does not have Lovable's automatic SPA routing, so refreshing `/work` would 404. Standard `spa-github-pages` trick: rewrites the path into a query string and redirects to `index.html`.
+**2. `public/404.html`** — change `segmentCount` from `0` to `1` so the SPA redirect preserves the `/PacifiqueLiyanaIshimwe.github.io/` prefix when bouncing deep links back to `index.html`.
 
-**3. `index.html`** — small inline `<script>` in `<head>` that reads the redirect query string from `404.html` and restores the original path via `history.replaceState` before React Router boots. No-op on normal loads.
+**3. `src/App.tsx`** — add `basename` to `BrowserRouter` so React Router matches routes relative to the subpath:
+```tsx
+<BrowserRouter basename={import.meta.env.BASE_URL}>
+```
+Using `import.meta.env.BASE_URL` keeps the Lovable preview (served at `/`) working unchanged.
 
-**4. `vite.config.ts`** — no change. `base: '/'` (default) is correct for a user site at the domain root.
+**4. `index.html`** — the existing redirect-restore script already works for project sites, no change.
+
+**5. `.github/workflows/deploy.yml`** — no change, current workflow is correct.
 
 ### What stays unchanged
-- No UI/UX, component, or styling changes
-- `BrowserRouter` stays as is
-- Lovable Cloud / analytics code untouched (analytics only tracks the `.lovable.app` copy — expected)
-- The Lovable-published site at `plishimweportfolio.lovable.app` stays live in parallel unless you unpublish it
+- Lovable preview and the `plishimweportfolio.lovable.app` published site keep working
+- No UI, component, styling, or backend changes
+- All internal links using React Router `<Link>` keep working (basename handles them)
 
 ### After deploy
-- First push triggers the workflow; site goes live at `https://pacifiqueliyanaishimwe.github.io/` in ~1–2 minutes
-- Every future Lovable edit auto-syncs to GitHub → auto-redeploys
+- Push triggers the workflow; site goes live in ~1–2 minutes at the URL above
+- If you later rename the repo (e.g. to `portfolio`), only `vite.config.ts` `base` needs updating
 
-### Files changed
-- `.github/workflows/deploy.yml` (new)
-- `public/404.html` (new)
-- `index.html` (add redirect-restore script)
+### Note on the repo name
+`PacifiqueLiyanaIshimwe.github.io` as a repo name only acts as a "user site" when owned by a GitHub account literally named `PacifiqueLiyanaIshimwe`. Owned by `gassarrowellness`, it is treated as a regular project repo and the `.github.io` suffix becomes part of the URL path. Functionally fine, just cosmetically unusual.
