@@ -3,6 +3,7 @@
 A personal portfolio and product work website showcasing experience in product management, digital platforms, AI-powered services, and impact-focused product delivery.
 
 The site includes an overview of Pacifique’s background, a dedicated product work section, selected case studies, strategy frameworks, experiments, prototypes, and contact information.
+If you do decide to clone this repository, please support the author by staring it and leaving a nice comment!
 
 ## What’s inside
 
