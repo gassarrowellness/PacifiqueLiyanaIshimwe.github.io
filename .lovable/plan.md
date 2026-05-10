@@ -1,59 +1,36 @@
-# Hero Redesign + Site-wide Glassmorphism
+## Add Gassarro case study with tech stack
 
-## 1. Add portrait image
-- Copy `user-uploads://New_Linkedin_Image.png` to `src/assets/pacifique-portrait.png`
-- Import as ES6 module in `Hero.tsx`
+Add one entry to the `caseStudies` array in `src/components/CaseStudies.tsx`, matching the existing shape, positioned after the Mobile Money Agent Support Platform entry.
 
-## 2. Rebuild `src/components/Hero.tsx` to match reference
-Two-column layout (stacks on mobile):
+### Proposed content
 
-**Left column:**
-- "Available for new opportunities" pill (glass style, emerald dot)
-- H1: "Pacifique Liyana" (black/foreground) line break "Ishimwe" (emerald-600, italic to match reference)
-- Emerald left-border quote block containing title: "Senior Product Manager | AI, Platforms, Digital Operations"
-- Subtitle paragraph (existing copy)
-- Two buttons:
-  - "View Product Work" (solid dark/primary, arrow icon, glass shadow)
-  - "LinkedIn" (glass: `bg-white/40 backdrop-blur-md border border-white/50`)
+- **Title:** Gassarro, Founder & Product Lead
+- **Tagline:** Founded a service-business lab to design websites and custom CRMs for SMBs
 
-**Right column:**
-- Rounded portrait (`rounded-3xl`, `aspect-[4/5]`), object-cover
-- Subtle emerald accent line/curve on right edge (decorative SVG or border element seen in reference)
-- Soft shadow + light glass frame
+- **Tags:** Founder, Web, Custom CRM, Service Businesses, Zambia, React, TypeScript, Supabase, Tailwind
 
-**Background:** keep existing aurora gradient but lighten to match reference (more white/slate-50, less slate-600). Light, airy feel.
+- **Problem:** Small service businesses (salons, clinics, studios) in emerging markets are stuck between paper, WhatsApp, and rigid global SaaS that does not match how they actually run. They lack credible websites and tailored operational tools, and most off-the-shelf CRMs are too generic, too expensive, or too complex for their teams.
 
-**Metrics bar:** keep below, restyle as glass card matching reference (white/40 backdrop-blur, rounded-2xl, 3 metrics: 2M+, 6+ yrs, 10+, each with descriptor line under label as in reference)
+- **User Insights:** Owners need a credible online presence and a simple operational backbone, not feature-heavy software. Staff need lightweight, mobile-first workflows for booking, verification, and client notes. Clients want frictionless online booking without back-and-forth messaging.
 
-Layout: `grid md:grid-cols-2 gap-12 items-center`, max-w-6xl. Text-left on desktop, centered on mobile.
+- **Hypothesis:** Running a real service business as a live lab would surface authentic workflow needs that generic SaaS misses, and would let me design websites and custom CRMs that genuinely fit how SMBs operate, then productize those patterns for other service businesses.
 
-## 3. Glassmorphism utility
-Update `.glass` in `src/index.css` (already exists) and add a new `.glass-button` utility:
-```css
-.glass-button {
-  @apply bg-white/40 dark:bg-white/10 backdrop-blur-md border border-white/50 dark:border-white/15;
-  box-shadow: 0 4px 20px -4px hsl(var(--foreground) / 0.08);
-}
-```
+- **Strategy:** Founded Gassarro and launched Gassarrowellness, a Lusaka hair and nail salon, as the live testing ground. Designed and shipped a branded booking website (services, gift cards, careers) plus a custom CRM covering authenticated staff access, appointment management, worker booking verification, and client surveys. Used the salon's day-to-day operations as continuous discovery for what service-business CRMs actually need.
 
-## 4. Apply glass treatment site-wide
-Targeted, presentation-only updates (no logic changes):
-- `Navigation.tsx`: nav bar uses `bg-background/60 backdrop-blur-xl border-b border-border/40`
-- `Footer.tsx`: social icon circles use `glass-button`
-- `Work.tsx` "Download PDF" outline button: add `glass-button` classes
-- `CaseStudies.tsx`, `ProductStrategy.tsx`, `GTMStrategy.tsx`, `ExperimentsBoard.tsx`, `ProductDashboards.tsx`, `FuturisticPrototypes.tsx`, `AIDemos.tsx`, `Timeline.tsx`, `SkillsTools.tsx`, `About.tsx`, `Contact.tsx`: any existing `Card`/section wrappers that use solid `bg-card` swap to `glass` class where it improves visual consistency. Filter chips/tabs/badges get `glass-button`.
-- `Contact.tsx` copy-email button: `glass-button`
+- **Experimentation:** Iterated booking flows, staff verification steps, and CRM layouts against real client and staff behaviour. Tested where automation helped, where it got in the way, and which workflows generalize across service categories versus which are salon-specific.
 
-Print CSS already neutralizes `.glass` — no print regression.
+- **Execution:** Led the venture end-to-end: company founding, product strategy, UX, build, deployment on a custom domain, staff onboarding, and ongoing iteration. Built on React, TypeScript, Vite, and Tailwind on the frontend, with Supabase (Postgres, auth, RLS) on the backend, plus React Query, React Hook Form, and Zod for data and form handling.
 
-## What stays unchanged
-- Routing, data, business logic, copy (except hero already-present text)
-- Color tokens, typography (Arial), accessibility
-- PDF export behavior
-- GitHub Pages deployment config
+- **Results:**
+  - Founded Gassarro and launched Gassarrowellness as a live product lab
+  - Shipped a public booking website at gassarrowellness.com
+  - Built a custom CRM with auth, appointment management, worker verification, and client surveys
+  - Validated reusable patterns for SMB websites and bespoke CRMs in service categories
+  - Demonstrates ability to take a service-business product from zero to live, end-to-end
 
-## Technical notes
-- All colors via semantic tokens / Tailwind opacity utilities, no hardcoded hex
-- Portrait image goes in `src/assets` (bundled, optimized), imported as module
-- Mobile-first: hero grid collapses to single column, portrait shown above text on small screens (or below — I'll match reference which shows side-by-side; on mobile stack with portrait first)
-- Maintain WCAG AA: glass backgrounds keep sufficient contrast for text by layering over solid section bg
+### Technical notes
+
+- Single edit to `src/components/CaseStudies.tsx`, inserting one object into the `caseStudies` array.
+- Tag list intentionally includes a few stack tags (React, TypeScript, Supabase, Tailwind) for scannability; the Execution paragraph carries the full stack detail.
+- No new components, assets, routes, or styling changes. Existing accordion, animations, tag pills, and print/PDF view pick it up automatically.
+- Punctuation follows project rules (no em or en dashes).
