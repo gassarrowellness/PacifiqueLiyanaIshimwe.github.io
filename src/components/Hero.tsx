@@ -95,7 +95,7 @@ const Hero = () => {
         >
           {[
             { value: "2M+", label: "Users Served", desc: "High-growth impact across diverse digital ecosystems." },
-            { value: "6+ yrs", label: "Experience", desc: "Strategic leadership in AI and product scaling." },
+            { value: "8+ yrs", label: "Experience", desc: "Strategic leadership in AI and product scaling." },
             { value: "10+", label: "Products", desc: "End-to-end delivery of complex digital solutions." },
           ].map((m) => (
             <div key={m.label} className="text-left">

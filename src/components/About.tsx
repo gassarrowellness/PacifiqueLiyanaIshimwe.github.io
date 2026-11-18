@@ -90,7 +90,7 @@ const About = () => {
 
               <div className="grid grid-cols-3 gap-4">
                 {[
-                { label: "Experience", value: "6+ yrs" },
+                { label: "Experience", value: "8+ yrs" },
                 { label: "Markets", value: "2+" },
                 { label: "Products", value: "10+" }].
                 map((s) =>
