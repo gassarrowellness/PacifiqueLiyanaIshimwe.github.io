@@ -78,7 +78,7 @@ const Hero = () => {
               <div className="relative rounded-3xl overflow-hidden glass shadow-2xl shadow-foreground/10 aspect-[4/5]">
                 <img
                   src={portrait}
-                  alt="Pacifique Liyana Ishimwe, Senior Product Manager"
+                  alt="Pacifique Liyana Ishimwe, Commercial and Product Lead"
                   className="w-full h-full object-cover"
                 />
               </div>
