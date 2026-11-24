@@ -3,18 +3,18 @@ import { motion, useInView } from "framer-motion";
 
 const milestones = [
   {
+    period: "2022 - Present",
+    role: "Product, Commercial & Technical Consultant",
+    company: "Independent Consulting | Digital Solutions & Commercial Strategy",
+    description: "Selected engagement: Cleanergy / Pimisagas, Zambia (June 2026 - Present), Head of Sales (Commercial Advisory). Lead commercial strategy, P&L management, and multi-location LPG retail and distribution. Drive growth across retail, field sales, telesales, and institutional partnerships while leading customer research, pricing strategies, and investor engagement. Selected engagement: Opareta, Uganda & Zambia (2025), Product & Technical Consultant. Led product definition, requirements, and delivery coordination with a 10-person engineering team for an agent-support platform. Directed the rollout of an Android agent application and centralized CRM workflows, migrating 70-80% of agent communications from WhatsApp to structured digital workflows.",
+    highlights: ["Commercial Strategy", "Product Leadership", "Agent Ops Digitization", "Multi-Market Expansion"],
+  },
+  {
     period: "July 2025 - Present",
     role: "Founder & Operations Lead",
     company: "Gassarro",
     description: "Established and oversee end-to-end business operations, designing organizational structure, operational workflows, and performance management systems. Introduced Businesscase, KPIs, reporting dashboards, formal SOPs, and automation to reduce operational friction.",
     highlights: ["Operations design", "KPI dashboards", "Process automation"],
-  },
-  {
-    period: "Apr 2025 - Jul 2025",
-    role: "Senior Product Manager",
-    company: "Opareta",
-    description: "Led product management for a mobile app supporting analog mobile money agent networks with transaction tracking and operational digitization. Designed features for transaction recording, improved data capture accuracy, and built internal tools for field issue logging.",
-    highlights: ["Mobile money agents", "Field ops digitization", "Multi-market rollout"],
   },
   {
     period: "March 2023 - February 2025",
